@@ -6,6 +6,7 @@
 
 ## Installation
 
+* [Tuner Hardware](installation/tuner-hardware.md)
 * [Downloads](installation/downloads.md)
 * [Docker](installation/docker.md)
 * [Android](installation/android.md)
