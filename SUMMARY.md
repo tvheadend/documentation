@@ -17,10 +17,11 @@
 * [DVB-S](quick-start/dvb-s.md)
 * [DVB-T](quick-start/dvb-t.md)
 
-## FAQ
+## APPENDICES
 
-* [Page 1](faq/page-1.md)
-* [Page 2](faq/page-2.md)
+* [FAQ](appendices/faq.md)
+* [CLI Commands](appendices/cli-commands.md)
+* [Debugging](appendices/debugging.md)
 
 ## Development
 
