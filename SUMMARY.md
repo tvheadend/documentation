@@ -25,3 +25,4 @@
 
 * [Compiling](development/compiling.md)
 * [HTSP](development/htsp.md)
+* [JSON API](development/json-api.md)
