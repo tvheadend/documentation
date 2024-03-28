@@ -18,6 +18,10 @@
 * [Stages](setup/stages.md)
 * [Concepts](setup/concepts.md)
 
+## CONFIG
+
+* [Concepts](config/concepts.md)
+
 ## APPENDICES
 
 * [FAQ](appendices/faq.md)
