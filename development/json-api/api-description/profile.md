@@ -44,7 +44,7 @@ Lists the available stream profiles (visible in the GUI at Configuration -> Stre
 }
 ```
 
-To get the contents of a stream profile use raw/export, passing it the stream profile's uuid.
+To get the contents of a stream profile use [raw/export](raw.md#raw-export), passing it the stream profile's uuid.
 
 ### profile/class
 

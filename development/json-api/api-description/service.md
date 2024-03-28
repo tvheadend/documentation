@@ -6,7 +6,7 @@ ADMIN privilege is required to use all of these functions.
 
 Lists the descriptions, options, current values and defaults of the GUI screen Configuration -> DVB Inputs -> Services. -> Map Services.
 
-Further API functions for manipulating DVB services are in the MPEGts section.
+Further API functions for manipulating DVB services are in the [MPEGts](mpegts.md) section.
 
 ### service/mapper/save
 

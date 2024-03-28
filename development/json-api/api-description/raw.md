@@ -24,7 +24,7 @@ Returns a list of all data classes together with readable titles. Requires versi
 
 ### raw/export
 
-* `class` One of the class names returned by classes.
+* `class` One of the class names returned by [classes](raw.md#classes).
 * `uuid` A single uuid or JSON array of uuids.
 
 Returns data about the selected object(s). The information is the same as returned by the corresponding `grid` function (where available) but without the selection and filtering options provided by that function.

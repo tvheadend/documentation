@@ -10,7 +10,7 @@ Lists the descriptions, options and defaults for configuring the chosen type of 
 
 ### esfilter/XXX/grid
 
-Returns the parameters of the defined filters of the chosen type. The usual selection options are available, see Grid Parameters
+Returns the parameters of the defined filters of the chosen type. The usual selection options are available, see [Grid Parameters](common-parameters.md#grid-parameters)
 
 ### esfilter/XXX/create
 

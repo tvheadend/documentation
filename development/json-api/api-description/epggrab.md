@@ -186,7 +186,7 @@ Lists the parameters, descriptions, options and defaults for the GUI screen Conf
 
 ### epggrab/channel/grid
 
-Gives details of the EPG grabber channels, ie from Configuration -> Channel / EPG -> EPG Grabber Channels. See Grid Parameters for parameter details.
+Gives details of the EPG grabber channels, ie from Configuration -> Channel / EPG -> EPG Grabber Channels. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details.
 
 ```
 {
@@ -231,11 +231,11 @@ List EPG Grabber Modules, as shown in the GUI screen Configuration -> Channel/EP
 
 ### epggrab/config/load
 
-Lists the parameters, options, defaults and current settings for the EPG grabber, ie Configuration -> Channel / EPG -> EPG Grabber. See Load Parameters for parameter details.
+Lists the parameters, options, defaults and current settings for the EPG grabber, ie Configuration -> Channel / EPG -> EPG Grabber. See [Load Parameters](common-parameters.md#load-parameters) for parameter details.
 
 ### epggrab/config/save
 
-Updates the EPG Grabber configuration from an object in the same format as provided by epggrab/config/load.
+Updates the EPG Grabber configuration from an object in the same format as provided by [epggrab/config/load](epggrab.md#epggrab-config-load).
 
 * `node` The JSON object.
 

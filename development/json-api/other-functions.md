@@ -214,7 +214,7 @@ http://192.168.0.1:9981/dvrfile/74cb4b64f55afca54725d8ab0a3d3e00
 
 ### pvrinfo
 
-Used by simple.html.
+Used by [simple.html](other-functions.md#simple.html).
 
 ### redir
 

@@ -8,7 +8,7 @@ Lists the network(s) associated with a given input device.
 
 * `uuid` The uuid of the specific hardware device.
 
-To find the input device uuid, use `hardware/tree?uuid=root`, then take the `id` value from the output and use it as the value of `uuid` in another call to hardware/tree. From the output of this function select the `id` corresponding to the specific front-end device required.
+To find the input device uuid, use `hardware/tree?uuid=root`, then take the `id` value from the output and use it as the value of `uuid` in another call to [hardware/tree](input.md#hardware-tree). From the output of this function select the `id` corresponding to the specific front-end device required.
 
 ```
 {
@@ -23,7 +23,7 @@ To find the input device uuid, use `hardware/tree?uuid=root`, then take the `id`
 
 ### mpegts/network/grid
 
-Lists available networks. The standard parameters listed in Grid Parameters may be used. The items returned depend on the type of network - terrestrial, satellite, IPTV etc.
+Lists available networks. The standard parameters listed in [Grid Parameters](common-parameters.md#grid-parameters) may be used. The items returned depend on the type of network - terrestrial, satellite, IPTV etc.
 
 ```
 curl http://192.168.1.1:9981/api/mpegts/network/grid |jq 
@@ -103,14 +103,14 @@ Lists the text strings, options and defaults used when configuring the DVB capab
 
 Create a new network.
 
-* `class` Required. The class name matching the `class` item obtained from a call to mpegts/network/builders.
+* `class` Required. The class name matching the `class` item obtained from a call to [mpegts/network/builders](mpegts.md#mpegts-network-builders).
 * `conf` Required. A JSON object containing the settings for this network.
 
 ### mpegts/network/mux\_class
 
 Lists the text strings, options and defaults used when editing a multiplex using Configuration -> DVB Inputs -> Muxes -> Edit.
 
-* `uuid` The value of `network_uuid` from a call to mpegts/mux/grid.
+* `uuid` The value of `network_uuid` from a call to [mpegts/mux/grid](mpegts.md#mpegts-mux-grid).
 
 ### mpegts/network/mux\_create
 
@@ -134,7 +134,7 @@ Triggers a scan of the requested network(s).
 
 ### mpegts/mux/grid
 
-Lists available multiplexes. The standard parameters listed in Grid Parameters may be used.
+Lists available multiplexes. The standard parameters listed in [Grid Parameters](common-parameters.md#grid-parameters) may be used.
 
 * `hidemode` If set to `all`, only enabled multiplexes are listed. The default is to show all multiplexes.
 
@@ -244,7 +244,7 @@ Lists the text strings, options and defaults used when configuring the DVB capab
 
 ### mpegts/mux\_sched/grid
 
-List the entries as found under Configuration -> DVB Inputs -> Mux Schedulers. The standard parameters listed in Grid Parameters may be used.
+List the entries as found under Configuration -> DVB Inputs -> Mux Schedulers. The standard parameters listed in [Grid Parameters](common-parameters.md#grid-parameters) may be used.
 
 ```
 {
@@ -264,7 +264,7 @@ List the entries as found under Configuration -> DVB Inputs -> Mux Schedulers. T
 
 ### mpegts/mux\_sched/create
 
-**Untested.** Create a mux schedule, presumably from a structure similar to that from mpegts/mux\_sched/grid.
+**Untested.** Create a mux schedule, presumably from a structure similar to that from [mpegts/mux\_sched/grid](mpegts.md#mpegts-mux\_sched-grid).
 
 ### dvb/orbitalpos/list
 

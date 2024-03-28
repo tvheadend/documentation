@@ -13,7 +13,7 @@ Although no special privilege is required to call these functions, access contro
 Read the value of one or more idnode records. One (and only one) of these parameters must be specified:
 
 * `uuid` The uuid (or JSON-structured list of uuids) to read.
-* `class` The class of records to read, ie one of the classes returned by classes.
+* `class` The class of records to read, ie one of the classes returned by [classes](raw.md#classes).
 
 If `uuid` is given, the data to be returned may be qualified by setting one of these parameters to an integer greater than zero:
 
@@ -32,7 +32,7 @@ Update an existing idnode.
 
 Each update must contain the `uuid` item. Other items supplied replace those in the idnode; they are not merged.
 
-Fields within an idnode may be read-only; for this reason it may not be possible to take the data from idnode/load and use it as input to idnode/save _(thanks to Poul Kalff for this information)_. To check the read-only status of a field, use idnode/class and check for a 'rdonly' flag.
+Fields within an idnode may be read-only; for this reason it may not be possible to take the data from idnode/load and use it as input to idnode/save _(thanks to Poul Kalff for this information)_. To check the read-only status of a field, use [idnode/class](idnode.md#idnode-class) and check for a 'rdonly' flag.
 
 ### idnode/tree
 

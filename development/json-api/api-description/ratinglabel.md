@@ -14,7 +14,7 @@ Creates a new parental rating label. Requires ADMIN privilege.
 
 ### ratinglabel/grid
 
-Lists details of parental rating labels. For details of the parameters and selection criteria which can be applied, see Grid Parameters.
+Lists details of parental rating labels. For details of the parameters and selection criteria which can be applied, see [Grid Parameters](common-parameters.md#grid-parameters).
 
 ```
 {
@@ -54,6 +54,6 @@ Lists the names and uuids of all known parental rating labels.
 **Notes:**
 
 * Parental rating labels were added to Tvheadend in December 2023.
-* Processig of parental rating labels is **disabled** by default and can be enabled via Configuration -> Channel/EPG -> EPG Grabber.
+* Processing of parental rating labels is **disabled** by default and can be enabled via Configuration -> Channel/EPG -> EPG Grabber.
 * Tvheadend will automatically create a placeholder record as new labels are encountered.
 * Parental rating label fields will not appear in other modules, (DVR, EPG) if the processing of parental rating labels is disabled.

@@ -124,10 +124,10 @@ The "pids" data is only present in TVH versions 4.3.1420 and later.
 
 Resets the input counters to zero.
 
-* `uuid` The uuid of the input device from status/inputs. More than one uuid can be specified - syntax?
+* `uuid` The uuid of the input device from [status/inputs](status.md#status-inputs). More than one uuid can be specified - syntax?
 
 ### connections/cancel
 
 Disconnects one or more clients.
 
-* `id` ids of the connections, obtained from status/connections. If set to 'all' then all connections are cancelled (new in 4.3.1680).
+* `id` ids of the connections, obtained from [status/connections](status.md#status-connections). If set to 'all' then all connections are cancelled (new in 4.3.1680).
