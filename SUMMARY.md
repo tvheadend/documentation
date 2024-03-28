@@ -6,9 +6,11 @@
 
 ## Installation
 
-* [Tuner Hardware](installation/tuner-hardware.md)
-* [Downloads](installation/downloads.md)
+* [Requirements](installation/requirements.md)
+* [Tuners](installation/tuners.md)
+* [Linux](installation/linux.md)
 * [Docker](installation/docker.md)
+* [NAS](installation/nas.md)
 * [Android](installation/android.md)
 
 ## Quick Start
