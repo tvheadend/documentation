@@ -22,6 +22,7 @@
 
 * [Concepts](configuration/concepts.md)
 * [Electronic Program Guide](configuration/electronic-program-guide.md)
+* [Digital Video Recorder](configuration/digital-video-recorder.md)
 
 ## APPENDICES
 
