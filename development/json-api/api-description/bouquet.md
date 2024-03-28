@@ -20,7 +20,7 @@ Removes the link from a channel to the bouquet that it is part of.
 
 ### bouquet/grid
 
-Lists details of bouquets. For details of the parameters and selection criteria which can be applied, see Commmon Parameters.
+Lists details of bouquets. For details of the parameters and selection criteria which can be applied, see [Common Parameters](common-parameters.md).
 
 ```
 {

@@ -2,7 +2,7 @@
 
 ### Grid parameters
 
-API calls which end in `/grid`, with the exception of epg/events/grid, have a common set of parameters:
+API calls which end in `/grid`, with the exception of [epg/events/grid](epg.md#epg-events-grid), have a common set of parameters:
 
 * `start` First entry to include. Default is the first (0).
 * `limit` Number of entries to include. **Default is 50** - use a large number to get all.
@@ -36,7 +36,7 @@ Multiple filters can be applied to a query ONLY if they refer to different field
 
 ### Load parameters
 
-API calls which end in `/load`, with the exception of epg/events/load, have a common set of parameters:
+API calls which end in `/load`, with the exception of [epg/events/load](epg.md#epg-events-load), have a common set of parameters:
 
 * `meta` If > 0 an extra data structure is output, mostly related to the format of the GUI screen where the information is presented. Default is 0.
 * `list` This parameter selects which items in the params array are to be output, based on the value of the 'id' field. Multiple entries can be selected, separated by commas, colons or semicolons. A '-' in front of an entry deselects that item (and implicitly selects all others).

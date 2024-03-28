@@ -16,7 +16,7 @@ Creates a new channel. Requires ADMIN privilege.
 
 ### channel/grid
 
-Lists details of channels. For details of the parameters and selection criteria which can be applied, see Grid Parameters.
+Lists details of channels. For details of the parameters and selection criteria which can be applied, see [Grid Parameters](common-parameters.md#grid-parameters).
 
 ```
 {
@@ -86,7 +86,7 @@ Creates a new channel tag. Requires ADMIN privilege.
 
 ### channeltag/grid
 
-Lists details of channel tags. For details of the parameters and selection criteria which can be applied, see Grid Parameters.
+Lists details of channel tags. For details of the parameters and selection criteria which can be applied, see [Grid Parameters](common-parameters.md#grid-parameters).
 
 ```
 {

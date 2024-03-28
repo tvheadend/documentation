@@ -14,7 +14,7 @@ Creates a new user from a JSON object.
 
 ### access/entry/grid
 
-Lists users and their privileges. See Common Parameters for details of selection parameters.
+Lists users and their privileges. See [Common Parameters](common-parameters.md) for details of selection parameters.
 
 ```
 {
@@ -103,7 +103,7 @@ Creates a new IP-based access record.
 
 ### ipblock/entry/grid
 
-Lists IP-block records. See Common Parameters for details of selection parameters.
+Lists IP-block records. See [Common Parameters](common-parameters.md) for details of selection parameters.
 
 ```
 {
@@ -131,7 +131,7 @@ Creates a new password record.
 
 ### passwd/entry/grid
 
-Lists passwords for users. Note that "password" is in clear-text while "password2" is base64-encoded with a static prefix. See Common Parameters for details of selection parameters.
+Lists passwords for users. Note that "password" is in clear-text while "password2" is base64-encoded with a static prefix. See [Common Parameters](common-parameters.md) for details of selection parameters.
 
 ```
 {

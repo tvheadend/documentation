@@ -14,7 +14,7 @@ Lists the text strings, options and defaults used when configuring Conditional A
 
 Create a new CA instance.
 
-* `class` Name of the class to create, ie one of the classes listed by caclient/builders.
+* `class` Name of the class to create, ie one of the classes listed by [caclient/builders](caclient.md#caclient-builders).
 * `conf` A JSON object describing the new device.
 
 ### caclient/list
