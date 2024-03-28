@@ -33,7 +33,8 @@
 ## Development
 
 * [Compiling](development/compiling.md)
-* [HTSP](development/htsp.md)
+* [HTSP](development/htsp/README.md)
+  * [Message Structure](development/htsp/message-structure.md)
 * [JSON API](development/json-api/README.md)
   * [API Description](development/json-api/api-description/README.md)
     * [Common Parameters](development/json-api/api-description/common-parameters.md)
