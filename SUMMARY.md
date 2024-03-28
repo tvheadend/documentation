@@ -18,9 +18,10 @@
 * [Stages](setup/stages.md)
 * [Concepts](setup/concepts.md)
 
-## CONFIG
+## CONFIGURATION
 
-* [Concepts](config/concepts.md)
+* [Concepts](configuration/concepts.md)
+* [Electronic Program Guide](configuration/electronic-program-guide.md)
 
 ## APPENDICES
 
