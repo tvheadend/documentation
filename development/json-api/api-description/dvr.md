@@ -73,11 +73,11 @@ Lists the text strings, options and defaults used when editing an upcoming recor
 
 Lists all of the recordings that TVH knows about, ie it combines the output of `grid_upcoming`, `grid_finished`, `grid_failed` and `grid_removed`. Use the `status` parameter to tell them apart.
 
-See Grid Parameters for parameter details, and note the default is to return only the first 50 items.
+See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details, and note the default is to return only the first 50 items.
 
 ### dvr/entry/grid\_upcoming
 
-Lists all of the currently-scheduled recordings. See Grid Parameters for parameter details, and note the default is to return only the first 50 items.
+Lists all of the currently-scheduled recordings. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details, and note the default is to return only the first 50 items.
 
 * `duplicates` Set to 0 to exclude duplicate timers. Default is 1.
 
@@ -174,7 +174,7 @@ The value of `rating_label_uuid` points to a current parental rating label recor
 
 ### dvr/entry/grid\_finished
 
-Lists recordings which have completed and which are still in the TVH logs. See Grid Parameters for parameter details, and note the default is to return only the first 50 items.
+Lists recordings which have completed and which are still in the TVH logs. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details, and note the default is to return only the first 50 items.
 
 The values of `start_real` and `stop_real` take into account the recorder padding and warm-up time **currently** set - not the values which were set when the recording was made. If this is a segmented recording (a programme split into two or more parts with for example a news bulletin in between) the value of `stop_real` is the end time of the final segment, while `stop` is the end time of he first segment.
 
@@ -262,7 +262,7 @@ Because legislation can change over time, the value of `rating_label_uuid` is bl
 
 ### dvr/entry/grid\_failed
 
-Lists failed recordings. See Grid Parameters for parameter details.
+Lists failed recordings. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details.
 
 If you merge the 'failed' and 'completed' recordings into a single list, the only way to tell which list the entries originally came from is by using the `status` field.
 
@@ -339,7 +339,7 @@ If you merge the 'failed' and 'completed' recordings into a single list, the onl
 
 ### dvr/entry/grid\_removed
 
-Lists removed recordings. See Grid Parameters for parameter details.
+Lists removed recordings. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details.
 
 Under some circumstances an unsuccessful recording may appear here rather than under failed recordings. For example when EIT-based accurate recording is being used and the 'running' status is never received.
 
@@ -391,14 +391,14 @@ It is also possible using this function to add a file created elsewhere into the
 }
 ```
 
-It is important that the start and stop times are in the past, otherwise TVH will try to create a timer to record the event. _(Thanks to "ullix tv" for this information.)_ Also note that the ability to add a pre-recorded file is unintended behaviour - see Caution.
+It is important that the start and stop times are in the past, otherwise TVH will try to create a timer to record the event. _(Thanks to "ullix tv" for this information.)_ Also note that the ability to add a pre-recorded file is unintended behaviour - see [Caution](../#caution).
 
 ### dvr/entry/create\_by\_event
 
 Creates a new timer using details from the EPG. Input parameters are:
 
-* `config_uuid` this is the `uuid` parameter from the output of dvr/config/grid
-* `event_id` this is the `eventId` parameter for the event, taken from epg/events/grid
+* `config_uuid` this is the `uuid` parameter from the output of [dvr/config/grid](dvr.md#dvr-config-grid)
+* `event_id` this is the `eventId` parameter for the event, taken from [epg/events/grid](epg.md#epg-events-grid)
 
 ### dvr/entry/rerecord/toggle, dvr/entry/rerecord/deny, dvr/entry/rerecord/allow
 
@@ -420,7 +420,7 @@ Deletes a timer or aborts a running recording.
 
 If the timer is running, the recording is kept on disk but classified as a 'failed' recording.
 
-**NOTE** To delete a series use idnode/delete, passing parameter `uuid` from the entry in dvr/timerec/grid. As with the UI, deleting a series deletes all pending timers for that series.
+**NOTE** To delete a series use [idnode/delete](idnode.md#idnode-delete), passing parameter `uuid` from the entry in [dvr/timerec/grid](dvr.md#dvr-timerec-grid). As with the UI, deleting a series deletes all pending timers for that series.
 
 ### dvr/entry/prevrec/toggle, dvr/entry/prevrec/set, dvr/entry/prevrec/unset
 
@@ -432,7 +432,7 @@ These functions provide the same capability as the Previously Recorded button in
 
 Removes a completed recording from storage.
 
-* `uuid` The recording's `uuid` value from dvr/entry/grid\_finished.
+* `uuid` The recording's `uuid` value from [dvr/entry/grid\_finished](dvr.md#dvr-entry-grid\_finished).
 
 ### dvr/entry/filemoved
 
@@ -459,7 +459,7 @@ Lists the text strings, options and defaults used when creating or editing a ser
 
 ### dvr/autorec/grid
 
-Lists autorecs (series timers). See Grid Parameters for parameter details.
+Lists autorecs (series timers). See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details.
 
 ```
 {
@@ -509,19 +509,19 @@ Lists autorecs (series timers). See Grid Parameters for parameter details.
 
 ### dvr/autorec/create
 
-Create a new series timer by specifying search parameters. To create a timer using CRIDs use dvr/autorec/create\_by\_series.
+Create a new series timer by specifying search parameters. To create a timer using CRIDs use [dvr/autorec/create\_by\_series](dvr.md#dvr-autorec-create\_by\_series).
 
 * `conf` A JSON object specifying the selection parameters for the timer.
-* `config_uuid` The `uuid` parameter from the output of dvr/config/grid. Parameter `config_name` may be passed instead.
+* `config_uuid` The `uuid` parameter from the output of [dvr/config/grid](dvr.md#dvr-config-grid). Parameter `config_name` may be passed instead.
 
 ### dvr/autorec/create\_by\_series
 
 Creates a new series timer using CRIDs. Input parameters are:
 
-* `config_uuid` The `uuid` parameter from the output of dvr/config/grid
-* `event_id` The `eventId` parameter for one event in the series, taken from epg/events/grid
+* `config_uuid` The `uuid` parameter from the output of [dvr/config/grid](dvr.md#dvr-config-grid)
+* `event_id` The `eventId` parameter for one event in the series, taken from [epg/events/grid](epg.md#epg-events-grid)
 
-**NOTE** To delete a series use idnode/delete, passing parameter `uuid` from the entry in dvr/autorec/grid. As with the UI, deleting a series deletes all pending timers for that series.
+**NOTE** To delete a series use [idnode/delete](idnode.md#idnode-delete), passing parameter `uuid` from the entry in [dvr/autorec/grid](dvr.md#dvr-autorec-grid). As with the UI, deleting a series deletes all pending timers for that series.
 
 ### dvr/timerec/class
 
@@ -529,7 +529,7 @@ Lists the text strings, options and defaults used when creating or editing a tim
 
 ### dvr/timerec/grid
 
-Lists time-based recordings. See Grid Parameters for parameter details.
+Lists time-based recordings. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details.
 
 ```
 {

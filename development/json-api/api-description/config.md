@@ -19,11 +19,11 @@ Returns a list of some compile-time options which were used to build the softwar
 
 ### config/load
 
-Lists the details, descriptions, defaults and current values of the items in the GUI screen Configuration -> General -> Base. See Common Parameters for details of selection parameters.
+Lists the details, descriptions, defaults and current values of the items in the GUI screen Configuration -> General -> Base. See [Common Parameters](common-parameters.md) for details of selection parameters.
 
 ### config/save
 
-**Untested.** Updates the server from an object in the format produced by config/load.
+**Untested.** Updates the server from an object in the format produced by [config/load](config.md#config-load).
 
 * `node` The JSON object.
 
@@ -33,7 +33,7 @@ Lists the details and descriptions of items in the TVH GUI screen Configuration 
 
 ### memoryinfo/grid
 
-Lists details of in-memory objects. See Common Parameters for details of selection parameters.
+Lists details of in-memory objects. See [Common Parameters](common-parameters.md) for details of selection parameters.
 
 ```
 {

@@ -10,18 +10,18 @@ Query the EPG and optionally apply filters.
 * `mode` If set to the string `now` then only events currently playing are listed.
 * `title` A (case-insensitive) string which must appear in the title to be listed.
 * `fulltext` If set to 1 then the `title` string must match exactly. Default is 0.
-* `channel` The channel to show events from, specified either by channel name or uuid. Must be an exact match to the data from channel/list, otherwise all channels are returned.
-* `channelTag` The (single) channel tag to show events from, specified either by name or uuid. Must be an exact match to the data from channeltag/list, otherwise all tags are returned.
+* `channel` The channel to show events from, specified either by channel name or uuid. Must be an exact match to the data from [channel/list](channel.md#channel-list), otherwise all channels are returned.
+* `channelTag` The (single) channel tag to show events from, specified either by name or uuid. Must be an exact match to the data from [channeltag/list](channel.md#channeltag-list), otherwise all tags are returned.
 * `durationMin` Shortest event to be listed (seconds).
 * `durationMax` Longest event to be listed (seconds).
-* `contentType` Integer representing the genre to be listed - see epg/content\_type/list.
-* `filter` A JSON object describing the filter(s) to be applied. See Grid Filters for the syntax. String filters can only be applied to the 'channelName', 'title', 'subtitle', 'summary', 'description' and 'extraText' fields.
+* `contentType` Integer representing the genre to be listed - see [epg/content\_type/list](epg.md#epg-content\_type-list).
+* `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](common-parameters.md#grid-filters) for the syntax. String filters can only be applied to the 'channelName', 'title', 'subtitle', 'summary', 'description' and 'extraText' fields.
 * `sort` The key to be sorted by. Default is to sort by 'start'.
 * `dir` If `sort` is specified, setting 'dir' to 'desc' reverses the sort order
 * `start` First record to be listed from the database, default is 0.
 * `limit` Number of records to list. **Default is 50** - use a very large number to get all.
 * `new` If set to 1 then only events marked as 'new' will be included. Default is 0. The EPG source must identify 'new' events for this filter to work.
-* `cat1, cat2, cat3` XMLTV provides more details of the event category than the OTA EPG, and these parameters can be used to filter by XMLTV category. See Channel-Category.
+* `cat1, cat2, cat3` XMLTV provides more details of the event category than the OTA EPG, and these parameters can be used to filter by XMLTV category. See [Channel-Category](channel.md#channelcategory-list).
 
 EPG sources differ in the information which they provide, and there are many more information items possible than are included in the example below. Any items which have no data available will be omitted.
 
@@ -70,7 +70,7 @@ Other possible values for `dvrState` are "recording", "completed", "completedErr
 
 Lists alternative broadcasts of the same event.
 
-* `eventId` Identifier of the event, eg taken from epg/events/grid.
+* `eventId` Identifier of the event, eg taken from [epg/events/grid](epg.md#epg-events-grid).
 * `lang` 3-letter ISO639 language code. If not supplied, the language configured for the user is entered; otherwise the system default.
 
 The function looks for broadcasts having the same eventId, rather than using event CRIDs. It does not work on UK DVB-T.
@@ -81,7 +81,7 @@ This function does not work on TVH versions older than 4.2.4-5 or 4.3-589.
 
 Lists broadcasts related to the given event.
 
-* `eventId` Identifier of the event, eg taken from epg/events/grid.
+* `eventId` Identifier of the event, eg taken from [epg/events/grid](epg.md#epg-events-grid).
 * `lang` 3-letter ISO639 language code. If not supplied, the language configured for the user is entered; otherwise the system default.
 
 The function looks for events having the same series link ID as the given event, ie part of the same series of broadcasts. It therefore relies on the EPG provider filling in these details.
@@ -135,13 +135,13 @@ The common parameters which apply to other 'load' functions do not work here.
 
 ### epg/brand/list
 
-A 'Brand' is a commonly-available show, eg "Eastenders". What constitutes a 'Brand' is up to the EPG provider.
+A 'Brand' is a commonly-available show, eg "Simpsons". What constitutes a 'Brand' is up to the EPG provider.
 
 **This function was removed in version 4.3.1059.**
 
 ### epg/content\_type/list
 
-Lists the Content Type IDs extracted from ETSI EN 300 468 together with their descriptions. The Content Type ID appears in the output of epg/events/grid as "Genre". IDs described as 'Reserved' or 'User Defined' in the specification are given the description of the previous ID instead.
+Lists the Content Type IDs extracted from ETSI EN 300 468 together with their descriptions. The Content Type ID appears in the output of [epg/events/grid](epg.md#epg-events-grid) as "Genre". IDs described as 'Reserved' or 'User Defined' in the specification are given the description of the previous ID instead.
 
 * `full` If set to 0 (the default) only the broad categories defined by `content_nibble_level_1` in the specification are listed. If set to 1 all categories are listed.
 
