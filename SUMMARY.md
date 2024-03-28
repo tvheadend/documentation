@@ -13,11 +13,10 @@
 * [NAS](installation/nas.md)
 * [Android](installation/android.md)
 
-## Quick Start
+## SETUP
 
-* [Concepts](quick-start/concepts.md)
-* [DVB-S](quick-start/dvb-s.md)
-* [DVB-T](quick-start/dvb-t.md)
+* [Stages](setup/stages.md)
+* [Concepts](setup/concepts.md)
 
 ## APPENDICES
 
