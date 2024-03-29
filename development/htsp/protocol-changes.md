@@ -1,42 +1,40 @@
 # Protocol Changes
 
+#### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
-
-#### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.[¶](broken-reference)
-
-#### v37[¶](broken-reference)
+#### v37
 
 * added ratingLabel to EPG & DVR entries
 * added ratingIcon to EPG & DVR entries
 
-#### v36[¶](broken-reference)
+#### v36
 
 * added ageRating to DVR entries
 
-#### v23..24[¶](broken-reference)
+#### v23..24
 
 * added descrambleInfo (not yet documented below)
 
-#### v22..23[¶](broken-reference)
+#### v22..23
 
 * extended addDvrEntry, updateDvrEntry, dvrEntryAdd method
   * added enabled
 * extended getSysTime
   * added gmtoffset
 
-#### v21..22[¶](broken-reference)
+#### v21..22
 
 * extended updateDvrEntry method
   * added channelId
 
-#### v20..v21[¶](broken-reference)
+#### v20..v21
 
 * dvrEntry structures
   * added files msg (multiple files) to the files field
   * added dataSize field to show actual (last) file size in dvrEntry updates
 * epg events - added subtitle field
 
-#### v19..v20[¶](broken-reference)
+#### v19..v20
 
 * dvrEntry structures
   * added subscriptionError, streamErrors, dataErrors fields
@@ -47,13 +45,13 @@
 * added satpos to the subscription start
 * added subscriptionError field to subscriptionStatus server-to-client method
 
-#### v18..v19[¶](broken-reference)
+#### v18..v19
 
 * autorec/timerec structures
   * added directory field (forced output directory)
   * added enabled field
 
-#### v17..v18[¶](broken-reference)
+#### v17..v18
 
 * added addTimerecEntry, deleteTimerecEntry methods
 * added timerecEntryAdd, timerecEntryUpdate, timerecEntryDelete server-to-client methods
@@ -73,7 +71,7 @@
 * extended getTag method
   * added tagIndex field
 
-#### v16..v17[¶](broken-reference)
+#### v16..v17
 
 * extended subscriptionStart server-to-client method
   * added meta field
@@ -82,25 +80,25 @@
 * changed subscribe method
   * the normts is always active and the parameter is ignored
 
-#### v15..v16[¶](broken-reference)
+#### v15..v16
 
 * added getProfiles, getDvrConfigs methods
 * removed getCodecs methods
 * extended subscribe method
   * add profile field
 
-#### v14..v15[¶](broken-reference)
+#### v14..v15
 
 * extended channelAdd, channelUpdate server-to-client methods
   * the channelIcon URL can be relative 'imagecache/%d' or '/imagecache/%d'
 * extended getChannel method
   * the channelIcon URL can be relative 'imagecache/%d' or '/imagecache/%d'
 
-#### v13..v14[¶](broken-reference)
+#### v13..v14
 
 * added getChannel method
 
-#### v12..v13[¶](broken-reference)
+#### v12..v13
 
 * added addAutorecEntry method
 * added deleteAutorecEntry method
@@ -117,12 +115,12 @@
   * added minduration, maxduration
 * added subscriptionGrace server-to-client method
 
-#### v11..v12[¶](broken-reference)
+#### v11..v12
 
 * added subscriptionFilterStream method
 * added getDvrCutpoints method
 
-#### v10..v11[¶](broken-reference)
+#### v10..v11
 
 * added audio\_type in the subscriptionStart server-to-client method
 * added getCodecs method

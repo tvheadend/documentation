@@ -16,7 +16,5 @@ If you're looking to develop a new client, there are several existing client imp
 * [TVHGuide](https://github.com/john-tornblom/TVHGuide)
 * [PyHTSP](https://github.com/adamsutton/tvheadend/tree/master/lib/py/tvh/htsp.py) (This is a demo client and is WIP, it has limited functionality).
 
-***
-
 
 
