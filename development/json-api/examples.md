@@ -2,7 +2,7 @@
 
 These examples (and any other use of the API which passes username and password in the URL) will only work if TVheadend is configured to use 'basic' or 'basic and digest' authentication.
 
-#### curl
+### curl
 
 Parameters passed to TVH using the GET method must be URI-encoded:
 
@@ -14,7 +14,7 @@ Alternatively use the POST Method:
 
 To make the output more human-readable, pipe it through json\_pp (included in the perl package on many distributions) or jq.
 
-#### PHP
+### PHP
 
 This simple example lists some details about upcoming timers, sorted in date order. To work through a PHP-enabled web server, the PHP.INI setting "allow\_url\_fopen" must be ON.
 
@@ -58,7 +58,7 @@ This simple example lists some details about upcoming timers, sorted in date ord
 
 For an example of what can be done with the API in PHP see https://github.com/dave-p/TVHadmin.
 
-#### Javascript
+### Javascript
 
 It is a 'feature' of Javascript that a script can only access remote content from the same source (IP and port number) as the script was loaded from. Hence to call the TVHeadend API from Javascript, the script must be hosted on TVHeadend's built-in web server. To do this, place your script in `/usr/share/tvheadend/src/webui/static`; it can then be accessed from URL `http://user:pass@your.server:9981/static/`. _Note that this is unintended behaviour and may change in the future._
 
@@ -116,7 +116,7 @@ This example carries out the same task as the PHP example above. Your browser wi
 </html>
 ```
 
-#### Python
+### Python
 
 This example produces the same output as the previous ones.
 

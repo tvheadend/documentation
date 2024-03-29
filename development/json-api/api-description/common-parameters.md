@@ -10,7 +10,7 @@ API calls which end in `/grid`, with the exception of [epg/events/grid](epg.md#e
 * `sort` Name of the field to sort the records by. A case-sensitive sort is used.
 * `dir` if `sort` is specified then `dir=desc` produces a reverse sort.
 
-#### Grid filters
+### Grid filters
 
 A filter can be applied to the output using a JSON object. The syntax is:
 
