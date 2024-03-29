@@ -1,6 +1,6 @@
 # Client to Server (RPC) methods
 
-#### hello[¶](broken-reference)
+#### hello
 
 Used to identify the client toward the server and to get the session challenge used to hash passwords into digests. The client can request a different version of the HTSP protocol with this method. If no 'hello' message is sent the server assumes latest version is to be used.
 
@@ -9,15 +9,18 @@ Client/Server should select lowest common version, if this is not possible conne
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 htspversion        u32   required   Client preferred HTSP version.
 clientname         str   required   Client software name.
 clientversion      str   required   Client software version.
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 htspversion        u32   required   The server supports all versions of the protocol up to and including this number.
 servername         str   required   Server software name.
@@ -27,10 +30,12 @@ challenge          bin   required   32 bytes randomized data used to generate au
 webroot            str   optional   Server HTTP webroot (Added in version 8)
                                     Note: any access to TVH webserver should include this at start of URL path
 ```
+{% endcode %}
 
 Note: possible values for servercapability\[]:\
 
 
+{% code fullWidth="true" %}
 ```
 cwc                Descrambling available
 v4l                Analogue TV available
@@ -38,8 +43,9 @@ linuxdvb           Linux DVB API available
 imagecache         Image caching available
 timeshift          Timeshifting available (Added in version 9).
 ```
+{% endcode %}
 
-#### authenticate[¶](broken-reference)
+#### authenticate
 
 This can be used to issue authentication without doing anything else.\
 If no privileges are gained it will return with 'noaccess' set to 1.
@@ -54,34 +60,40 @@ None
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 noaccess           u32   optional   If set to 1, no privileges were granted.
 ```
+{% endcode %}
 
 ***
 
-#### api (Added in version 24)[¶](broken-reference)
+#### api (Added in version 24)
 
 This is a proxy to HTTP API.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 args               msg[] optional   HTTP arguments
 path               str   required   HTTP path
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 response           msg[] required   Structured response (like in JSON HTTP replies)
 ```
+{% endcode %}
 
 ***
 
-#### getDiskSpace (Added in version 3)[¶](broken-reference)
+#### getDiskSpace (Added in version 3)
 
 Return diskspace status from Tvheadend's PVR storage
 
@@ -95,12 +107,14 @@ None
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 freediskspace      s64   required   Bytes available.
 totaldiskspace     s64   required   Total capacity.
 ```
+{% endcode %}
 
-#### getSysTime (Added in version 3)[¶](broken-reference)
+#### getSysTime (Added in version 3)
 
 Return system time on the server.
 
@@ -114,15 +128,17 @@ None
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 time               s64  required   UNIX time.
 timezone           s32  required   Hours west of GMT. (deprecated, does not work reliable, use gmtoffset instead)
 gmtoffset          s32  optional   Minutes east of GMT.
 ```
+{% endcode %}
 
 ***
 
-#### enableAsyncMetadata[¶](broken-reference)
+#### enableAsyncMetadata
 
 When this is enabled the client will get continuous updates from the server about added, update or deleted channels, tags, dvr and epg entries.
 
@@ -131,12 +147,14 @@ An interactive application that presents the user with information about these t
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 epg                u32   optional   Set to 1, to include EPG data in async, implied by epgMaxTime (Added in version 6).
 lastUpdate         s64   optional   Only provide metadata that has changed since this time (Added in version 6).
 epgMaxTime         s64   optional   Maximum time to return EPG data up to (Added in version 6)
 language           str   optional   RFC 2616 compatible language list (Added in version 6)
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -147,6 +165,7 @@ None
 
 Once the reply as been sent the initial data set will be provided, and then updates will arrive asynchronously after that. The initial data dump is sent using the following messages:
 
+{% code fullWidth="true" %}
 ```
 tagAdd                   optional
 channelAdd               optional
@@ -155,19 +174,22 @@ dvrEntryAdd              optional
 eventAdd                 optional   (Added in version 6)
 initialSyncComplete      required
 ```
+{% endcode %}
 
 ***
 
-#### getChannel (Added in version 14)[¶](broken-reference)
+#### getChannel (Added in version 14)
 
 Request information about the given channel.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 channelId          u32   required   Channel ID.
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -178,7 +200,7 @@ see channelAdd
 
 ***
 
-#### getEvent[¶](broken-reference)
+#### getEvent
 
 Request information about the given event. An event typically corresponds to a program on a channel.
 
@@ -187,10 +209,12 @@ The language field in the request allows preference for languages to be requeste
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 eventId            u32   required   Event ID.
 language           str   optional   RFC 2616 compatible language list (Added in version 6)
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -199,13 +223,14 @@ Reply message fields:\
 see eventAdd
 ```
 
-#### getEvents (Added in version 4)[¶](broken-reference)
+#### getEvents (Added in version 4)
 
 Request information about a set of events. If no options are specified the entire EPG database will be returned.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 eventId            u32   optional   Event ID to begin from (Optional since version 6)
 channelId          u32   optional   Channel ID to get data for (Added in version 6)
@@ -213,21 +238,25 @@ numFollowing       u32   optional   Number of events to add (Optional since vers
 maxTime            u64   optional   Maximum time to return data up to (Added in version 6)
 language           str   optional   RFC 2616 compatible language list (Added in version 6)
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 events             msg[] required   List of events, using response message fields from eventAdd
 ```
+{% endcode %}
 
-#### epgQuery (Added in version 4)[¶](broken-reference)
+#### epgQuery (Added in version 4)
 
 Query the EPG (event titles) and optionally restrict to channel/tag/content type.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 query              str   required  Title regular expression to search for
 channelId          u32   optional  [[ChannelId]] to restrict search to
@@ -238,33 +267,40 @@ maxduration        u32   optional  Maximal duration in seconds (Added in version
 language           str   optional  RFC 2616 compatible language list for title (Added in version 6)
 full               u32   optional  Output full event list rather than just IDs
 ```
+{% endcode %}
 
 Reply message fields:
 
 if full == 1\
 
 
+{% code fullWidth="true" %}
 ```
 events             msg[] optional   List of events, using response message fields from eventAdd
 ```
+{% endcode %}
 
 else
 
+{% code fullWidth="true" %}
 ```
 eventIds           u32[] optional  List of eventIds that match the query
 ```
+{% endcode %}
 
-#### getEpgObject[¶](broken-reference)
+#### getEpgObject
 
 Get detailed EPG Object info.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required  Object ID
 type               u32   optional  Object type
 ```
+{% endcode %}
 
 Reply message fields:
 
@@ -274,33 +310,38 @@ TODO
 
 ***
 
-#### getDvrConfigs (Added in version 16)[¶](broken-reference)
+#### getDvrConfigs (Added in version 16)
 
 Return a list of DVR configurations.
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 dvrconfigs         msg[]      optional   Supported DVR configurations.
 ```
+{% endcode %}
 
 Message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 uuid               str        required   DVR configuration ID
 name               str        required   DVR configuration Name
 comment            str        required   DVR configuration Comment
 ```
+{% endcode %}
 
-#### addDvrEntry (Added in version 4)[¶](broken-reference)
+#### addDvrEntry (Added in version 4)
 
 Create a new DVR entry. Either eventId or channelId, start and stop must be specified.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 eventId            u32   optional   Event ID (Optional since version 5).
 channelId          u32   optional   Channel ID (Added in version 5)
@@ -318,23 +359,27 @@ configName         str   optional   DVR configuration name or UUID
 enabled            u32   optional   Enabled flag (Added in version 23).
 ageRating          u32   optional   Minimum age rating (Added in version 36).
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if entry was added, 0 otherwise
 id                 u32   optional   ID of created DVR entry
 error              str   optional   English clear text of error message
 ```
+{% endcode %}
 
-#### updateDvrEntry (Added in version 5)[¶](broken-reference)
+#### updateDvrEntry (Added in version 5)
 
 Update an existing DVR entry.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   DVR Entry ID
 channelId          u32   optional   New channel ID (Added in version 22)
@@ -350,74 +395,90 @@ retention          u32   optional   Retention in days (Added in version 13)
 priority           u32   optional   Recording priority (Added in version 13)
 enabled            u32   optional   Enabled flag (Added in version 23).
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if update as successful, otherwise 0
 error              str   optional   Error message if update failed
 ```
+{% endcode %}
 
-#### cancelDvrEntry (Added in version 5)[¶](broken-reference)
+#### cancelDvrEntry (Added in version 5)
 
 Cancel an existing recording, but don't remove the entry from the database.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   dvrEnryId to delete
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            int   required   1 if entry was cancelled
 error              str   optional   Error message if cancellation failed
 ```
+{% endcode %}
 
-#### deleteDvrEntry (Added in version 4)[¶](broken-reference)
+#### deleteDvrEntry (Added in version 4)
 
 Delete an existing DVR entry from the database.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   DVR Entry ID
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if entry was removed
 error              str   optional   Error message if the delete fails
 ```
+{% endcode %}
 
-#### getDvrCutpoints (Added in version 12)[¶](broken-reference)
+#### getDvrCutpoints (Added in version 12)
 
 Get DVR cutpoints.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   DVR Entry ID
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 cutpoints          msg[] optional   List of cutpoint entries, if a file is found and has some valid data.
 ```
+{% endcode %}
 
 Cutpoint fields:\
 
 
+{% code fullWidth="true" %}
 ```
 start              u32   required   Cut start time in ms.
 end                u32   required   Cut end time in ms.
@@ -425,16 +486,18 @@ type               u32   required   Action type:
                                       0=Cut, 1=Mute, 2=Scene, 
                                       3=Commercial break.
 ```
+{% endcode %}
 
 ***
 
-#### addAutorecEntry (Added in version 13)[¶](broken-reference)
+#### addAutorecEntry (Added in version 13)
 
 Create a new Autorec DVR entry. Title must be specified.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 enabled            u32   optional   Enabled flag (Added in version 19).
 title              str   required   Title for the recordings.
@@ -455,44 +518,52 @@ stopExtra          s64   optional   Extra stop minutes (post-time).
 dupDetect          u32   optional   Dup Detect (0 = all, 1 = diff episode, 2 = diff subtitle, 3 = diff description, 4 = once per week, 5 = once per day) (Added in version 20).
 comment            str   optional   User Comment.
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if entry was added, 0 otherwise
 id                 str   optional   ID (string!) of created autorec DVR entry
 error              str   optional   English clear text of error message
 ```
+{% endcode %}
 
-#### deleteAutorecEntry (Added in version 13)[¶](broken-reference)
+#### deleteAutorecEntry (Added in version 13)
 
 Delete an existing autorec DVR entry from the database.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 str   required   Autorec DVR Entry ID (string!)
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if entry was removed
 error              str   optional   Error message if the delete fails
 ```
+{% endcode %}
 
 ***
 
-#### addTimerecEntry (Added in version 18)[¶](broken-reference)
+#### addTimerecEntry (Added in version 18)
 
 Create a new Timerec DVR entry. Title must be specified.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 enabled            u32   optional   Enabled flag (Added in version 19).
 title              str   required   Title for the recordings.
@@ -507,64 +578,76 @@ stop               u32   optional   Minutes from modnight (up to 24*60) for the 
 retention          u32   optional   Retention in days. 
 comment            str   optional   User Comment.
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if entry was added, 0 otherwise
 id                 str   optional   ID (string!) of created timerec DVR entry
 error              str   optional   English clear text of error message
 ```
+{% endcode %}
 
-#### deleteTimerecEntry (Added in version 18)[¶](broken-reference)
+#### deleteTimerecEntry (Added in version 18)
 
 Delete an existing timerec DVR entry from the database.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 str   required   Timerec DVR Entry ID (string!)
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 success            u32   required   1 if entry was removed
 error              str   optional   Error message if the delete fails
 ```
+{% endcode %}
 
 ***
 
-#### getTicket (Added in version 5)[¶](broken-reference)
+#### getTicket (Added in version 5)
 
 Get a ticket to allow access to a channel or recording via HTTP
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 channelId          u32  optional   Channel to gain access for
 dvrId              u32  optional   DVR file to gain access for
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 path               str  required   The full path for access URL (no scheme, host or port)
 ticket             str  required   The ticket to pass in the URL query string
 ```
+{% endcode %}
 
-#### subscribe[¶](broken-reference)
+#### subscribe
 
 Request subscription to the given channel.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 channelId          u32   required   ID for channel. 
 subscriptionId     u32   required   Subscription ID. Selected by client. This value is not interpreted by the server in any form. 
@@ -581,26 +664,31 @@ timeshiftPeriod    u32   optional   The number of seconds to keep in the timeshi
                                     Note: this may be bounded by server configuration settings
 profile            str   optional   Select stream profile (Added in version 16).
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 90khz              u32   optional   Indicates 90khz timestamps will be used
 normts             u32   optional   Indicates timestamps will be normalised (and fixed)
 timeshiftPeriod    u32   optional   The actual timeshiftPeriod to be used
 ```
+{% endcode %}
 
-#### unsubscribe[¶](broken-reference)
+#### unsubscribe
 
 Stop a subscription.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 subscriptionId     u32   required   Subscription ID.
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -609,17 +697,19 @@ Reply message fields:\
 None
 ```
 
-#### subscriptionChangeWeight (Added in version 5)[¶](broken-reference)
+#### subscriptionChangeWeight (Added in version 5)
 
 Change the weight of an existing subscription
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 subscriptionId     u32   required   Subscription ID.
 weight             u32   optional   The new subscription weight.
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -628,19 +718,21 @@ Reply message fields:\
 None
 ```
 
-#### subscriptionSkip (Added in version 9)[¶](broken-reference)
+#### subscriptionSkip (Added in version 9)
 
 Skip a timeshift enabled subscription. The response will be asynchronous subscriptionSkip().
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 subscriptionId     u32   required   Subscription ID.
 absolute           u32   optional   The skip request is absolute
 time               u64   optional   Specify skip using time (units are as for PTS)
 size               u64   optional   Specify skip using size (Not currently used)
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -649,21 +741,23 @@ Reply message fields:\
 None
 ```
 
-#### subscriptionSeek (Added in version 9)[¶](broken-reference)
+#### subscriptionSeek (Added in version 9)
 
 Synonym for subscriptionSkip
 
-#### subscriptionSpeed (Added in version 9)[¶](broken-reference)
+#### subscriptionSpeed (Added in version 9)
 
 Set the playback speed for the subscription. The response will be asynchronous subscriptionSpeed().
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 subscriptionId     u32   required   Subscription ID.
 speed              u32   required   Specify speed (0=pause, 100=1x fwd, -100=1x backward)
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -672,16 +766,18 @@ Reply message fields:\
 None
 ```
 
-#### subscriptionLive (Added in version 9)[¶](broken-reference)
+#### subscriptionLive (Added in version 9)
 
 Return a timeshifted session to live. Reply will be asynchronous subscriptionSkip().
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 subscriptionId     u32   required   Subscription ID.
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -690,18 +786,20 @@ Reply message fields:\
 None
 ```
 
-#### subscriptionFilterStream (Added in version 12)[¶](broken-reference)
+#### subscriptionFilterStream (Added in version 12)
 
 Enable or disable specified streams by index.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 subscriptionId     u32        required   Subscription ID.
 enable             list[u32]  optional   Enable stream indexes
 disable            list[u32]  optional   Disable (filter out) stream indexes
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -712,38 +810,44 @@ None
 
 ***
 
-#### getProfiles (Added in version 16)[¶](broken-reference)
+#### getProfiles (Added in version 16)
 
 Return a list of stream profiles (configurations).
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 profiles           msg[]      optional   Supported profiles
 ```
+{% endcode %}
 
 Message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 uuid               str        required   Profile ID
 name               str        required   Profile Name
 comment            str        required   Profile Comment
 ```
+{% endcode %}
 
-#### getCodecs (Added in version 11, Removed in version 16)[¶](broken-reference)
+#### getCodecs (Added in version 11, Removed in version 16)
 
 Return a list of encoders (codecs).
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 encoders           list[str]  optional   Supported encoders
 ```
+{% endcode %}
 
-#### fileOpen (Added in version 8)[¶](broken-reference)
+#### fileOpen (Added in version 8)
 
 Open a file within the Tvheadend file system. This is now the preferred method (in place of HTTP) for accessing recordings.
 
@@ -752,57 +856,69 @@ Accessing recordings via HTSP will overcome the limitations of standard HTTP str
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 file               str   required   File path to open
 ```
+{% endcode %}
 
 Valid file paths:\
 
 
+{% code fullWidth="true" %}
 ```
 /dvrfile/ID        will open the file associated with DVR entry ID
 /imagecache/ID     will open the file associated with imagecache entry ID (Note: only works for HTSPv10+)
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   The file handle used for further file operations
 size               u64   optional   The size of the file in bytes
 mtime              u64   optional   The last time the file was modified
 ```
+{% endcode %}
 
-#### fileRead (Added in version 8)[¶](broken-reference)
+#### fileRead (Added in version 8)
 
 Read data from a file.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   The file handle used for further file operations
 size               u64   required   The amount of data to read
 offset             u64   optional   Offset into the file to read (default is current position)
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 data               bin   required   The data read from the file (size may be less than requested)
 ```
+{% endcode %}
 
-#### fileClose (Added in version 8)[¶](broken-reference)
+#### fileClose (Added in version 8)
 
 Close an opened file.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   The file handle to be closed
 ```
+{% endcode %}
 
 Reply message fields:\
 
@@ -811,50 +927,60 @@ Reply message fields:\
 None
 ```
 
-#### fileStat (Added in version 8)[¶](broken-reference)
+#### fileStat (Added in version 8)
 
 Get status of a file.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   The file handle to be stat'd
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 size               u64   optional   The size of the file in bytes
 mtime              u64   optional   The last time the file was modified
 ```
+{% endcode %}
 
-#### fileSeek (Added in version 8)[¶](broken-reference)
+#### fileSeek (Added in version 8)
 
 Seek to position in a file.
 
 Request message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 id                 u32   required   The file handle to be stat'd
 offset             u64   required   The position to seek in the file
 whence             str   required   Where to seek relative to (default=SEEK_SET)
 ```
+{% endcode %}
 
 Note: valid values for whence\
 
 
+{% code fullWidth="true" %}
 ```
 SEEK_SET           Seek relative to start of file
 SEEK_CUR           Seek relative to current position in file
 SEEK_END           Seek relative (backwards) to end of file
 ```
+{% endcode %}
 
 Reply message fields:\
 
 
+{% code fullWidth="true" %}
 ```
 offset             u64   optional   The new absolute position within the file
 ```
+{% endcode %}
