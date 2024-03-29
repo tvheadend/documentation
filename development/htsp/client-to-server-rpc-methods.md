@@ -17,10 +17,8 @@ clientversion      str   required   Client software version.
 ```
 {% endcode %}
 
-Reply message fields:\
+Reply message fields:
 
-
-{% code fullWidth="true" %}
 ```
 htspversion        u32   required   The server supports all versions of the protocol up to and including this number.
 servername         str   required   Server software name.
@@ -30,7 +28,6 @@ challenge          bin   required   32 bytes randomized data used to generate au
 webroot            str   optional   Server HTTP webroot (Added in version 8)
                                     Note: any access to TVH webserver should include this at start of URL path
 ```
-{% endcode %}
 
 Note: possible values for servercapability\[]:\
 
