@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # General
 
 HTSP is a TCP based protocol primarily intended for streaming of live TV and related meta data such as channels, group of channels (called tags in HTSP) and electronic program guide (EPG) information.
