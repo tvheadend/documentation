@@ -34,7 +34,12 @@
 
 * [Compiling](development/compiling.md)
 * [HTSP](development/htsp/README.md)
-  * [Message Structure](development/htsp/message-structure.md)
+  * [General](development/htsp/general.md)
+  * [HTSMSG Binary Format](development/htsp/htsmsg-binary-format.md)
+  * [Communication](development/htsp/communication.md)
+  * [Client to Server (RPC) methods](development/htsp/client-to-server-rpc-methods.md)
+  * [Server to Client methods](development/htsp/server-to-client-methods.md)
+  * [Protocol Changes](development/htsp/protocol-changes.md)
 * [JSON API](development/json-api/README.md)
   * [API Description](development/json-api/api-description/README.md)
     * [Common Parameters](development/json-api/api-description/common-parameters.md)

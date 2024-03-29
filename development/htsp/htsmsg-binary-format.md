@@ -1,4 +1,8 @@
-# Message Structure
+---
+description: Message Structure
+---
+
+# HTSMSG Binary Format
 
 A message can be of either **map** or **list** type. In a **map** each field has a name, in a **list** the members do not have names, but the order should be preserved.
 
