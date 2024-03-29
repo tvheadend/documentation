@@ -76,21 +76,21 @@ This example carries out the same task as the PHP example above. Your browser wi
     }
   </style>
   <script>
-    var getTimers = async function() {
-      var url = "http://192.168.0.1:9981/api/dvr/entry/grid_upcoming?sort=start";
+    async function getTimers() {
+      const url = "http://192.168.0.1:9981/api/dvr/entry/grid_upcoming?sort=start";
       const response = await fetch(url);
       const timers = await response.json();
       return timers.entries;
     }
 
     async function main() { 
-      var timers = await getTimers(); 
+      const timers = await getTimers(); 
       const table = document.getElementById("result");
       timers.forEach(function(entry) {
-        var start = new Date(entry.start * 1000);
-        var stop = new Date(entry.stop * 1000);
-        row = table.insertRow();
-        html = "<td>" + start.toLocaleDateString() +
+        const start = new Date(entry.start * 1000);
+        const stop = new Date(entry.stop * 1000);
+        const row = table.insertRow();
+        const html = "<td>" + start.toLocaleDateString() +
              "</td><td>" + start.toLocaleTimeString() +
              "</td><td>" + stop.toLocaleTimeString() +
              "</td><td>" + entry.disp_title + "</td>";
