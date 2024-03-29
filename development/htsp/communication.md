@@ -6,7 +6,7 @@ There are two distinct ways for communication within HTSP.
 
 Apart from this there is a number of messages that needs to be exchanged during login, see the login section below.
 
-#### RPC Communication
+### RPC Communication
 
 There is a normal RPC way of doing things. I.e. the client sends a request and the server responds with a reply. All the RPC methods are listed below as the 'Client to Server' methods. Apart from all message fields listed within each message type the client can add an additional field:
 
@@ -34,13 +34,13 @@ noaccess         int  optional   If present and set to '1' the user is prohibite
                                  access restrictions. 
 ```
 
-#### Streaming Communication
+### Streaming Communication
 
 For streaming of live TV and various related messages the server will continuously push data to the client.\
 These messages are referred to as asynchronous messages and always have the 'method' field set and never have the 'seq' field set.\
 Also, the client can enable an additional asyncMetadata mode and by doing so it will be notified by the server when meta data changes. (EPG updates, creation of channels and tags, etc).
 
-#### Authentication
+### Authentication
 
 In Tvheadend, each method has an associated access restriction. Currently there is only one restriction (Streaming). However, this may change in the future.
 
@@ -56,7 +56,7 @@ In principle it's possible to use two different authentication idioms with HTSP.
 Depending on how your application works one or another may be more suitable.\
 While they do not really differ from a protocol point of view it's worth mentioning a bit about them here:
 
-#### Initial Login Authentication
+### Initial Login Authentication
 
 The client performs all of its authentication using the 'login' method.
 
@@ -70,7 +70,7 @@ If no privileges are granted after the login message has been received by the se
 the server will reply with 'noaccess' set to 1. A client that only employs initial login should honor this flag and ask the\
 user for a username + password and retry by using the 'authenticate' method. I.e. it should not send the 'login' method again.
 
-#### On-Demand Authentication
+### On-Demand Authentication
 
 The client performs all of its authentication when it needs to.
 
