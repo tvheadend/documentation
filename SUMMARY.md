@@ -70,10 +70,11 @@
   * [Other Functions](development/json-api/other-functions.md)
   * [WebSocket](development/json-api/websocket.md)
 * [Object Class Relationships](development/object-class-relationships.md)
+* [Testing Tuners Using Files](development/testing-tuners-using-files.md)
+* [Translations](development/translations.md)
 * [XMLTV](development/xmltv/README.md)
   * [Input](development/xmltv/input/README.md)
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
-* [Testing Tuners Using Files](development/testing-tuners-using-files.md)
 
 ## WIP
 
