@@ -1,6 +1,6 @@
 # Server to Client methods
 
-#### channelAdd
+### channelAdd
 
 A new channel has been created on the server.
 
@@ -33,11 +33,11 @@ caid               u32   optional   Encryption CA ID
 caname             str   optional   Encryption CA name
 ```
 
-#### channelUpdate
+### channelUpdate
 
 Same as channelAdd, but all fields (except channelId) are optional.
 
-#### channelDelete
+### channelDelete
 
 A channel has been deleted on the server.
 
@@ -50,7 +50,7 @@ channelId          u32   required   ID of channel.
 
 ***
 
-#### tagAdd
+### tagAdd
 
 A new tag has been created on the server.
 
@@ -66,11 +66,11 @@ tagTitledIcon      u32   optional   Icon includes a title
 members            u32[] optional   Channel IDs of those that belong to the tag
 ```
 
-#### tagUpdate
+### tagUpdate
 
 Same as tagAdd, but all fields (except tagId) are optional.
 
-#### tagDelete
+### tagDelete
 
 A tag has been deleted from the server.
 
@@ -83,7 +83,9 @@ tagId              u32   required   ID of tag.
 
 ***
 
-#### dvrEntryAdd (Added in version 4)
+### dvrEntryAdd
+
+(Added in version 4)
 
 A new recording has been created on the server.
 
@@ -145,7 +147,7 @@ userAccess               User does not have access rights for this service.
 userLimit                Maximum number of streaming connections set in user's profile reached.
 ```
 
-#### dvrEntryUpdate
+### dvrEntryUpdate
 
 Message fields:\
 
@@ -154,7 +156,9 @@ Message fields:\
 Same as dvrEntryAdd, but all fields (except id) are optional.
 ```
 
-#### dvrEntryDelete (Added in version 4)
+### dvrEntryDelete
+
+(Added in version 4)
 
 A recording has been deleted from the server.
 
@@ -167,7 +171,9 @@ id                 u32   required   ID of recording to delete.
 
 ***
 
-#### autorecEntryAdd (Added in version 13)
+### autorecEntryAdd
+
+(Added in version 13)
 
 A new autorec recording has been created on the server.
 
@@ -197,7 +203,9 @@ creator            str   optional   Creator of this autorec entry (Added in vers
 dupDetect          u32   optional   Duplicate detection (see addAutorecEntry) (Added in version 20).
 ```
 
-#### autorecEntryUpdate (Added in version 13)
+### autorecEntryUpdate
+
+(Added in version 13)
 
 Message fields:\
 
@@ -217,7 +225,9 @@ id                 str   required   Autorec Entry ID (string!)
 
 ***
 
-#### timerecEntryAdd (Added in version 18)
+### timerecEntryAdd
+
+(Added in version 18)
 
 A new autorec recording has been created on the server.
 
@@ -240,7 +250,9 @@ owner              str   optional   Owner of this timerec entry.
 creator            str   optional   Creator of this timerec entry.
 ```
 
-#### timerecEntryUpdate (Added in version 18)
+### timerecEntryUpdate
+
+(Added in version 18)
 
 Message fields:\
 
@@ -249,7 +261,9 @@ Message fields:\
 Same as timerecEntryAdd but all fields (except id) are optional.
 ```
 
-#### timerecEntryDelete (Added in version 18)
+### timerecEntryDelete
+
+(Added in version 18)
 
 Message fields:\
 
@@ -260,7 +274,9 @@ id                 str   required   Timerec Entry ID (string!)
 
 ***
 
-#### eventAdd (Added in version 6)
+### eventAdd
+
+(Added in version 6)
 
 Message fields:\
 
@@ -300,7 +316,9 @@ ratingIcon         str   optional   Parental rating label icon (Added in version
   as major category and bottom 4 bits has sub-category. Clients requesting\
   v5 or lower will get the old output.
 
-#### eventUpdate (Added in version 6)
+### eventUpdate
+
+(Added in version 6)
 
 Message fields:\
 
@@ -309,7 +327,9 @@ Message fields:\
 Same as eventAdd but all fields (except eventId) are optional.
 ```
 
-#### eventDelete (Added in version 6)
+### eventDelete
+
+(Added in version 6)
 
 Message fields:\
 
@@ -320,7 +340,9 @@ eventId            u32   required   Event ID
 
 ***
 
-#### initialSyncCompleted (Added in version 2)
+### initialSyncCompleted
+
+(Added in version 2)
 
 Sent after all the initial metadata has been sent when session has been set to async mode.
 
@@ -332,7 +354,7 @@ Message fields:\
 
 ***
 
-#### subscriptionStart
+### subscriptionStart
 
 Asynchronous message output when a new subscription is successfully started.
 
@@ -407,7 +429,7 @@ TELETEXT                      ???
 DVBSUB                        ???
 ```
 
-#### subscriptionGrace
+### subscriptionGrace
 
 Notifies client about the grace timeout (timeout for stream activation). It can be issues multiple times.\
 For example a configuration with satellite rotors requires more than 120 seconds to tune, so users\
@@ -421,7 +443,7 @@ subscriptionId     u32   required   Subscription ID.
 graceTimeout       u32   required   Grace timeout in seconds.
 ```
 
-#### subscriptionStop
+### subscriptionStop
 
 A subscription has been stopped.
 
@@ -441,7 +463,9 @@ Valid values for subscriptionError:\
 see dvrEntryAdd
 ```
 
-#### subscriptionSkip (Added version 9)
+### subscriptionSkip
+
+(Added in version 9)
 
 A subscription has been skipped.
 
@@ -456,7 +480,9 @@ time               u64   optional   The time the subscription has skipped to.
 size               u64   optional   The position in the file we've skipped to (Note: not currently used).
 ```
 
-#### subscriptionSpeed (Added version 9)
+### subscriptionSpeed
+
+(Added in version 9)
 
 A subscription's playback speed has changed.
 
@@ -470,7 +496,7 @@ subscriptionId     u32   required   Subscription ID.
 speed              u32   required   The new speed of the subscription
 ```
 
-#### subscriptionStatus
+### subscriptionStatus
 
 Subscription status update.
 
@@ -490,7 +516,7 @@ Valid values for subscriptionError:\
 see dvrEntryAdd
 ```
 
-#### queueStatus
+### queueStatus
 
 The queueStatus message is sent every second during normal data delivery.
 
@@ -513,7 +539,7 @@ Idrops             u32   required   Number of I-frames dropped
 delay              s64   required   Delta between first and last DTS (Added in version 9)
 ```
 
-#### signalStatus
+### signalStatus
 
 The signalStatus message is sent every second during normal data delivery.
 
@@ -531,7 +557,7 @@ feBER              u32   optional   Bit error rate.
 feUNC              u32   optional   Uncorrected blocks.
 ```
 
-#### timeshiftStatus
+### timeshiftStatus
 
 Provide status every second about the timeshift buffer.
 
@@ -546,7 +572,7 @@ start              s64   optional   PTS of the first frame in the buffer
 end                s64   optional   PTS of the last frame in the buffer
 ```
 
-#### muxpkt
+### muxpkt
 
 Streaming data.
 

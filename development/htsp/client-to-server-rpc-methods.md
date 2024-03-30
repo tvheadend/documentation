@@ -81,7 +81,7 @@ noaccess           u32   optional   If set to 1, no privileges were granted.
 
 ### api
 
-#### (Added in version 24)
+(Added in version 24)
 
 This is a proxy to HTTP API.
 
@@ -114,7 +114,7 @@ Also see:&#x20;
 
 ### getDiskSpace
 
-#### (Added in version 3)
+(Added in version 3)
 
 Return diskspace status from Tvheadend's PVR storage
 
@@ -137,7 +137,7 @@ totaldiskspace     s64   required   Total capacity.
 
 ### getSysTime
 
-#### (Added in version 3)
+(Added in version 3)
 
 Return system time on the server.
 
@@ -203,7 +203,7 @@ initialSyncComplete      required
 
 ### getChannel
 
-#### (Added in version 14)
+(Added in version 14)
 
 Request information about the given channel.
 
@@ -250,7 +250,7 @@ see eventAdd
 
 ### getEvents
 
-#### (Added in version 4)
+(Added in version 4)
 
 Request information about a set of events. If no options are specified the entire EPG database will be returned.
 
@@ -278,7 +278,7 @@ events             msg[] required   List of events, using response message field
 
 ### epgQuery
 
-#### (Added in version 4)
+(Added in version 4)
 
 Query the EPG (event titles) and optionally restrict to channel/tag/content type.
 
@@ -341,7 +341,7 @@ TODO
 
 ### getDvrConfigs
 
-#### (Added in version 16)
+(Added in version 16)
 
 Return a list of DVR configurations.
 
@@ -367,7 +367,7 @@ comment            str        required   DVR configuration Comment
 
 ### addDvrEntry
 
-#### (Added in version 4)
+(Added in version 4)
 
 Create a new DVR entry. Either eventId or channelId, start and stop must be specified.
 
@@ -407,7 +407,7 @@ error              str   optional   English clear text of error message
 
 ### updateDvrEntry
 
-#### (Added in version 5)
+(Added in version 5)
 
 Update an existing DVR entry.
 
@@ -444,7 +444,7 @@ error              str   optional   Error message if update failed
 
 ### cancelDvrEntry
 
-#### (Added in version 5)
+(Added in version 5)
 
 Cancel an existing recording, but don't remove the entry from the database.
 
@@ -469,7 +469,7 @@ error              str   optional   Error message if cancellation failed
 
 ### deleteDvrEntry
 
-#### (Added in version 4)
+(Added in version 4)
 
 Delete an existing DVR entry from the database.
 
@@ -494,7 +494,7 @@ error              str   optional   Error message if the delete fails
 
 ### getDvrCutpoints
 
-#### (Added in version 12)
+(Added in version 12)
 
 Get DVR cutpoints.
 
@@ -533,7 +533,7 @@ type               u32   required   Action type:
 
 ### addAutorecEntry
 
-#### (Added in version 13)
+(Added in version 13)
 
 Create a new Autorec DVR entry. Title must be specified.
 
@@ -576,7 +576,7 @@ error              str   optional   English clear text of error message
 
 ### deleteAutorecEntry
 
-#### (Added in version 13)
+(Added in version 13)
 
 Delete an existing autorec DVR entry from the database.
 
@@ -603,7 +603,7 @@ error              str   optional   Error message if the delete fails
 
 ### addTimerecEntry
 
-#### (Added in version 18)
+(Added in version 18)
 
 Create a new Timerec DVR entry. Title must be specified.
 
@@ -640,7 +640,7 @@ error              str   optional   English clear text of error message
 
 ### deleteTimerecEntry
 
-#### (Added in version 18)
+(Added in version 18)
 
 Delete an existing timerec DVR entry from the database.
 
@@ -667,7 +667,7 @@ error              str   optional   Error message if the delete fails
 
 ### getTicket
 
-#### (Added in version 5)
+(Added in version 5)
 
 Get a ticket to allow access to a channel or recording via HTTP
 
@@ -750,7 +750,7 @@ None
 
 ### subscriptionChangeWeight
 
-#### (Added in version 5)
+(Added in version 5)
 
 Change the weight of an existing subscription
 
@@ -773,7 +773,7 @@ None
 
 ### subscriptionSkip
 
-#### (Added in version 9)
+(Added in version 9)
 
 Skip a timeshift enabled subscription. The response will be asynchronous subscriptionSkip().
 
@@ -798,13 +798,13 @@ None
 
 ### subscriptionSeek
 
-#### (Added in version 9)
+(Added in version 9)
 
 Synonym for subscriptionSkip
 
 ### subscriptionSpeed
 
-#### (Added in version 9)
+(Added in version 9)
 
 Set the playback speed for the subscription. The response will be asynchronous subscriptionSpeed().
 
@@ -827,7 +827,7 @@ None
 
 ### subscriptionLive
 
-#### (Added in version 9)
+(Added in version 9)
 
 Return a timeshifted session to live. Reply will be asynchronous subscriptionSkip().
 
@@ -849,7 +849,7 @@ None
 
 ### subscriptionFilterStream
 
-#### (Added in version 12)
+(Added in version 12)
 
 Enable or disable specified streams by index.
 
@@ -875,7 +875,7 @@ None
 
 ### getProfiles
 
-#### (Added in version 16)
+(Added in version 16)
 
 Return a list of stream profiles (configurations).
 
@@ -901,7 +901,7 @@ comment            str        required   Profile Comment
 
 ### getCodecs
 
-#### (Added in version 11, Removed in version 16)
+(Added in version 11, Removed in version 16)
 
 Return a list of encoders (codecs).
 
@@ -916,7 +916,7 @@ encoders           list[str]  optional   Supported encoders
 
 ### fileOpen
 
-#### (Added in version 8)
+(Added in version 8)
 
 Open a file within the Tvheadend file system. This is now the preferred method (in place of HTTP) for accessing recordings.
 
@@ -954,7 +954,7 @@ mtime              u64   optional   The last time the file was modified
 
 ### fileRead
 
-#### (Added in version 8)
+(Added in version 8)
 
 Read data from a file.
 
@@ -980,7 +980,7 @@ data               bin   required   The data read from the file (size may be les
 
 ### fileClose
 
-#### (Added in version 8)
+(Added in version 8)
 
 Close an opened file.
 
@@ -1002,7 +1002,7 @@ None
 
 ### fileStat
 
-#### (Added in version 8)
+(Added in version 8)
 
 Get status of a file.
 
@@ -1027,7 +1027,7 @@ mtime              u64   optional   The last time the file was modified
 
 ### fileSeek
 
-#### (Added in version 8)
+(Added in version 8)
 
 Seek to position in a file.
 
