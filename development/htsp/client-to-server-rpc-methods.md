@@ -104,11 +104,7 @@ response           msg[] required   Structured response (like in JSON HTTP repli
 ```
 {% endcode %}
 
-Also see:&#x20;
-
-{% content-ref url="../json-api/api-description/" %}
-[api-description](../json-api/api-description/)
-{% endcontent-ref %}
+Also see: [JSON API](../json-api/).
 
 ***
 
@@ -134,6 +130,8 @@ freediskspace      s64   required   Bytes available.
 totaldiskspace     s64   required   Total capacity.
 ```
 {% endcode %}
+
+Also see: [JSON API 'comet/poll'](../json-api/other-functions.md).
 
 ### getSysTime
 
@@ -223,6 +221,8 @@ Reply message fields:\
 see channelAdd
 ```
 
+Also see: [JSON API Channel](../json-api/api-description/channel.md)
+
 ***
 
 ### getEvent
@@ -247,6 +247,8 @@ Reply message fields:\
 ```
 see eventAdd
 ```
+
+Also see: [JSON API EPG](../json-api/api-description/epg.md)
 
 ### getEvents
 
@@ -364,6 +366,8 @@ name               str        required   DVR configuration Name
 comment            str        required   DVR configuration Comment
 ```
 {% endcode %}
+
+Also see: [JSON API DVR](../json-api/api-description/dvr.md)
 
 ### addDvrEntry
 

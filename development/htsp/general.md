@@ -21,7 +21,7 @@ The transmission and reception of a channel over HTSP is referred to as a subscr
 The HTSP server in tvheadend has a payload-aware scheduler for prioritizing more important packets (such as I-frames) before less important ones (such as B-frames). This makes HTSP suitable for long-distance transmissions and/or paths with non-perfect delivery.\
 (It has been tested with a server in Stockholm and the client in Berlin).
 
-For information about the HTSP wire format please refer to the following page: [htsmsg-binary-format.md](htsmsg-binary-format.md "mention")
+For information about the HTSP wire format please refer to the following page: [HTSMSG Binary Format](htsmsg-binary-format.md).
 
 If you're looking to develop a new client, there are several existing client implementations from which you might be able to gain knowledge:
 
