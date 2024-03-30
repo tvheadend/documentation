@@ -17,8 +17,8 @@ layout:
 TVH accepts three episode numbering schemes via XMLTV.
 
 * onscreen
-* xmltv\_ns
 * dd\_progid
+* xmltv\_ns
 
 ```xml
 <episode-num system="onscreen">S01E01</episode-num>
@@ -73,3 +73,5 @@ Set the 'episodeNumber' property to 5.\
 Set the 'episodeOnscreen' property to "s03.e05".
 
 **Note:** The property names in the above examples refer to the HTML/JSON API.
+
+More details on the XMLTV format can be found here: [https://wiki.xmltv.org/index.php/XMLTVFormat](https://wiki.xmltv.org/index.php/XMLTVFormat) and here: [https://github.com/XMLTV/xmltv/blob/master/xmltv.dtd](https://github.com/XMLTV/xmltv/blob/master/xmltv.dtd).
