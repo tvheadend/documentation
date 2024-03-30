@@ -12,22 +12,25 @@ Usage: `tvheadend [OPTIONS]`
 ### Service Configuration <a href="#service-configuration" id="service-configuration"></a>
 
 ```
--c, --config                Alternate config path
--B, --nobackup              Do not backup config tree at upgrade
+-c, --config                Alternate configuration path
+-B, --nobackup              Don't backup configuration tree at upgrade
 -f, --fork                  Fork and run as daemon
 -u, --user                  Run as user
 -g, --group                 Run as group
--p, --pid                   Alternate pid path
+-p, --pid                   Alternate PID path
 -C, --firstrun              If no user account exists then create one with
                             no username and no password. Use with care as
                             it will allow world-wide administrative access
-                            to your Tvheadend installation until you edit
-                            the access-control from within the Tvheadend UI
+                            to your Tvheadend installation until you create or edit
+                            the access control from within the Tvheadend web interface.
 -U, --dbus                  Enable DBus
--e, --dbus_session          DBus - use the session message bus instead system one
--a, --adapters              Only use specified DVB adapters (comma separated)
+-e, --dbus_session          DBus - use the session message bus instead of the system one
+-a, --adapters              Only use specified DVB adapters (comma-separated, -1 = none)
+    --satip_bindaddr        Specify bind address for SAT>IP server
     --satip_rtsp            SAT>IP RTSP port number for server
                             (default: -1 = disable, 0 = webconfig, standard port is 554)
+    --nosatip               Disable SAT>IP client (deprecated flag, use nosatipcli)
+    --nosatipcli            Disable SAT>IP client
     --satip_xml             URL with the SAT>IP server XML location
 ```
 
@@ -48,14 +51,17 @@ Usage: `tvheadend [OPTIONS]`
 
 ```
 -d, --stderr                Enable debug on stderr
+-n, --nostderr              Disable debug on stderr
 -s, --syslog                Enable debug to syslog
--S, --nosyslog              Disable syslog (all msgs)
+-S, --nosyslog              Disable syslog (all messages)
 -l, --logfile               Enable debug to file
     --debug                 Enable debug subsystems
     --trace                 Enable trace subsystems
+    --subsystems            List subsystems
     --fileline              Add file and line numbers to debug
     --threadid              Add the thread ID to debug
-    --uidebug               Enable webUI debug (non-minified JS)
+    --libav                 More verbose libav log
+    --uidebug               Enable web UI debug (non-minified JS)
 -A, --abort                 Immediately abort
 -D, --dump                  Enable coredumps for daemon
     --noacl                 Disable all access control checks
@@ -63,9 +69,11 @@ Usage: `tvheadend [OPTIONS]`
 -j, --join                  Subscribe to a service permanently
 ```
 
-### Testing Options <a href="#testing-options" id="testing-options"></a>
+### Testing Options
 
 ```
 --tsfile_tuners         Number of tsfile tuners
 --tsfile                tsfile input (mux file)
+--tprofile              Gather timing statistics for the code
+--thrdebug              Thread debugging
 ```
