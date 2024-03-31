@@ -74,6 +74,7 @@
 * [Translations](development/translations.md)
 * [XMLTV](development/xmltv/README.md)
   * [Input](development/xmltv/input/README.md)
+    * [Recognised Tags/Attributes](development/xmltv/input/recognised-tags-attributes.md)
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
 
 ## WIP
