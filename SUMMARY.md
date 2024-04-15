@@ -76,6 +76,7 @@
   * [Input](development/xmltv/input/README.md)
     * [Recognised Tags/Attributes](development/xmltv/input/recognised-tags-attributes.md)
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
+* [Random Notes](development/random-notes.md)
 
 ## WIP
 
