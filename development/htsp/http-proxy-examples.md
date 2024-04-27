@@ -4,7 +4,7 @@ The HTSP `api` method can be used as a proxy to access the HTTP/JSON API.  This 
 \
 Data exchanged to and from the TVH server is achieved by encapsulating the required HTTP/JSON parameters within the HTSP message.\
 \
-TVH expects to receive encapsulated JSON data and will respond with encapsulated JSON data.
+TVH expects to receive encapsulated JSON data and will respond with a HTSP map representing the JSON data.
 
 Also see: [JSON API](../json-api/).
 
@@ -28,7 +28,9 @@ response           msg[] required   JSON response
 To execute the HTTP API command:\
 `http://TVH:9981/api/channel/grid`\
 \
-Set the `path` field to `channel/grid` and send the request.  The `args` field is not required.
+Set the `path` field to `channel/grid` and send the request.  The `args` field is not required.\
+\
+The response will be a HTSP `map` containing an element named `response`.  This element will be a `map` containing the the JSON response presented as HTSP elements.
 
 ## Intermediate Request
 
@@ -48,8 +50,16 @@ To execute the HTTP API command:\
 \
 Set the path to `dvr/entry/create`.\
 \
-Create a JSON string containing the properties required to complete the request as detailed in the [JSON API documentation](../json-api/).  In this example, to create a new DVR entry.\
-\
 As with the previous example, the `args` field must be set to type `map`.\
 \
-Within that `map`, create a `str` element named `conf` that contains the required JSON string.
+**Method 1 - JSON String**\
+\
+Create a JSON string containing the properties required to complete the request as detailed in the [JSON API documentation](../json-api/).  In this example, to create a new DVR entry.\
+\
+Within that `map`, create a `str` element named `conf` that contains the required JSON string.\
+\
+**Method 2 - HTSP Map**\
+\
+Instead of creating a JSON string, create a HTSP `map` where each element name matches the name of the JSON property and contains the required property value.\
+\
+`args` should be a `map` that contains another `map` named `conf` that contains another `map` with the required JSON data represented as HTSP elements.
