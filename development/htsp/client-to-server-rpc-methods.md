@@ -104,9 +104,7 @@ response           msg[] required   Structured response (like in JSON HTTP repli
 ```
 {% endcode %}
 
-**Note:** To execute the HTTP API command `http://TVH:9981/api/channel/grid` set the `path` to `channel/grid`.  A string containing the raw JSON response will be returned.
-
-Also see: [JSON API](../json-api/).
+Also see: [JSON API](../json-api/) and [Proxy Examples](http-proxy-examples.md).
 
 ***
 

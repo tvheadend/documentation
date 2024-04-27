@@ -40,6 +40,7 @@
   * [Client to Server (RPC) methods](development/htsp/client-to-server-rpc-methods.md)
   * [Server to Client methods](development/htsp/server-to-client-methods.md)
   * [Protocol Changes](development/htsp/protocol-changes.md)
+  * [HTTP Proxy Examples](development/htsp/http-proxy-examples.md)
 * [JSON API](development/json-api/README.md)
   * [API Description](development/json-api/api-description/README.md)
     * [Common Parameters](development/json-api/api-description/common-parameters.md)
