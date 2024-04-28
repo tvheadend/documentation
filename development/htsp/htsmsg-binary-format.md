@@ -8,7 +8,7 @@ A message can be of either **map** or **list** type. In a **map** each field has
 
 The field types are:
 
-<table><thead><tr><th width="111">Name </th><th width="70">ID </th><th>Description </th></tr></thead><tbody><tr><td>Map </td><td>1</td><td>Sub message of type map</td></tr><tr><td>S64 </td><td>2</td><td>Signed 64bit integer</td></tr><tr><td>Str </td><td>3</td><td>UTF-8 encoded string</td></tr><tr><td>Bin </td><td>4</td><td>Binary blob</td></tr><tr><td>List </td><td>5</td><td>Sub message of type list</td></tr></tbody></table>
+<table><thead><tr><th width="124">Name </th><th width="70">ID </th><th>Description </th></tr></thead><tbody><tr><td>Map </td><td>1</td><td>Sub message of type map</td></tr><tr><td>S64 </td><td>2</td><td>Signed 64bit integer</td></tr><tr><td>Str </td><td>3</td><td>UTF-8 encoded string</td></tr><tr><td>Bin </td><td>4</td><td>Binary blob</td></tr><tr><td>List </td><td>5</td><td>Sub message of type list</td></tr><tr><td>Dbl</td><td>6</td><td>Double precision floating point</td></tr><tr><td>Bool</td><td>7</td><td>Boolean</td></tr><tr><td>UUID</td><td>8</td><td>64 bit UUID in binary format</td></tr></tbody></table>
 
 All in all the message structure is quite similar to JSON but most notably; no **boolean** nor **null** type exist and HTSMSG supports **binary** objects.
 

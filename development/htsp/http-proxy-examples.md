@@ -4,7 +4,7 @@ The HTSP `api` method can be used as a proxy to access the HTTP/JSON API.  This 
 \
 Data exchanged to and from the TVH server is achieved by encapsulating the required HTTP/JSON parameters within the HTSP message.\
 \
-TVH expects to receive encapsulated JSON data and will respond with a HTSP map representing the JSON data.
+TVH expects to receive encapsulated JSON data and will respond with a HTSP map representing the JSON data returned.
 
 Also see: [JSON API](../json-api/).
 
