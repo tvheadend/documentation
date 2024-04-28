@@ -15,3 +15,8 @@ When evaluated as binary data, it matches the first 4 bytes of the proxied JSON 
 The following table summarises UUID handling by API.
 
 <table><thead><tr><th width="148">API Used</th><th width="372">UUID Value Returned</th><th>Encoding</th></tr></thead><tbody><tr><td>JSON</td><td><code>90e9361f38c156df654ecd27b92f398c</code></td><td>String</td></tr><tr><td>Proxied JSON</td><td><code>0x90e9361f38c156df654ecd27b92f398c</code></td><td>Binary</td></tr><tr><td>HTSP</td><td><code>0x90e9361f</code></td><td>Binary</td></tr></tbody></table>
+
+**Additional Notes**
+
+* The 32 bit ID may only contain 31 valid bits under certain circumstances.  Based on how TVH creates 32 bit IDs, it is recommended to apply a `0x7fffffff` mask for comparison operations between long and short ID forms.
+* There appears to be no guarantee that the 32 bit ID will be unique among ALL object types.
