@@ -33,6 +33,7 @@
 ## Development
 
 * [Compiling](development/compiling.md)
+* [Debugging (Work-In-Progress)](development/debugging-work-in-progress.md)
 * [HTSP](development/htsp/README.md)
   * [General](development/htsp/general.md)
   * [HTSMSG Binary Format](development/htsp/htsmsg-binary-format.md)
