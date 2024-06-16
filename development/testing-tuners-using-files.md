@@ -17,7 +17,7 @@ layout:
 If you need to test with a system that you that you don't have access to, for example, testing ATSC functionality on a DVB system, you can use a TS recording to emulate the tuner type.
 
 ```
-./tvheadend--tsfile_tuners 1 --tsfile test.ts
+./tvheadend --tsfile_tuners 1 --tsfile test.ts
 ```
 
 The TS file should contain the whole mux and not just one service.
