@@ -11,7 +11,7 @@ Tvheadend has physical and software considerations:
 
 ## Server Hardware
 
-Tvheadend runs on Intel compatible i386/x86\_64 CPUs and ARM SoC arm/aarch64 processor. It will need a minimum of 1GB disk space for application binaries and configuration data, although the total required will depend on the number and type of tuners you have, the number of channels received, the choice of programme guide data, etc.
+Tvheadend is tested on Intel compatible i386/x86\_64 CPUs and ARM SoC arm/aarch64 processors. It will need a minimum of 1GB disk space for application binaries and configuration data, although the total required will depend on the number and type of tuners you have, the number of channels received, the choice of programme guide data, etc.
 
 Tvheadend is intended to be lightweight and will run in less than 1GB RAM on low-powered NAS and Single Board Computer devices. Many users run Tvheadend on older Raspberry Pi boards with 512MB physical RAM and perhaps only 256MB free memory: although more is sensible and will result in a better user experience. Note that transcoding is CPU intensive and this feature runs best on powerful multi-core systems.
 
