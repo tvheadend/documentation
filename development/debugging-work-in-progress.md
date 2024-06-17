@@ -209,11 +209,11 @@ Note: "set logging on" will cause GDB to write its output to a file, by default 
 
 However I'd strongly recommend that you keep a copy of tvheadend binary and core file in case further analysis is required.
 
-## Dead or Live Lock¶
+## Dead or Live Lock
 
 If Tvheadend appears to die but the process is still running, then its quite possible that the process is deadlocked (or possibly live locked).
 
-#### Buildin deadlock mutex checker (since latest 4.3 version)
+### Buildin deadlock mutex checker (since latest 4.3 version)
 
 Use '--thrdebug 1' as the command line option. The deadlock will be printed to the tvheadend's configuration directory to file **mutex-deadlock.txt** and to the standard task error output (so you can see it through the systemctl service log for example).
 
