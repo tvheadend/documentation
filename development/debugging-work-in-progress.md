@@ -17,7 +17,7 @@ ulimit -c unlimited
 To make this permanent put this somewhere in your shell environment setup (.bashrc, .profile, etc...)\
 Firstly I'd recommend that if you're specifically trying to investigate an issue then you should consider running Tvheadend manually, rather than as a service, as documented [here](https://old.tvheadend.org/projects/tvheadend/wiki/Development).
 
-### Logging¶
+## Logging
 
 I'd strongly recommend that if you're specifically trying to investigate a crash or other problem in Tvheadend that you enable debugging:
 
@@ -41,7 +41,7 @@ it is just set for run-time (current task).
 
 The traces must be compiled to the tvheadend binary - see [Traces](https://old.tvheadend.org/projects/tvheadend/wiki/Traces).
 
-### Incorrect (not useable) crash reports¶
+## Incorrect (not useable) crash reports
 
 ```
 Jun  6 15:01:08 srv tvheadend[10808]: CRASH: Signal: 11 in PRG: /usr/bin/tvheadend (4.3-193~ga4ff519) [15a15a895adaf9c5760b80707f582c2d60cfab01] CWD: /
@@ -65,7 +65,7 @@ Jun  6 15:01:09 srv kernel: [2320412.837462] tvh:mi-table[11208]: segfault at 90
 
 In this case, the debug symbols are missing (look to the top of this page). Install the debug version of the tvheadend package.
 
-### Correct crash reports¶
+## Correct crash reports
 
 ```
 2017-06-06 17:36:53.626 [  ALERT] CRASH: Signal: 6 in PRG: ./build.linux/tvheadend (4.3-195~gf476b37-dirty) [d761557cdfcd10940d79f8758376fadda7e49e8c] CWD: /home/tvheadend/git/tvheadend  
@@ -80,7 +80,7 @@ In this case, the debug symbols are missing (look to the top of this page). Inst
 2017-06-06 17:36:53.690 [  ALERT] CRASH: __libc_start_main+0xf1  (/lib64/libc.so.6)
 ```
 
-### Basic crash debug¶
+## Basic crash debug
 
 You may run tvh in gdb directly using command:
 
@@ -116,7 +116,7 @@ Once you have gdb attached grab a stack trace from every thread using the follow
 
 Note: "set logging on" will cause GDB to write its output to a file, by default this will be gdb.txt in the current directory.
 
-### Enabling coredumps¶
+## Enabling coredumps
 
 If you need to investigate some running problem you can always attach (see below) later and if you need to trap crashes, then you can configure your system to generate a core file and then retrospectively analyse this with gdb.
 
@@ -160,7 +160,7 @@ TVH_ARGS="-D -A"
 
 Note: remember to remove the option after you've tested it!
 
-### Processing core file.¶
+## Processing core file
 
 Once you have a core file you can start up gdb with that coredump, just as if you'd caught the crash while running under gdb:
 
@@ -209,15 +209,15 @@ Note: "set logging on" will cause GDB to write its output to a file, by default 
 
 However I'd strongly recommend that you keep a copy of tvheadend binary and core file in case further analysis is required.
 
-### Dead or Live Lock¶
+## Dead or Live Lock¶
 
 If Tvheadend appears to die but the process is still running, then its quite possible that the process is deadlocked (or possibly live locked).
 
-#### Buildin deadlock mutex checker (since latest 4.3 version)[¶](broken-reference)
+#### Buildin deadlock mutex checker (since latest 4.3 version)
 
 Use '--thrdebug 1' as the command line option. The deadlock will be printed to the tvheadend's configuration directory to file **mutex-deadlock.txt** and to the standard task error output (so you can see it through the systemctl service log for example).
 
-#### GDB¶
+### GDB
 
 The best way to help investigate such a problem is to get a full stack trace from every thread in the system.
 
@@ -255,15 +255,15 @@ It might also be useful to generate a core file for good measure:
 
 This information may give an indication as to why things are locked, often 2 threads are stuck trying to lock a mutex (probably each holds the opposite lock).
 
-### Reporting crash (or lock)¶
+## Reporting crash (or lock)
 
 If you're going to report a crash (or lockup) then please try to provide the above information, including a debug log (or whatever logging you have), a core file and the tvheadend binary and basic information about the platform (distribution, version and architecture) you're running on.
 
-### Memory leaks or corruption¶
+## Memory leaks or corruption
 
 It may be really difficult to track these problems. There are basically two tools which may help to discover the memory leaks or memory corruptions.
 
-### Valgrind¶
+## Valgrind
 
 It is very slow, but it may be useable for things which are triggered every time:
 
@@ -271,7 +271,7 @@ It is very slow, but it may be useable for things which are triggered every time
 valgrind --suppressions=support/valgrind.supp --leak-check=full --show-reachable=yes /tvh_command_line/
 ```
 
-### clang¶
+## clang
 
 There is address and leak sanitizer in the clang toolkit.
 
@@ -341,7 +341,7 @@ READ of size 8 at 0x60700000d928 thread T0
     #2 0x56409f9c9de2 in streaming_done /home/tvh/git/tvheadend/src/streaming.c:597:3
 ```
 
-### Mutex profiling¶
+## Mutex profiling
 
 The code blocks are protected using mutexes. Tvheadend has the debug interface to show locks which took too much time now (latest 4.3 code). Use '--thrdebug 10020' where 20 means 20 millisecond threshold to show the problematic mutexes. The output is printed to standard error file descriptor (stderr) by default. If you run tvheadend using systemctl or initd, you may send those messages to a UDP port. Set the TVHEADEND\_RTLOG\_UDP\_PORT environment variable like:
 
