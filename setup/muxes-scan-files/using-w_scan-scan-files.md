@@ -36,7 +36,7 @@ T 226500000 7MHz  3/4 NONE    QAM64   8k 1/16 NONE	# ABC Sydney
 This file can be copied to the scan file location and once TVH has been restarted, used to scan for services.
 
 Depending upon the exact installation of TVH, scan file can be found in various locations:\
-`./local/share/tvheadend/data/dvb-scan/`\
-`./share/tvheadend/data/dvb-scan/`
+`/usr/local/share/tvheadend/data/dvb-scan/`\
+`/usr/share/tvheadend/data/dvb-scan/`
 
 **Please Note:** depending upon the parameters used, `w_scan` can take a **very** long time to perform a scan.
