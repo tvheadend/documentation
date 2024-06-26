@@ -17,6 +17,9 @@
 
 * [Stages](setup/stages.md)
 * [Concepts](setup/concepts.md)
+* [Muxes/Scan Files](setup/muxes-scan-files/README.md)
+  * [Scan Files](setup/muxes-scan-files/scan-files.md)
+  * [Using w\_scan Scan Files](setup/muxes-scan-files/using-w\_scan-scan-files.md)
 
 ## CONFIGURATION
 
