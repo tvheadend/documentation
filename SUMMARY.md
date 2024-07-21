@@ -82,6 +82,7 @@
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
 * [Object ID Representation](development/object-id-representation.md)
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
+* [Programmers Translation Workflow](development/programmers-translation-workflow.md)
 * [Random Notes](development/random-notes.md)
 
 ## WIP
