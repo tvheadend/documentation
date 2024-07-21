@@ -76,13 +76,13 @@
 * [Object Class Relationships](development/object-class-relationships.md)
 * [Testing Tuners Using Files](development/testing-tuners-using-files.md)
 * [Translations](development/translations.md)
+* [Programmers Translation Workflow](development/programmers-translation-workflow.md)
 * [XMLTV](development/xmltv/README.md)
   * [Input](development/xmltv/input/README.md)
     * [Recognised Tags/Attributes](development/xmltv/input/recognised-tags-attributes.md)
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
 * [Object ID Representation](development/object-id-representation.md)
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
-* [Programmers Translation Workflow](development/programmers-translation-workflow.md)
 * [Random Notes](development/random-notes.md)
 
 ## WIP
