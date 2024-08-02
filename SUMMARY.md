@@ -26,6 +26,9 @@
 * [Concepts](configuration/concepts.md)
 * [Electronic Program Guide](configuration/electronic-program-guide.md)
 * [Digital Video Recorder](configuration/digital-video-recorder.md)
+* [Web User Interface Customisation](configuration/web-user-interface-customisation/README.md)
+  * [Theme](configuration/web-user-interface-customisation/theme.md)
+  * [Date/Time Format](configuration/web-user-interface-customisation/date-time-format.md)
 
 ## APPENDICES
 
