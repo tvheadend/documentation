@@ -22,14 +22,20 @@ Title of another PR ([PR 2345](https://github.com/tvheadend/tvheadend/pull/1740)
 
 ## [Release 2.3.4567](https://cloudsmith.io/\~tvheadend/repos/tvheadend/packages/) (yyyy-mm-dd)
 
-Title of PR ([PR 3456](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm-dd)
+[Title of PR](#user-content-fn-2)[^2] ([PR 3456](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm-dd)
 
-[Yet another PR title](#user-content-fn-2)[^2] ([PR 4567](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm-dd)
+[Yet another PR title](#user-content-fn-3)[^3] ([PR 4567](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm-dd)
 
 [^1]: This could be a description, it should be clear that this belongs to the commit from one line above\
     This may be a multi-line thingy
 
-[^2]: Another annotation goes in here.\
+[^2]: Line1
+
+    Line2
+
+    Line3
+
+[^3]: Another annotation goes in here.\
     Forced line 2\
     Forced line 3\
     Forced line 4
