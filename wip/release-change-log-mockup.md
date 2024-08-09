@@ -29,4 +29,7 @@ Title of PR ([PR 3456](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm
 [^1]: This could be a description, it should be clear that this belongs to the commit from one line above\
     This may be a multi-line thingy
 
-[^2]: Another annotation goes in here.
+[^2]: Another annotation goes in here.\
+    Forced line 2\
+    Forced line 3\
+    Forced line 4
