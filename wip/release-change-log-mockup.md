@@ -33,3 +33,9 @@ Title of PR ([PR 3456](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm
     Forced line 2\
     Forced line 3\
     Forced line 4
+
+    \<br>Maybe html will work
+
+    \<br>Maybe html will work
+
+    \<br>Maybe html will work
