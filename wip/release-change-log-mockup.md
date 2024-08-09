@@ -26,6 +26,7 @@ Title of PR ([PR 3456](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm
 
 [Yet another PR title](#user-content-fn-2)[^2] ([PR 4567](https://github.com/tvheadend/tvheadend/pull/1740) yyyy-mm-dd)
 
-[^1]: This could be a description, it should be clear that this belongs to the commit from one line above
+[^1]: This could be a description, it should be clear that this belongs to the commit from one line above\
+    This may be a multi-line thingy
 
 [^2]: Another annotation goes in here.
