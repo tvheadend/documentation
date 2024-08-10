@@ -3,6 +3,7 @@
 ## Introduction
 
 * [About](README.md)
+* [Release / Change Log](introduction/release-change-log.md)
 
 ## Installation
 
