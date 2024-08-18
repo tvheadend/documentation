@@ -155,30 +155,6 @@ udp
 ratinglabels
 ```
 
-## Incorrect (not useable) crash reports
-
-```
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: Signal: 11 in PRG: /usr/bin/tvheadend (4.3-193~ga4ff519) [15a15a895adaf9c5760b80707f582c2d60cfab01] CWD: /
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: Fault address 0x90 (Address not mapped)
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: STACKTRACE
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:0 0x555558549eba 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:0 0x7f3d97c0c0c0 0x7f3d97bfb000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:0 0x555558525620 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:0 0x5555585257a8 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:? 0x5555585db371 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:? 0x5555585dc1f2 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:? 0x5555585c3212 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:? 0x5555585bb71d 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:? 0x5555585bb8d1 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:0 0x5555585b4589 0x555558350000
-Jun  6 15:01:08 srv tvheadend[10808]: CRASH: ??:0 0x5555585b4796 0x555558350000
-Jun  6 15:01:09 srv tvheadend[10808]: CRASH: ??:0 0x555558511e44 0x555558350000
-Jun  6 15:01:09 srv tvheadend[10808]: CRASH: ??:0 0x7f3d97c02494 0x7f3d97bfb000
-Jun  6 15:01:09 srv kernel: [2320412.837462] tvh:mi-table[11208]: segfault at 90 ip 0000555558525620 sp 00007f3d85ff0b98 error 4 in tvheadend[555558350000+10d1000]
-```
-
-In this case, the debug symbols are missing (look to the top of this page). Install the debug version of the tvheadend package.
-
 ## Crash reports
 
 ### Incorrect (not useable) crash reports
