@@ -1,6 +1,6 @@
 # WebSocket
 
-Tvheadend has a websocket interface on port 9981. It is used by the UI to provide 'live' actions and updates, avoiding the need to refresh the screen.
+Tvheadend has a WebSocket interface on port 9981. It is used by the UI to provide 'live' actions and updates, avoiding the need to refresh the screen.
 
 ### Example Code
 
@@ -34,7 +34,7 @@ The example below creates a WebSocket connection to the Tvheadend server and lis
 
 ### Output
 
-Tvheadend transmits messages on the Websocket interface asynchronously, when either a event occurs or in some cases at scheduled intervals. The output format is JSON.
+Tvheadend transmits messages on the Websocket interface asynchronously, when either an event occurs or in some cases at scheduled intervals. The output format is JSON.
 
 Each message contains a key "messages" whose value is an array of message objects. Each message object contains a key "notificationClass" which specifies the source of the message, and a series of message-specific key-value pairs.
 
