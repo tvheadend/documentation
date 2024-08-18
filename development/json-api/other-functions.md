@@ -46,6 +46,8 @@ curl  "http://192.168.0.1:9981/comet/poll" | jq
 }
 ```
 
+See [WebSocket](websocket.md) for a WebSocket interface to this function.
+
 ### dvrfile
 
 Downloads a previously-recorded file. Called with the UUID of the recording. Requires appropriate privilege (DVR or streaming).
