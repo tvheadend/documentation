@@ -2,6 +2,10 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
+#### v38
+
+* added service provider name to channelAdd -> services
+
 #### v37
 
 * added ratingLabel to EPG & DVR entries

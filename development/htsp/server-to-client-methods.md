@@ -31,6 +31,7 @@ name               str   required   Service name
 type               str   required   Service type
 caid               u32   optional   Encryption CA ID
 caname             str   optional   Encryption CA name
+providername       str   optional   Service provider (Added in version 38)
 ```
 
 ### channelUpdate
