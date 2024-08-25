@@ -2,6 +2,10 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
+#### v39
+
+* added broadcast type to autorec DVR entry
+
 #### v38
 
 * added service provider name to channelAdd -> services
@@ -15,9 +19,18 @@
 
 * added ageRating to DVR entries
 
+#### v26..35
+
+TODO
+
+#### v25
+
+* added updateAutorecEntry and updateTimerecEntry
+* (and other changes not yet documented here)
+
 #### v23..24
 
-* added descrambleInfo (not yet documented below)
+* added descrambleInfo (not yet documented here)
 
 #### v22..23
 

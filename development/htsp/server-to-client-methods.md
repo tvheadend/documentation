@@ -181,8 +181,7 @@ A new autorec recording has been created on the server.
 Message fields:\
 
 
-```
-id                 str   required   ID (string!) of dvrAutorecEntry.
+<pre><code>id                 str   required   ID (string!) of dvrAutorecEntry.
 enabled            u32   required   If autorec entry is enabled (activated).
 name               str   required   Name of the autorec entry (Added in version 18).
 minDuration        u32   required   Minimal duration in seconds (0 = Any).
@@ -202,7 +201,8 @@ channel            u32   optional   Channel ID.
 owner              str   optional   Owner of this autorec entry (Added in version 18).
 creator            str   optional   Creator of this autorec entry (Added in version 18).
 dupDetect          u32   optional   Duplicate detection (see addAutorecEntry) (Added in version 20).
-```
+<strong>broadcastType      u32   optional   Broadcast type (0 = any, 1 = new/premiere/unknown, 2 = repeated, 3 = new/premiere) (Added in version 39).
+</strong></code></pre>
 
 ### autorecEntryUpdate
 

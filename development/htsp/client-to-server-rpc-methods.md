@@ -564,6 +564,7 @@ startExtra         s64   optional   Extra start minutes (pre-time).
 stopExtra          s64   optional   Extra stop minutes (post-time).
 dupDetect          u32   optional   Dup Detect (0 = all, 1 = diff episode, 2 = diff subtitle, 3 = diff description, 4 = once per week, 5 = once per day) (Added in version 20).
 comment            str   optional   User Comment.
+broadcastType      u32   optional   Broadcast type (0 = any, 1 = new/premiere/unknown, 2 = repeated, 3 = new/premiere) (Added in version 39).
 ```
 {% endcode %}
 
@@ -577,6 +578,25 @@ id                 str   optional   ID (string!) of created autorec DVR entry
 error              str   optional   English clear text of error message
 ```
 {% endcode %}
+
+### updateAutorecEntry
+
+(Added in version 25)
+
+Update an existing Autorec DVR entry.&#x20;
+
+Request message fields:
+
+<pre><code>id                 str   required   Autorec DVR Entry ID (string!)
+title              str   optional   Title for the recordings
+<strong>(Rest same as for addAutorecEntry)
+</strong></code></pre>
+
+Reply message fields:
+
+```
+None (errors only propagated via HTTP status code)
+```
 
 ### deleteAutorecEntry
 
@@ -641,6 +661,25 @@ id                 str   optional   ID (string!) of created timerec DVR entry
 error              str   optional   English clear text of error message
 ```
 {% endcode %}
+
+### updateTimerecEntry
+
+(Added in version 25)
+
+Update an existing Timerec DVR entry.&#x20;
+
+Request message fields:
+
+<pre><code>id                 str   required   Timerec DVR Entry ID (string!)
+title              str   optional   Title for the recordings
+<strong>(Rest same as for addTimerecEntry)
+</strong></code></pre>
+
+Reply message fields:
+
+```
+None (errors only propagated via HTTP status code)
+```
 
 ### deleteTimerecEntry
 
