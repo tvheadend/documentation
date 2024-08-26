@@ -85,6 +85,7 @@
   * [Input](development/xmltv/input/README.md)
     * [Recognised Tags/Attributes](development/xmltv/input/recognised-tags-attributes.md)
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
+  * [Output](development/xmltv/output.md)
 * [Object ID Representation](development/object-id-representation.md)
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
 * [Random Notes](development/random-notes.md)
