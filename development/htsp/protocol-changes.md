@@ -2,6 +2,10 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
+#### v40
+
+* added DVR configuration UUID to dvrEntryAdd, dvrEntryUpdate, autorecEntryAdd, autorecEntryUpdate, timerecEntryAdd, timerecEntryUpdate
+
 #### v39
 
 * added broadcast type to autorec DVR entry

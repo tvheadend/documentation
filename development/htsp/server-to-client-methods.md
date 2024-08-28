@@ -124,6 +124,7 @@ enabled            u32   optional   Enabled flag (Added in version 23).
 ageRating          u32   optional   Minimum age rating (Added in version 36).
 ratingLabel        str   optional   Parental rating label text (Added in version 37).
 ratingIcon         str   optional   Parental rating label icon (Added in version 37).
+configId           str   optional   DVR Configuration UUID (Added in version 40).
 ```
 
 Valid values for state:\
@@ -202,7 +203,8 @@ owner              str   optional   Owner of this autorec entry (Added in versio
 creator            str   optional   Creator of this autorec entry (Added in version 18).
 dupDetect          u32   optional   Duplicate detection (see addAutorecEntry) (Added in version 20).
 <strong>broadcastType      u32   optional   Broadcast type (0 = any, 1 = new/premiere/unknown, 2 = repeated, 3 = new/premiere) (Added in version 39).
-</strong></code></pre>
+</strong>configId           str   optional   DVR Configuration UUID (Added in version 40).
+</code></pre>
 
 ### autorecEntryUpdate
 
@@ -240,7 +242,6 @@ title              str   required   Title for the recordings.
 directory          str   optional   Forced directory name (Added in version 19).
 enabled            u32   required   Title for the recordings.
 name               str   required   Name for this timerec entry.
-configName         str   required   DVR Configuration Name / UUID.
 channel            u32   required   Channel ID.
 daysOfWeek         u32   optional   Bitmask - Days of week (0x01 = Monday, 0x40 = Sunday, 0x7f = Whole Week, 0 = Not set).
 priority           u32   optional   Priority (0 = Important, 1 = High, 2 = Normal, 3 = Low, 4 = Unimportant, 5 = Not set).
@@ -249,6 +250,7 @@ stop               u32   required   Minutes from modnight (up to 24*60) for the 
 retention          u32   optional   Retention in days.
 owner              str   optional   Owner of this timerec entry.
 creator            str   optional   Creator of this timerec entry.
+configId           str   optional   DVR Configuration UUID (Added in version 40).
 ```
 
 ### timerecEntryUpdate
