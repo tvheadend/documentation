@@ -2,6 +2,14 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
+#### v42
+
+* added comment field to addDvrEntry, updateDvrEntry, autoreEntryAdd, autorecEntryUpdate, timerecEntryAddd, timerecEntryUpdate&#x20;
+
+#### v41
+
+* tbd
+
 #### v40
 
 * added DVR configuration UUID to dvrEntryAdd, dvrEntryUpdate, autorecEntryAdd, autorecEntryUpdate, timerecEntryAdd, timerecEntryUpdate

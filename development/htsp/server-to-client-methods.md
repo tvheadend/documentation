@@ -125,6 +125,7 @@ ageRating          u32   optional   Minimum age rating (Added in version 36).
 ratingLabel        str   optional   Parental rating label text (Added in version 37).
 ratingIcon         str   optional   Parental rating label icon (Added in version 37).
 configId           str   optional   DVR Configuration UUID (Added in version 40).
+comment            str   optional   User Comment (Added in version 42).
 ```
 
 Valid values for state:\
@@ -204,6 +205,7 @@ creator            str   optional   Creator of this autorec entry (Added in vers
 dupDetect          u32   optional   Duplicate detection (see addAutorecEntry) (Added in version 20).
 <strong>broadcastType      u32   optional   Broadcast type (0 = any, 1 = new/premiere/unknown, 2 = repeated, 3 = new/premiere) (Added in version 39).
 </strong>configId           str   optional   DVR Configuration UUID (Added in version 40).
+comment            str   optional   User Comment (Added in version 42).
 </code></pre>
 
 ### autorecEntryUpdate
@@ -251,6 +253,7 @@ retention          u32   optional   Retention in days.
 owner              str   optional   Owner of this timerec entry.
 creator            str   optional   Creator of this timerec entry.
 configId           str   optional   DVR Configuration UUID (Added in version 40).
+comment            str   optional   User Comment (Added in version 42).
 ```
 
 ### timerecEntryUpdate

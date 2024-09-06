@@ -395,6 +395,7 @@ description        str   optional   Recording description, if no eventId (Added 
 configName         str   optional   DVR configuration name or UUID
 enabled            u32   optional   Enabled flag (Added in version 23).
 ageRating          u32   optional   Minimum age rating (Added in version 36).
+comment            str   optional   User Comment (Added in version 42).
 ```
 {% endcode %}
 
@@ -433,6 +434,7 @@ configName         str   optional   New DVR configuration name or UUID
 retention          u32   optional   Retention in days (Added in version 13)
 priority           u32   optional   Recording priority (Added in version 13)
 enabled            u32   optional   Enabled flag (Added in version 23).
+comment            str   optional   User Comment (Added in version 42).
 ```
 {% endcode %}
 
