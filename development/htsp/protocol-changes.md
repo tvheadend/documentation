@@ -4,7 +4,7 @@
 
 #### v42
 
-* added comment field to addDvrEntry, updateDvrEntry, autoreEntryAdd, autorecEntryUpdate, timerecEntryAddd, timerecEntryUpdate&#x20;
+* added comment field to addDvrEntry, updateDvrEntry, autoreEntryAdd, autorecEntryUpdate, timerecEntryAdd, timerecEntryUpdate&#x20;
 
 #### v41
 
