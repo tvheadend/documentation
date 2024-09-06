@@ -9,6 +9,7 @@ Message fields:\
 
 ```
 channelId          u32   required   ID of channel.
+channelIdStr       str   required   Full UUID of channel (Added in version 41).
 channelNumber      u32   required   Channel number, 0 means unconfigured.
 channelNumberMinor u32   optional   Minor channel number (Added in version 13).
 channelName        str   required   Name of channel.
@@ -60,6 +61,7 @@ Message fields:\
 
 ```
 tagId              u32   required   ID of tag.
+tagIdStr           str   required   Full UUID of tag (Added in version 41).
 tagName            str   required   Name of tag.
 tagIndex           u32   optional   Index value for sorting (default by from min to max) (Added in version 18).
 tagIcon            str   optional   URL to an icon representative for the channel.
@@ -95,6 +97,7 @@ Message fields:\
 
 ```
 id                 u32   required   ID of dvrEntry.
+idStr              str   required   Full UUID of dvrEntry (Added in version 41).
 channel            u32   optional   Channel of dvrEntry.
 start              s64   required   Time of when this entry was scheduled to start recording.
 stop               s64   required   Time of when this entry was scheduled to stop recording.
@@ -124,6 +127,8 @@ enabled            u32   optional   Enabled flag (Added in version 23).
 ageRating          u32   optional   Minimum age rating (Added in version 36).
 ratingLabel        str   optional   Parental rating label text (Added in version 37).
 ratingIcon         str   optional   Parental rating label icon (Added in version 37).
+ratingCountry      str   optional   Parental rating label country (Added in version 41).
+ratingAuthority    str   optional   Parental rating label authority (Added in version 41).
 configId           str   optional   DVR Configuration UUID (Added in version 40).
 comment            str   optional   User Comment (Added in version 42).
 ```
@@ -315,6 +320,9 @@ dvrId              u32   optional   ID of a recording (Added in version 5).
 nextEventId        u32   optional   ID of next event on the same channel.
 ratingLabel        str   optional   Parental rating label text (Added in version 37).
 ratingIcon         str   optional   Parental rating label icon (Added in version 37).
+ratingCountry      str   optional   Parental rating label country (Added in version 41).
+ratingAuthority    str   optional   Parental rating label authority (Added in version 41).
+
 ```
 
 * \*contentType previously had the major DVB category in the bottom 4 bits,\

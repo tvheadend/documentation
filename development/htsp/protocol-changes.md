@@ -8,7 +8,8 @@
 
 #### v41
 
-* tbd
+* added full UUID to channelAdd, tagAdd and dvrEntryAdd
+* added ratingAuthority and ratingCountry to dvrEntryAdd and eventAdd
 
 #### v40
 

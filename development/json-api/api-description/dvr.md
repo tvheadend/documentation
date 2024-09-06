@@ -163,6 +163,8 @@ The value of `rating_label_uuid` points to a current parental rating label recor
       "age_rating": 11,
       "rating_label_saved": "PG,
       "rating_icon_saved": "file:///my/file/location/acma-pg.png",
+      "rating_country_saved": "AUS",
+      "rating_authority_saved": "ACMA",
       "rating_label_uuid": "a82438515ecc857dbf2509517ff3fe40",
       "rating_icon": "imagecache/37",
       "rating_label": "PG"
@@ -252,6 +254,8 @@ Because legislation can change over time, the value of `rating_label_uuid` is bl
       "age_rating": 13,
       "rating_label_saved": "M",
       "rating_icon_saved": "file:///my/file/location/acma-m.png",
+      "rating_country_saved": "AUS",
+      "rating_authority_saved": "ACMA",
       "rating_label_uuid": "",
       "rating_icon": "imagecache/35",
       "rating_label": "M"
