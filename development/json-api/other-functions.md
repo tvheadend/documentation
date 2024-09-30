@@ -117,6 +117,8 @@ When playing streams, the parameters for the underlying stream function can also
 
 This is a complex function which outputs lists of content available from the server, in various formats and filtered in several ways. The syntax for invoking the function depends on the required output and not all combinations of inputs are valid.
 
+**Note:** The hostname portion of the URLs returned within the resulting playlist, for example m3u, will be the same as the hostname supplied with the http request.
+
 #### List all tags
 
 ```
