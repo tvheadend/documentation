@@ -10,6 +10,7 @@
 * [Requirements](installation/requirements.md)
 * [Tuners](installation/tuners.md)
 * [Linux](installation/linux.md)
+* [Virtualisation - Proxmox](installation/virtualisation-proxmox.md)
 * [Docker](installation/docker.md)
 * [NAS](installation/nas.md)
 * [Android](installation/android.md)
@@ -20,7 +21,7 @@
 * [Concepts](setup/concepts.md)
 * [Muxes/Scan Files](setup/muxes-scan-files/README.md)
   * [Scan Files](setup/muxes-scan-files/scan-files.md)
-  * [Using w\_scan Scan Files](setup/muxes-scan-files/using-w\_scan-scan-files.md)
+  * [Using w\_scan Scan Files](setup/muxes-scan-files/using-w_scan-scan-files.md)
 
 ## CONFIGURATION
 
