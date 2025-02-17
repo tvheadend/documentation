@@ -93,5 +93,5 @@
 
 ## WIP
 
-* [Example](wip/example.md)
+* [Setup VAAPI with Lubuntu 24.04](wip/setup-vaapi-with-lubuntu-24.04.md)
 * [Release / Change Log Mockup](wip/release-change-log-mockup.md)
