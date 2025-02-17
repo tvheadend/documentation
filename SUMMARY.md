@@ -41,6 +41,7 @@
 ## Development
 
 * [Compiling](development/compiling.md)
+  * [Compiling TVH with Intel VAAPI support for Lubuntu 24.04](development/compiling/compiling-tvh-with-intel-vaapi-support-for-lubuntu-24.04.md)
 * [HTSP](development/htsp/README.md)
   * [General](development/htsp/general.md)
   * [HTSMSG Binary Format](development/htsp/htsmsg-binary-format.md)
@@ -93,5 +94,4 @@
 
 ## WIP
 
-* [Setup VAAPI with Lubuntu 24.04](wip/setup-vaapi-with-lubuntu-24.04.md)
 * [Release / Change Log Mockup](wip/release-change-log-mockup.md)

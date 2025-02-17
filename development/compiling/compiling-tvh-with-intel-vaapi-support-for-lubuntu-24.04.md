@@ -1,10 +1,16 @@
 ---
-description: Setup VAAPI on x86 (64 bits) system from scrach
+description: Setup Intel VAAPI on x86 (64 bits) system from scratch using Lubuntu 24.04
 ---
 
-# Setup VAAPI with Lubuntu 24.04
+# Compiling TVH with Intel VAAPI support for Lubuntu 24.04
 
-**HW**:&#x20;
+**Legend:**
+
+* `<command>`— this is a command that should be copied to terminal.
+* _ukn@ukn-lenovo:\~$ uname -a_ — this is the output I got; you should get something similar (except username). Is intended for verification purpose.
+* rest of the text is informational.
+
+**Hardware used in the process**:&#x20;
 
 Lenovo ThinkCentre M720q element with i5-9500T
 
@@ -12,7 +18,12 @@ download ISO LUBUNTU 24.04:&#x20;
 
 [https://www.cdimage.ubuntu.com/lubuntu/releases/24.04/release/lubuntu-24.04.1-desktop-amd64.iso](https://www.cdimage.ubuntu.com/lubuntu/releases/24.04/release/lubuntu-24.04.1-desktop-amd64.iso)
 
-flash ISO to USB 32G using rufus-3.21 Note: make sure you plug the USB in USB2.0 socket (black).
+flash ISO to USB 32G using rufus-3.21&#x20;
+
+**Note**:&#x20;
+
+* make sure you plug the USB in USB2.0 socket (black).
+* HDD information will be lost when you install Lubuntu 24.04; make sure you back up any information.
 
 Install Lubuntu to PC with default settings; connect also to internet.
 
@@ -36,7 +47,7 @@ and&#x20;
 
 `sudo systemctl start ssh`
 
-connect over SSH to continue:
+connect over SSH using Putty or terminal to continue the setup (from this point you should not need the keyboard, mouse and display for the server):
 
 Update to latest software
 
@@ -58,7 +69,7 @@ Before you start let's check that GPU is supported in MSDK or OneVPL.
 
 _ukn@ukn-lenovo:\~$ sudo lspci -nn | grep -e VGA 00:02.0 VGA compatible controller \[0300]: Intel Corporation CoffeeLake-S GT2 \[UHD Graphics 630] \[8086:**3e92**]_
 
-you can go on: https://dgpu-docs.intel.com/devices/hardware-table.html and search for: "**3e92**" (check after \[8086:\*\*\*\*]). and see is: Intel® UHD Graphics 630 --> Gen 9 --> Coffee Lake
+you can go on: [https://dgpu-docs.intel.com/devices/hardware-table.html](https://dgpu-docs.intel.com/devices/hardware-table.html) and search for: "**3e92**" (check after \[8086:\*\*\*\*]). and see is: Intel® UHD Graphics 630 --> Gen 9 --> Coffee Lake
 
 install vainfo to check what profiles are available
 
@@ -70,7 +81,7 @@ $################### log output ####################&#x20;
 
 _ukn@ukn-lenovo:\~$ sudo vainfo error: XDG\_RUNTIME\_DIR is invalid or not set in the environment. error: can't connect to X server! libva info: VA-API version 1.20.0 libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so libva info: Found init function \_\_vaDriverInit\_1\_20 libva info: va\_openDriver() returns 0 vainfo: VA-API version: 1.20 (libva 2.12.0) vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 24.1.0 () vainfo: Supported profile and entrypoints VAProfileMPEG2Simple : VAEntrypointVLD VAProfileMPEG2Main : VAEntrypointVLD VAProfileH264Main : VAEntrypointVLD VAProfileH264Main : VAEntrypointEncSliceLP VAProfileH264High : VAEntrypointVLD VAProfileH264High : VAEntrypointEncSliceLP VAProfileJPEGBaseline : VAEntrypointVLD VAProfileJPEGBaseline : VAEntrypointEncPicture VAProfileH264ConstrainedBaseline: VAEntrypointVLD VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP VAProfileVP8Version0\_3 : VAEntrypointVLD VAProfileHEVCMain : VAEntrypointVLD VAProfileHEVCMain10 : VAEntrypointVLD VAProfileVP9Profile0 : VAEntrypointVLD VAProfileVP9Profile2 : VAEntrypointVLD_ $########################################################
 
-instructions:&#x20;
+**Instructions**:&#x20;
 
 [https://dgpu-docs.intel.com/driver/client/overview.html#installing-client-gpus-on-ubuntu-desktop-24-04-lts](https://dgpu-docs.intel.com/driver/client/overview.html#installing-client-gpus-on-ubuntu-desktop-24-04-lts)
 
@@ -100,7 +111,13 @@ Install the media-related packages
 
 Update to latest software:
 
-`sudo apt update sudo apt upgrade sudo reboot sudo apt autoremove --purge`
+`sudo apt update`
+
+`sudo apt upgrade`
+
+`sudo reboot`
+
+`sudo apt autoremove --purge`
 
 `sudo vainfo`
 
@@ -173,7 +190,7 @@ Intel GPU:&#x20;
 
 `sudo apt install i965-va-driver-shaders`
 
-Enable GUC firmware (this is a must for encoding with low power codec):
+Enable GUC/HuC firmware (this is a must for encoding with low power codec):
 
 we need to generate a file: /etc/modprobe.d/i915.conf&#x20;
 
@@ -212,6 +229,10 @@ Verify GuC was enabled:&#x20;
 _ukn@ukn-lenovo:\~$ sudo dmesg | grep guc \[ 2.142048] Setting dangerous option enable\_guc - tainting kernel \[ 2.502650] i915 0000:00:02.0: \[drm] GT0: GuC firmware i915/kbl\_guc\_70.1.1.bin version 70.1.1_
 
 This setting was accepted; bit 2 was able to enable GuC
+
+**Note**:
+
+For system with Intel gen 11+ most likely you might want to check **enable\_guc=3**
 
 -> it sounds scary 'dangerous option' ... but is fine.
 
@@ -309,9 +330,9 @@ http://\[IP\_NUMBER]:9981
 
 Setup GPU transcoding:&#x20;
 
-\--> make sure you have **Expert** settings selected&#x20;
+\--> make sure you have **Expert** settings selected Configure / General / Base / Web Interface Settings / Default View Level
 
-\[browser menus]:&#x20;
+Add codec profile:&#x20;
 
 Configuration / Stream / Codec Profiles --> Add&#x20;
 
@@ -341,9 +362,9 @@ Ignore B-Frames: 0&#x20;
 
 Quality: 1
 
-Press Create button.
+Press **Create** button.
 
-\[browser menus]:&#x20;
+Add stream profile:&#x20;
 
 Configuration / Stream / Stream Profiles --> Add&#x20;
 
