@@ -43,6 +43,7 @@
 * [Compiling](development/compiling.md)
   * [Compiling TVH with VAAPI Support](development/compiling/compiling-tvh-with-vaapi-support/README.md)
     * [for Lubuntu 24.04](development/compiling/compiling-tvh-with-vaapi-support/for-lubuntu-24.04.md)
+    * [for Lubuntu 22.04](development/compiling/compiling-tvh-with-vaapi-support/for-lubuntu-22.04.md)
     * [Level 2](development/compiling/compiling-tvh-with-vaapi-support/level-2.md)
 * [HTSP](development/htsp/README.md)
   * [General](development/htsp/general.md)
