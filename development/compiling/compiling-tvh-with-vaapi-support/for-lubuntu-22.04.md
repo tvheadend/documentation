@@ -16,7 +16,7 @@ Lenovo ThinkCentre M720q element with i5-9500T
 
 download ISO LUBUNTU 22.04:&#x20;
 
-[https://www.cdimage.ubuntu.com/lubuntu/releases/22.04/release/lubuntu-22.04.1-desktop-amd64.iso](https://cdimage.ubuntu.com/lubuntu/releases/22.04/release/lubuntu-22.04.5-desktop-amd64.iso)
+[https://cdimage.ubuntu.com/lubuntu/releases/22.04/release/lubuntu-22.04.5-desktop-amd64.iso](https://cdimage.ubuntu.com/lubuntu/releases/22.04/release/lubuntu-22.04.5-desktop-amd64.iso)
 
 flash ISO to USB 32G using rufus-3.21&#x20;
 
@@ -198,7 +198,9 @@ with the text (only one line) "options i915 enable\_guc=1"
 
 `echo -e "options i915 enable_guc=1" | sudo tee -a /etc/modprobe.d/i915.conf`
 
-`sudo update-initramfs -k all -u sudo update-grub`
+`sudo update-initramfs -k all -u`&#x20;
+
+`sudo update-grub`
 
 `sudo reboot`
 
