@@ -79,3 +79,31 @@ Each message contains a key "messages" whose value is an array of message object
   ]
 }
 ```
+
+### Object Changes
+
+Some "notificationClass" messages may optionally contain one or more of the following arrays: "create", "change" and "delete". When present, these arrays will contain lists of UUIDs that have been created, modified or deleted as part of the scope of the current notification.
+
+> {
+>
+> &#x20;   'messages': \[{
+>
+> &#x20;           'change': \[
+>
+> &#x20;                '3b0c29363b43ebd73f37c54dc18d2b0e',
+>
+> &#x20;                '9651da654aa7d2f620946fcbae7500a6'&#x20;
+>
+> &#x20;               ],
+>
+> &#x20;           'notificationClass': 'channel'&#x20;
+>
+> &#x20;       }
+>
+> &#x20;    ]&#x20;
+>
+> }
+
+When a "notificationClass" is "epg", the arrays described above will contain EventIds rather than UUIDs and the 'update" array will be present rather than "change".  Two additional arrays ('dvr\_delete' and 'dvr\_update') may also be present to indicate a change in recording status of the EPG event.
+
+With regards to "create" and "change"/"update" notifications, the UUID/EventID will need to be explicitly fetched to obtain the new object property values.

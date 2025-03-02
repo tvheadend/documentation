@@ -54,4 +54,4 @@ Also see [Debugging / Trace options](../../../appendices/debugging.md) and [CLI 
 
 **Note 1:**  Users may enter a special `all` subsystem (not listed) instead of nominating each subsystem individually in the WebUI.  This condition can be detected if `traceCoount` and/or `debugCount` is equal to `totalCount`.
 
-**Note 2:** As at April 2014, the `id` field is informational only.  It is provided to facilitate future API development.
+**Note 2:** As at April 2024, the `id` field is informational only.  It is provided to facilitate future API development.
