@@ -33,7 +33,9 @@ Update some settings: Preference / LXQt setting / Power Management: Idle --> unc
 
 open: System Tools / QTerminal
 
-`sudo apt update sudo apt install ssh`
+`sudo apt update`
+
+`sudo apt install ssh`
 
 check status
 
@@ -51,11 +53,11 @@ connect over SSH using Putty or terminal to continue the setup (from this point 
 
 Update to latest software
 
-`sudo apt update`&#x20;
+`sudo apt update`
 
-`sudo apt upgrade`&#x20;
+`sudo apt upgrade`
 
-`sudo reboot sudo`&#x20;
+`sudo reboot sudo`
 
 `apt autoremove --purge`
 
