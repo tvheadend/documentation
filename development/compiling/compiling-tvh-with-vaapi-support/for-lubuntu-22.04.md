@@ -59,7 +59,7 @@ Update to latest software
 
 `sudo reboot sudo`
 
-`apt autoremove --purge`
+`sudo apt autoremove --purge`
 
 _ukn@ukn-lenovo:$ uname -a Linux ukn-lenovo 6.8.0-52-generic #53\~22.04.1-Ubuntu SMP PREEMPT\_DYNAMIC Wed Jan 15 19:18:46 UTC 2 x86\_64 x86\_64 x86\_64 GNU/Linux_
 
