@@ -10,7 +10,7 @@ The following command can be used to create a scan file called `au-wscan`:\
 \
 `w_scan -f t -c AU -x > au-wscan`\
 \
-The explanation of every `w_scan` parameter is beyond the scope of this document, however, the `-x` parameter is required to produce the output format required by TVH.\
+The explanation of every `w_scan` parameter is beyond the scope of this document, however, the `-f t` parameter is for scanning DVB-T, the `-c AU` parameter sets to country to Australia and the `-x` parameter is required to produce the output format required by TVH.\
 \
 Use `w_scan -h` and `w_scan -H` for a full list of parameters.
 
