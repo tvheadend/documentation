@@ -27,7 +27,19 @@ flash ISO to USB 32G using rufus-3.21&#x20;
 
 Install Lubuntu to PC with default settings; connect also to internet.
 
-Update some settings: Preference / LXQt setting / Power Management: Idle --> uncheck Enable Idleness Watcher : Close Preference / LXQt setting / Monitor Settings: 1280 x 720 : Save : Yes Preference / LXQt setting / LXQt Configuration Center : Openbox Settings --> Desktops : Number of desktops : 1 Preference / Screen Saver : Mode : Disable screen saver
+Update some settings:&#x20;
+
+Preference / LXQt setting / Power Management: Idle --> uncheck Enable Idleness Watcher
+
+Press button Close&#x20;
+
+Preference / LXQt setting / Monitor Settings: 1280 x 720&#x20;
+
+Press button Save and Yes&#x20;
+
+Preference / LXQt setting / LXQt Configuration Center : Openbox Settings --> Desktops : Number of desktops : 1&#x20;
+
+Preference / Screen Saver : Mode : Disable screen saver
 
 **Install SSH**
 
@@ -57,7 +69,7 @@ Update to latest software
 
 `sudo apt upgrade`
 
-`sudo reboot sudo`
+`sudo reboot`
 
 `sudo apt autoremove --purge`
 
