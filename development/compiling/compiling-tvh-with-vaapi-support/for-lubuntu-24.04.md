@@ -73,7 +73,9 @@ Update to latest software
 
 `sudo apt autoremove --purge`
 
-_ukn@ukn-lenovo:\~$ uname -a Linux ukn-lenovo 6.8.0-52-generic #53-Ubuntu SMP PREEMPT\_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86\_64 x86\_64 x86\_64 GNU/Linux_
+_ukn@ukn-lenovo:\~$ uname -a_&#x20;
+
+_Linux ukn-lenovo 6.8.0-52-generic #53-Ubuntu SMP PREEMPT\_DYNAMIC Sat Jan 11 00:06:25 UTC 2025 x86\_64 x86\_64 x86\_64 GNU/Linux_
 
 install OneVPL
 
@@ -81,7 +83,9 @@ Before you start let's check that GPU is supported in MSDK or OneVPL.
 
 `sudo lspci -nn | grep -e VGA`
 
-_ukn@ukn-lenovo:\~$ sudo lspci -nn | grep -e VGA 00:02.0 VGA compatible controller \[0300]: Intel Corporation CoffeeLake-S GT2 \[UHD Graphics 630] \[8086:**3e92**]_
+_ukn@ukn-lenovo:\~$ sudo lspci -nn | grep -e VGA_&#x20;
+
+_00:02.0 VGA compatible controller \[0300]: Intel Corporation CoffeeLake-S GT2 \[UHD Graphics 630] \[8086:**3e92**]_
 
 you can go on: [https://dgpu-docs.intel.com/devices/hardware-table.html](https://dgpu-docs.intel.com/devices/hardware-table.html) and search for: "**3e92**" (check after \[8086:\*\*\*\*]). and see is: Intel® UHD Graphics 630 --> Gen 9 --> Coffee Lake
 
@@ -157,13 +161,17 @@ _render_
 
 `groups ${USER}`
 
-_ukn@ukn-lenovo:\~$ groups ${USER} ukn : ukn adm cdrom sudo dip plugdev lpadmin sambashare_
+_ukn@ukn-lenovo:\~$ groups ${USER}_&#x20;
+
+_ukn : ukn adm cdrom sudo dip plugdev lpadmin sambashare_
 
 My user doesn't have access because is not art of 'render' Now we add my user (ukn) to group (render)
 
 `sudo gpasswd -a ${USER} render`
 
-_ukn@ukn-lenovo:\~$ sudo gpasswd -a ${USER} render Adding user ukn to group render_
+_ukn@ukn-lenovo:\~$ sudo gpasswd -a ${USER} render_&#x20;
+
+_Adding user ukn to group render_
 
 `newgrp render`
 
@@ -171,7 +179,9 @@ verify:&#x20;
 
 `groups ${USER}`
 
-_ukn@ukn-lenovo:\~$ groups ${USER} ukn : ukn adm cdrom sudo dip plugdev render lpadmin sambashare_
+_ukn@ukn-lenovo:\~$ groups ${USER}_&#x20;
+
+_ukn : ukn adm cdrom sudo dip plugdev render lpadmin sambashare_
 
 Now we see user is part of **render**.
 
@@ -222,7 +232,13 @@ Verify GuC was enabled:&#x20;
 
 `sudo dmesg | grep guc`
 
-_ukn@ukn-lenovo:\~$ sudo dmesg | grep guc \[ 4.331207] Setting dangerous option enable\_guc - tainting kernel \[ 4.343052] i915 0000:00:02.0: \[drm] GT0: Incompatible option enable\_guc=1 - GuC submission is N/A \[ 4.726395] i915 0000:00:02.0: \[drm] GT0: GuC firmware i915/kbl\_guc\_70.1.1.bin version 70.1.1_
+_ukn@ukn-lenovo:\~$ sudo dmesg | grep guc_&#x20;
+
+_\[ 4.331207] Setting dangerous option enable\_guc - tainting kernel_&#x20;
+
+_\[ 4.343052] i915 0000:00:02.0: \[drm] GT0: Incompatible option enable\_guc=1 - GuC submission is N/A_&#x20;
+
+_\[ 4.726395] i915 0000:00:02.0: \[drm] GT0: GuC firmware i915/kbl\_guc\_70.1.1.bin version 70.1.1_
 
 In this case we see that GuC is not available (so bit 1 is not useful).
 
@@ -242,7 +258,11 @@ Verify GuC was enabled:&#x20;
 
 `sudo dmesg | grep guc`
 
-_ukn@ukn-lenovo:\~$ sudo dmesg | grep guc \[ 2.142048] Setting dangerous option enable\_guc - tainting kernel \[ 2.502650] i915 0000:00:02.0: \[drm] GT0: GuC firmware i915/kbl\_guc\_70.1.1.bin version 70.1.1_
+_ukn@ukn-lenovo:\~$ sudo dmesg | grep guc_&#x20;
+
+_\[ 2.142048] Setting dangerous option enable\_guc - tainting kernel_&#x20;
+
+_\[ 2.502650] i915 0000:00:02.0: \[drm] GT0: GuC firmware i915/kbl\_guc\_70.1.1.bin version 70.1.1_
 
 This setting was accepted; bit 2 was able to enable GuC
 
@@ -312,13 +332,13 @@ _dpkg-deb: building package 'tvheadend-dbg' in '../tvheadend-dbg\_4.3-2375_~~_g6
 
 $################### log output end ####################
 
-From this last log you need to copy the file name starting "'**tvheadend' in '../tvheadend\_4.3...**" (in your case will have a different number after '4.3-') In my case is: **tvheadend-dbg\_4.3-2375**~~**g653bd0400**~~**noble\_amd64.deb**
+From this last log you need to copy the file name starting "'**tvheadend' in '../tvheadend\_4.3...**" (in your case will have a different number after '4.3-') In my case is: **tvheadend\_4.3-2375\~g653bd0400\~noble\_amd64.deb**
 
 `cd ..`
 
 Install tvheadend:
 
-`sudo dpkg -i tvheadend_4.3-2375`~~`g653bd0400`~~`noble_amd64.deb`
+`sudo dpkg -i tvheadend_4.3-2375~g653bd0400~noble_amd64.deb`
 
 We have to add also user hts to render (or your group that has access to GPU):
 
@@ -330,7 +350,9 @@ verify:&#x20;
 
 `groups hts`
 
-_ukn@ukn-lenovo:\~$ groups hts hts : hts render_
+_ukn@ukn-lenovo:\~$ groups hts_&#x20;
+
+_hts : hts render_
 
 Now we see user is part of render.
 
