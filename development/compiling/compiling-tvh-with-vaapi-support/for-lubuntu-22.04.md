@@ -97,7 +97,35 @@ install vainfo to check what profiles are available
 
 $################### log output ####################&#x20;
 
-_ukn@ukn-lenovo:\~$ sudo vainfo error: XDG\_RUNTIME\_DIR not set in the environment. error: can't connect to X server! libva info: VA-API version 1.14.0 libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so libva info: Found init function \_\_vaDriverInit\_1\_14 libva info: va\_openDriver() returns 0 vainfo: VA-API version: 1.14 (libva 2.12.0) vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.3.1 () vainfo: Supported profile and entrypoints VAProfileMPEG2Simple : VAEntrypointVLD VAProfileMPEG2Main : VAEntrypointVLD VAProfileH264Main : VAEntrypointVLD VAProfileH264Main : VAEntrypointEncSliceLP VAProfileH264High : VAEntrypointVLD VAProfileH264High : VAEntrypointEncSliceLP VAProfileJPEGBaseline : VAEntrypointVLD VAProfileJPEGBaseline : VAEntrypointEncPicture VAProfileH264ConstrainedBaseline: VAEntrypointVLD VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP VAProfileVP8Version0\_3 : VAEntrypointVLD VAProfileHEVCMain : VAEntrypointVLD VAProfileHEVCMain10 : VAEntrypointVLD VAProfileVP9Profile0 : VAEntrypointVLD VAProfileVP9Profile2 : VAEntrypointVLD_ $########################################################
+ukn@ukn-lenovo:\~$ sudo vainfo\
+Trying display: wayland\
+error: XDG\_RUNTIME\_DIR not set in the environment.\
+Trying display: x11\
+error: can't connect to X server!\
+Trying display: drm\
+libva info: VA-API version 1.14.0\
+libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so\
+libva info: Found init function \_\_vaDriverInit\_1\_14\
+libva info: va\_openDriver() returns 0\
+vainfo: VA-API version: 1.14 (libva 2.12.0)\
+vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 22.3.1 ()\
+vainfo: Supported profile and entrypoints\
+VAProfileMPEG2Simple : VAEntrypointVLD\
+VAProfileMPEG2Main : VAEntrypointVLD\
+VAProfileH264Main : VAEntrypointVLD\
+VAProfileH264Main : VAEntrypointEncSliceLP\
+VAProfileH264High : VAEntrypointVLD\
+VAProfileJPEGBaseline : VAEntrypointVLD\
+VAProfileJPEGBaseline : VAEntrypointEncPicture\
+VAProfileH264ConstrainedBaseline: VAEntrypointVLD\
+VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP\
+VAProfileVP8Version0\_3 : VAEntrypointVLD\
+VAProfileHEVCMain : VAEntrypointVLD\
+VAProfileHEVCMain10 : VAEntrypointVLD\
+VAProfileVP9Profile0 : VAEntrypointVLD\
+VAProfileVP9Profile2 : VAEntrypointVLD
+
+$########################################################
 
 **Instructions**:&#x20;
 
@@ -141,7 +169,53 @@ Update to latest software:
 
 $################### log output ####################&#x20;
 
-_ukn@ukn-lenovo:\~$ sudo vainfo Trying display: wayland error: XDG\_RUNTIME\_DIR not set in the environment. Trying display: x11 error: can't connect to X server! Trying display: drm libva info: VA-API version 1.22.0 libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so libva info: Found init function \_\_vaDriverInit\_1\_22 libva info: va\_openDriver() returns 0 vainfo: VA-API version: 1.22 (libva 2.22.0) vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 24.4.4 () vainfo: Supported profile and entrypoints VAProfileNone : VAEntrypointVideoProc VAProfileNone : VAEntrypointStats VAProfileMPEG2Simple : VAEntrypointVLD VAProfileMPEG2Simple : VAEntrypointEncSlice VAProfileMPEG2Main : VAEntrypointVLD VAProfileMPEG2Main : VAEntrypointEncSlice VAProfileH264Main : VAEntrypointVLD VAProfileH264Main : VAEntrypointEncSlice VAProfileH264Main : VAEntrypointFEI VAProfileH264Main : VAEntrypointEncSliceLP VAProfileH264High : VAEntrypointVLD VAProfileH264High : VAEntrypointEncSlice VAProfileH264High : VAEntrypointFEI VAProfileH264High : VAEntrypointEncSliceLP VAProfileVC1Simple : VAEntrypointVLD VAProfileVC1Main : VAEntrypointVLD VAProfileVC1Advanced : VAEntrypointVLD VAProfileJPEGBaseline : VAEntrypointVLD VAProfileJPEGBaseline : VAEntrypointEncPicture VAProfileH264ConstrainedBaseline: VAEntrypointVLD VAProfileH264ConstrainedBaseline: VAEntrypointEncSlice VAProfileH264ConstrainedBaseline: VAEntrypointFEI VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP VAProfileVP8Version0\_3 : VAEntrypointVLD VAProfileVP8Version0\_3 : VAEntrypointEncSlice VAProfileHEVCMain : VAEntrypointVLD VAProfileHEVCMain : VAEntrypointEncSlice VAProfileHEVCMain : VAEntrypointFEI VAProfileHEVCMain10 : VAEntrypointVLD VAProfileHEVCMain10 : VAEntrypointEncSlice VAProfileVP9Profile0 : VAEntrypointVLD VAProfileVP9Profile2 : VAEntrypointVLD_ $########################################################
+ukn@ukn-lenovo:\~$ sudo vainfo\
+Trying display: wayland\
+error: XDG\_RUNTIME\_DIR not set in the environment.\
+Trying display: x11\
+error: can't connect to X server!\
+Trying display: drm\
+libva info: VA-API version 1.22.0\
+libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so\
+libva info: Found init function \_\_vaDriverInit\_1\_22\
+libva info: va\_openDriver() returns 0\
+vainfo: VA-API version: 1.22 (libva 2.22.0)\
+vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 24.4.4 ()\
+vainfo: Supported profile and entrypoints\
+VAProfileNone : VAEntrypointVideoProc\
+VAProfileNone : VAEntrypointStats\
+VAProfileMPEG2Simple : VAEntrypointVLD\
+VAProfileMPEG2Simple : VAEntrypointEncSlice\
+VAProfileMPEG2Main : VAEntrypointVLD\
+VAProfileMPEG2Main : VAEntrypointEncSlice\
+VAProfileH264Main : VAEntrypointVLD\
+VAProfileH264Main : VAEntrypointEncSlice\
+VAProfileH264Main : VAEntrypointFEI\
+VAProfileH264Main : VAEntrypointEncSliceLP\
+VAProfileH264High : VAEntrypointVLD\
+VAProfileH264High : VAEntrypointEncSlice\
+VAProfileH264High : VAEntrypointFEI\
+VAProfileH264High : VAEntrypointEncSliceLP\
+VAProfileVC1Simple : VAEntrypointVLD\
+VAProfileVC1Main : VAEntrypointVLD\
+VAProfileVC1Advanced : VAEntrypointVLD\
+VAProfileJPEGBaseline : VAEntrypointVLD\
+VAProfileJPEGBaseline : VAEntrypointEncPicture\
+VAProfileH264ConstrainedBaseline: VAEntrypointVLD\
+VAProfileH264ConstrainedBaseline: VAEntrypointEncSlice\
+VAProfileH264ConstrainedBaseline: VAEntrypointFEI\
+VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP\
+VAProfileVP8Version0\_3 : VAEntrypointVLD\
+VAProfileVP8Version0\_3 : VAEntrypointEncSlice\
+VAProfileHEVCMain : VAEntrypointVLD\
+VAProfileHEVCMain : VAEntrypointEncSlice\
+VAProfileHEVCMain : VAEntrypointFEI\
+VAProfileHEVCMain10 : VAEntrypointVLD\
+VAProfileHEVCMain10 : VAEntrypointEncSlice\
+VAProfileVP9Profile0 : VAEntrypointVLD\
+VAProfileVP9Profile2 : VAEntrypointVLD
+
+$########################################################
 
 Install developer packages:
 
@@ -189,16 +263,60 @@ Now we see user is part of **render**.
 
 $################### log output ####################&#x20;
 
-_ukn@ukn-lenovo:\~$ sudo vainfo Trying display: wayland error: XDG\_RUNTIME\_DIR not set in the environment. Trying display: x11 error: can't connect to X server! Trying display: drm libva info: VA-API version 1.22.0 libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so libva info: Found init function \_\_vaDriverInit\_1\_22 libva info: va\_openDriver() returns 0 vainfo: VA-API version: 1.22 (libva 2.22.0) vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 24.4.4 () vainfo: Supported profile and entrypoints VAProfileNone : VAEntrypointVideoProc VAProfileNone : VAEntrypointStats VAProfileMPEG2Simple : VAEntrypointVLD VAProfileMPEG2Simple : VAEntrypointEncSlice VAProfileMPEG2Main : VAEntrypointVLD VAProfileMPEG2Main : VAEntrypointEncSlice VAProfileH264Main : VAEntrypointVLD VAProfileH264Main : VAEntrypointEncSlice VAProfileH264Main : VAEntrypointFEI VAProfileH264Main : VAEntrypointEncSliceLP VAProfileH264High : VAEntrypointVLD VAProfileH264High : VAEntrypointEncSlice VAProfileH264High : VAEntrypointFEI VAProfileH264High : VAEntrypointEncSliceLP VAProfileVC1Simple : VAEntrypointVLD VAProfileVC1Main : VAEntrypointVLD VAProfileVC1Advanced : VAEntrypointVLD VAProfileJPEGBaseline : VAEntrypointVLD VAProfileJPEGBaseline : VAEntrypointEncPicture VAProfileH264ConstrainedBaseline: VAEntrypointVLD VAProfileH264ConstrainedBaseline: VAEntrypointEncSlice VAProfileH264ConstrainedBaseline: VAEntrypointFEI VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP VAProfileVP8Version0\_3 : VAEntrypointVLD VAProfileVP8Version0\_3 : VAEntrypointEncSlice VAProfileHEVCMain : VAEntrypointVLD VAProfileHEVCMain : VAEntrypointEncSlice VAProfileHEVCMain : VAEntrypointFEI VAProfileHEVCMain10 : VAEntrypointVLD VAProfileHEVCMain10 : VAEntrypointEncSlice VAProfileVP9Profile0 : VAEntrypointVLD VAProfileVP9Profile2 : VAEntrypointVLD_ $########################################################
+ukn@ukn-lenovo:\~$ sudo vainfo\
+Trying display: wayland\
+error: XDG\_RUNTIME\_DIR not set in the environment.\
+Trying display: x11\
+error: can't connect to X server!\
+Trying display: drm\
+libva info: VA-API version 1.22.0\
+libva info: Trying to open /usr/lib/x86\_64-linux-gnu/dri/iHD\_drv\_video.so\
+libva info: Found init function \_\_vaDriverInit\_1\_22\
+libva info: va\_openDriver() returns 0\
+vainfo: VA-API version: 1.22 (libva 2.22.0)\
+vainfo: Driver version: Intel iHD driver for Intel(R) Gen Graphics - 24.4.4 ()\
+vainfo: Supported profile and entrypoints\
+VAProfileNone : VAEntrypointVideoProc\
+VAProfileNone : VAEntrypointStats\
+VAProfileMPEG2Simple : VAEntrypointVLD\
+VAProfileMPEG2Simple : VAEntrypointEncSlice\
+VAProfileMPEG2Main : VAEntrypointVLD\
+VAProfileMPEG2Main : VAEntrypointEncSlice\
+VAProfileH264Main : VAEntrypointVLD\
+VAProfileH264Main : VAEntrypointEncSlice\
+VAProfileH264Main : VAEntrypointFEI\
+VAProfileH264Main : VAEntrypointEncSliceLP\
+VAProfileH264High : VAEntrypointVLD\
+VAProfileH264High : VAEntrypointEncSlice\
+VAProfileH264High : VAEntrypointFEI\
+VAProfileH264High : VAEntrypointEncSliceLP\
+VAProfileVC1Simple : VAEntrypointVLD\
+VAProfileVC1Main : VAEntrypointVLD\
+VAProfileVC1Advanced : VAEntrypointVLD\
+VAProfileJPEGBaseline : VAEntrypointVLD\
+VAProfileJPEGBaseline : VAEntrypointEncPicture\
+VAProfileH264ConstrainedBaseline: VAEntrypointVLD\
+VAProfileH264ConstrainedBaseline: VAEntrypointEncSlice\
+VAProfileH264ConstrainedBaseline: VAEntrypointFEI\
+VAProfileH264ConstrainedBaseline: VAEntrypointEncSliceLP\
+VAProfileVP8Version0\_3 : VAEntrypointVLD\
+VAProfileVP8Version0\_3 : VAEntrypointEncSlice\
+VAProfileHEVCMain : VAEntrypointVLD\
+VAProfileHEVCMain : VAEntrypointEncSlice\
+VAProfileHEVCMain : VAEntrypointFEI\
+VAProfileHEVCMain10 : VAEntrypointVLD\
+VAProfileHEVCMain10 : VAEntrypointEncSlice\
+VAProfileVP9Profile0 : VAEntrypointVLD\
+VAProfileVP9Profile2 : VAEntrypointVLD
+
+$########################################################
 
 the data format is: CODEC/profile : Encoder/Decoder
 
-```
-  VAProfileH264High               : VAEntrypointVLD
-  VAProfileH264High               : VAEntrypointEncSlice
-  VAProfileH264High               : VAEntrypointFEI
-  VAProfileH264High               : VAEntrypointEncSliceLP
-```
+VAProfileH264High : VAEntrypointVLD\
+VAProfileH264High : VAEntrypointEncSlice\
+VAProfileH264High : VAEntrypointFEI\
+VAProfileH264High : VAEntrypointEncSliceLP
 
 This is: H264, Profile high with decoder (**VAEntrypointVLD**) , Encoder (**VAEntrypointEncSlice**) and LowPower encoder (**VAEntrypointEncSliceLP**) Is important to identify if your GPU has this low power (LP) codecs available. In my case I have low power for: H264 profiles Main, High and Constrained
 
