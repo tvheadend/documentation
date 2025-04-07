@@ -32,6 +32,10 @@
   * [Theme](configuration/web-user-interface-customisation/theme.md)
   * [Date/Time Format](configuration/web-user-interface-customisation/date-time-format.md)
 
+***
+
+* [HTTPS access via Reverse Proxy](https-access-via-reverse-proxy.md)
+
 ## APPENDICES
 
 * [FAQ](appendices/faq.md)
