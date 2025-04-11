@@ -99,6 +99,10 @@
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
 * [Random Notes](development/random-notes.md)
 
+***
+
+* [Creating a Mux Dump](creating-a-mux-dump.md)
+
 ## WIP
 
 * [Release / Change Log Mockup](wip/release-change-log-mockup.md)
