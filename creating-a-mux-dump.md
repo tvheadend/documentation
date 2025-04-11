@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A 'Mux Dump' is a special recording where Tvheadend records the entire transmission of a single broadcaster rather than just a specific channel. Mux dumps can be useful for development and debugging purposes.
+A 'Mux Dump' is a special recording where Tvheadend records the entire transmission of a single broadcaster rather than just a specific channel. Mux dumps can be useful for [development and debugging purposes](development/testing-tuners-using-files.md).
 
 For most purposes, a mux dump lasting between 1 and 2 minutes should be suitable, however, if you are requested to provide a mux dump, ask the requester to indicate how long the mux dump should be for their purposes.
 

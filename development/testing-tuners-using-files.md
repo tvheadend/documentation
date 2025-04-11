@@ -25,3 +25,5 @@ The TS file should contain the whole mux and not just one service.
 A new 'network' will be created for the file as well as a number of 'mux', 'service' and 'channel' objects matching the services found within the TS file.
 
 The contents of the TS file will be played on a continuous loop.
+
+See the instructions for creating [Mux Dump Files](../creating-a-mux-dump.md) for more information.
