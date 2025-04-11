@@ -14,7 +14,7 @@ In order to perform a mux dump, you first have to obtain the UUID of the mux tha
 
 ### WebUI Methods
 
-There are many ways to do this, however, one of the easiest is to use the WebUI to navigate to '`Configuration - DVB Inputs - Muxes`'. For each mux listed, there will be a 'Play' icon.
+There are many ways to do this, however, one of the easiest is to use the WebUI to navigate to '`Configuration - DVB Inputs - Muxes`'. For each mux listed, there will be a 'Play' icon, on the left side of each row.
 
 The process will be different between specific browsers, however, the 'Play' icon will always point to a link that contains the UUID of the mux somewhere.
 
