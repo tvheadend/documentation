@@ -122,6 +122,23 @@ streamErrors       str   optional   Number of recording errors (Added in version
 dataErrors         str   optional   Number of stream data errors (Added in version 20).
 path               str   optional   Recording path for playback.
 files              msg   optional   All recorded files for playback (Added in version 21).
+ filename          str   optional   File name.
+ fsid              ???   unknown    TBA. (Maybe the inode.)
+ size              s64   unknown    TBA. (Probably file size in bytes.)
+ info              msg   unknown    Information about the streams in this file.
+  type             str   unknown    Stream type name.
+  width            u32   unknown    Video stream width.
+  height           u32   unknown    Video stream height.
+  duration         u32   unknown    Duration (Units TBA).
+  aspect_num       u32   unknown    Aspect ration numerator.
+  aspect_den       u32   unknown    Aspect ration denominatorTBA.
+  language         str   unknown    3 byte language code.
+  audio_type       u32   optional   Only present for audio streams.
+  audio_version    u32   unknown    TBA.
+  composition_id   u32   unknown    TBA.
+  ancillary_id     u32   unknown    TBA.
+ start             s64   unknown    TBA.
+ stop              s64   unknown    TBA.
 dataSize           s64   optional   Actual file size of the last recordings (Added in version 21).
 enabled            u32   optional   Enabled flag (Added in version 23).
 ageRating          u32   optional   Minimum age rating (Added in version 36).
@@ -131,6 +148,21 @@ ratingCountry      str   optional   Parental rating label country (Added in vers
 ratingAuthority    str   optional   Parental rating label authority (Added in version 41).
 configId           str   optional   DVR Configuration UUID (Added in version 40).
 comment            str   optional   User Comment (Added in version 42).
+channelName        str   optional   Name of the channel.
+removal            u32   optional   TBA. (Something to do with retention.)
+playcount          u32   optional   TBA. (Probably the number of times the recording has been played.)
+playposition       u32   optional   TBA. (Probably the last played position.
+image              str   optional   Path to artwork.
+fanartImage        str   optional   TBA. (Probably path to fan art.)
+copyrightYear      u32   optional   TBA. (Probably the year produced.)
+duplicate          u32   optional   TBA.
+seasonNumber       u32   optional   Season number.
+seasonCount        u32   optional   Season count.
+episodeNumber      u32   optional   Episode number.
+episodeCount       u32   optional   Episode count.
+partNumber         u32   optional   Part number.
+partCount          u32   optional   Part count.
+episodeOnscreen    str   optional   Textual representation of the season/episode number suitable for display.
 ```
 
 Valid values for state:\

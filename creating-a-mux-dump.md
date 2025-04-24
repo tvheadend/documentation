@@ -29,6 +29,7 @@ The process will be different between specific browsers, however, the 'Play' ico
   For example: `d32ef9ef9c67e0552465f6a86caf1d77.m3u` \
   \
   Using this method, the UUID is 'd32ef9ef9c67e0552465f6a86caf1d77' and consists of all of the characters before the '.m3u' in the file name.
+* If you already receiving functioning services from the mux in question, you can navigate to '`Configuration - DVB Inputs - Services`', select one of those functioning services and press the 'Edit' button. Within the edit window, press the 'Read-only Info' drop-down button and copy the value shown in the 'Mux UUID' text box. Press 'Cancel' to close the edit window.
 
 #### API Direct Method
 
