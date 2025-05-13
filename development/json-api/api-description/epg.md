@@ -14,7 +14,7 @@ Query the EPG and optionally apply filters.
 * `channelTag` The (single) channel tag to show events from, specified either by name or uuid. Must be an exact match to the data from [channeltag/list](channel.md#channeltag-list), otherwise all tags are returned.
 * `durationMin` Shortest event to be listed (seconds).
 * `durationMax` Longest event to be listed (seconds).
-* `contentType` Integer representing the genre to be listed - see [epg/content\_type/list](epg.md#epg-content\_type-list).
+* `contentType` Integer representing the genre to be listed - see [epg/content\_type/list](epg.md#epg-content_type-list).
 * `filter` A JSON object describing the filter(s) to be applied. See [Grid Filters](common-parameters.md#grid-filters) for the syntax. String filters can only be applied to the 'channelName', 'title', 'subtitle', 'summary', 'description' and 'extraText' fields.
 * `sort` The key to be sorted by. Default is to sort by 'start'.
 * `dir` If `sort` is specified, setting 'dir' to 'desc' reverses the sort order
@@ -30,25 +30,23 @@ EPG sources differ in the information which they provide, and there are many mor
    "totalCount" : 18575,
    "entries" : [
       {
-         "serieslinkUri" : "crid://www.channel4.com/M4EI0021031162146302",
-         "serieslinkId" : 510179,
-         "episodeId" : 510180,
-         "episodeUri" : "crid://www.channel4.com/41408/013",
-         "summary" : "Tony Robinson and the Team descend on the bleak landscape of Bodmin Moor to examine a Bronze Age village and a vast, ancient 300m-long stone structure.  [S]",
-         "genre" : [
-            160
+         "eventId": 5229882,
+         "episodeUri": "crid://www.itv.com/1002485413",
+         "serieslinkUri": "crid://www.itv.com/ebshd48582",
+         "channelName": "ITV HD",
+         "channelUuid": "fd22bbade9093bd1fedf6ce87d75f9a0",
+         "channelNumber": "3",
+         "start": 1747148400,
+         "stop": 1747152000,
+         "title": "Tipping Point",
+         "summary": "Ben Shephard hosts the quiz show in which three players take on an extraordinary machine in the hope of winning a cash jackpot. [S,HD]",
+         "widescreen": 1,
+         "subtitled": 1,
+         "hd": 1,
+         "genre": [
+           48
          ],
-         "channelName" : "More 4",
-         "title" : "Time Team",
-         "start" : 1508760600,
-         "subtitled" : 1,
-         "channelUuid" : "e1b1de65605dc4e13bac6d4478e66a44",
-         "eventId" : 510178,
-         "nextEventId" : 510181,
-         "widescreen" : 1,
-         "stop" : 1508764500,
-         "subtitle" : "Tony Robinson and the Team descend on the bleak landscape of Bodmin Moor to examine a Bronze Age village and a vast, ancient 300m-long stone structure.  [S]",
-         "channelNumber" : "14",
+         "nextEventId": 5229883
          "ageRating" : 9,
          "ratingLabel" : "PG,
          "ratingLabelIcon" : "imagecache/37"
@@ -104,25 +102,23 @@ The common parameters which apply to other 'load' functions do not work here.
 {
    "entries" : [
       {
-         "serieslinkId" : 261067,
-         "channelUuid" : "e61af00ea8b71683b9a1f41515fa83d3",
-         "title" : "Take Me Out",
-         "nextEventId" : 262992,
-         "widescreen" : 1,
-         "summary" : "Paddy McGuinness presents the dating show. The likely lads include a chocolate factory worker, a city slicker, an oil rig engineer and a gymnast. [S]",
-         "channelNumber" : "113",
-         "channelName" : "ITV2+1",
-         "serieslinkUri" : "crid://www.itv.com/ebs44033",
-         "genre" : [
-            48
+         "eventId": 5229882,
+         "episodeUri": "crid://www.itv.com/1002485413",
+         "serieslinkUri": "crid://www.itv.com/ebshd48582",
+         "channelName": "ITV HD",
+         "channelUuid": "fd22bbade9093bd1fedf6ce87d75f9a0",
+         "channelNumber": "3",
+         "start": 1747148400,
+         "stop": 1747152000,
+         "title": "Tipping Point",
+         "summary": "Ben Shephard hosts the quiz show in which three players take on an extraordinary machine in the hope of winning a cash jackpot. [S,HD]",
+         "widescreen": 1,
+         "subtitled": 1,
+         "hd": 1,
+         "genre": [
+           48
          ],
-         "subtitle" : "Paddy McGuinness presents the dating show. The likely lads include a chocolate factory worker, a city slicker, an oil rig engineer and a gymnast. [S]",
-         "episodeId" : 262718,
-         "episodeUri" : "crid://www.itv.com/1616462450",
-         "eventId" : 262991,
-         "start" : 1515005400,
-         "stop" : 1515009600,
-         "subtitled" : 1,
+         "nextEventId": 5229883
          "ageRating" : 9,
          "ratingLabel" : "PG,
          "ratingLabelIcon" : "imagecache/37"
