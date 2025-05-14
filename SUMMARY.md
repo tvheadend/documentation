@@ -106,3 +106,7 @@
 ## WIP
 
 * [Release / Change Log Mockup](wip/release-change-log-mockup.md)
+
+***
+
+* [Release / Change Log 2](release-change-log-2.md)
