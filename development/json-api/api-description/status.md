@@ -128,6 +128,44 @@ Resets the input counters to zero.
 
 ### connections/cancel
 
+
+
 Disconnects one or more clients.
 
 * `id` ids of the connections, obtained from [status/connections](status.md#status-connections). If set to 'all' then all connections are cancelled (new in 4.3.1680).
+
+### status/activity
+
+Provide information required for assessing the suitability for entering low-power mode and a suitable time for reawakening.  For example, then TVH is used as part of an appliance configuration.
+
+```json
+{
+  "current_time": 1748659324,
+  "next_activity": 1748659500,
+  "activities": {
+    "dvr": 1748764623,
+    "ota_grabber": 1748659500,
+    "int_grabber": 0,
+    "mux_scheduler": 1748725200
+  },
+  "subscription_count": 1,
+  "connection_count": 2
+}
+```
+
+For finer analysis and control, the 'activities' property contains individual scheduling times for the following activities:
+
+* DVR Recordings
+* OTA EPG Grabber
+* Internal EPG Grabber
+* Mux Scheduler
+
+Times are presented as standard Unix epoch values. A value of zero indicates that nothing for that activity type is currently scheduled.
+
+It should be noted that the times provided are strictly from the point of view of TVH internal activities and that the calling program must take into account operating system and hardware boot times when determining the precise time to reawaken the system.
+
+Times are only reported for the EPG grabbers if there are enabled grabbers of that type. Likewise, only enabled mux schedulers are reported.
+
+DVR recordings in progress are also included, therefore, the reported DVR time may be in the past.
+
+The connection and subscription counts are duplications of the summaries provided by the ‘status/connections’ and ‘status/subscriptions’ API calls and are included here in order to provide a single consolidated API call for assessing the suitability for entering low-power mode.
