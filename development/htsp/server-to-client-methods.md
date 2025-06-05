@@ -354,10 +354,10 @@ ratingLabel        str   optional   Parental rating label text (Added in version
 ratingIcon         str   optional   Parental rating label icon (Added in version 37).
 ratingCountry      str   optional   Parental rating label country (Added in version 41).
 ratingAuthority    str   optional   Parental rating label authority (Added in version 41).
-
+isNew              str   optional   Flag to indicate whether the programme is new to air (Added in version 43).
 ```
 
-* \*contentType previously had the major DVB category in the bottom 4 bits,\
+* contentType previously had the major DVB category in the bottom 4 bits,\
   however in v6 this has been changed to properly match DVB, so top 4 bits\
   as major category and bottom 4 bits has sub-category. Clients requesting\
   v5 or lower will get the old output.

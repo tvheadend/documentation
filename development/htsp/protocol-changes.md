@@ -2,6 +2,10 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
+#### v43
+
+* added isNew field to eventAdd
+
 #### v42
 
 * added comment field to addDvrEntry, updateDvrEntry, autorecEntryAdd, autorecEntryUpdate, timerecEntryAdd, timerecEntryUpdate&#x20;
