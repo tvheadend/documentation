@@ -169,3 +169,5 @@ Times are only reported for the EPG grabbers if there are enabled grabbers of th
 DVR recordings in progress are also included, therefore, the reported DVR time may be in the past.
 
 The connection and subscription counts are duplications of the summaries provided by the ‘status/connections’ and ‘status/subscriptions’ API calls and are included here in order to provide a single consolidated API call for assessing the suitability for entering low-power mode.
+
+Requires v4.3-2405.
