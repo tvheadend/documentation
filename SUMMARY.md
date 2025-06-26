@@ -97,6 +97,7 @@
   * [Output](development/xmltv/output.md)
 * [Object ID Representation](development/object-id-representation.md)
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
+* [Pathname Substitution Strings and Command Script Variables](development/pathname-substitution-strings-and-command-script-variables.md)
 * [Random Notes](development/random-notes.md)
 
 ***
