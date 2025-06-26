@@ -53,6 +53,10 @@ All of the help system [documentation files](webui-help-content-workflow.md) are
 
 If no translation is available, the original English text passed to `N_()` or `_()`will be returned.
 
+## Building the .pot Files
+
+The 3 `.pot` files are updated by running the `make intl` command which searches the source files for translatable strings and updates the 3 `.pot` files accordingly.
+
 ## Build Process
 
 Although there is a single unified build process, translations for each programming language or area referred to above are described separately for clarity.
