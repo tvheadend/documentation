@@ -68,6 +68,16 @@ Used by simple.html.
 
 Downloads an icon file. The filename is hard-coded in the source; on installation it is usually placed at `/usr/share/tvheadend/src/webui/static/img/logo.png`.
 
+### HDHomeRun
+
+These functions are only available if HDHomeRun Server has been compiled into Tvheadend. The first two are documented in [https://info.hdhomerun.com/info/http\_api](https://info.hdhomerun.com/info/http_api), the others are required by Plex.
+
+* discover.json
+* lineup.json
+* lineup\_status.json
+* lineup.post
+* device.xml
+
 ### imagecache
 
 Outputs an image from the image cache. Requires streaming, recording or web interface privilege.
@@ -226,7 +236,7 @@ Used internally for theme selection?
 
 ### satip\_server
 
-Outputs one of two files describing the SAT>IP server and the services available from it.
+Outputs one of two files describing the SAT>IP server and the services available from it. SAT>IP server must be compiled into Tvheadend.
 
 ```
 $ curl  http://192.168.0.1:9981/satip_server/desc.xml
