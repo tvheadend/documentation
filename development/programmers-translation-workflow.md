@@ -45,7 +45,7 @@ This system is very similar to [GNU tettext](https://www.gnu.org/software/gettex
 
 ## Programmer Usage
 
-Within program code written in the 'C' programming language, the `N_()` macro is used to identify English text that can be translated into another language. The translated text is returned at run time based on the user's linguistic preferences.
+Within program code written in the 'C' programming language, the `N_()` macro is used to identify English text that can be translated into another language. `_()` is used to return translated text at runtime based on the core application's language setting (from the OS).
 
 Within the WebUI code written in the 'JavaScript' programming language, the `_()` function is used to indicate that translation is required.
 
