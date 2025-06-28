@@ -1,8 +1,14 @@
 # Translations
 
+## Main Application Language
+
+Although, individual WebUI users can select their own display language, the core application takes its language configuration from the operating system.
+
+When TVH loads, it inspects, in sequence, the following environmental variables: `LC_ALL`, `LANG` and `LANGUAGE` for a recognised language. Should no language information be present, or the language present is not recognised, TVH will default to `en_US`.
+
 ## Workflow
 
-Tvheadend uses English (en\_GB) as the master langauge for the WebGUI and in-GUI help. Changes to source code that add new features and capabilities must also include updates to the master template `.pot`files under the `intl` directory if existing strings are reused or new strings added.
+Tvheadend uses English (en\_US) as the master langauge for the WebGUI and in-GUI help. Changes to source code that add new features and capabilities must also include updates to the master template `.pot`files under the `intl` directory if existing strings are reused or new strings added.
 
 Merged changes to master template `.pot`files are automatically replicated to Transifex where we manage the translation process. Our project is here: [https://www.transifex.com/projects/p/tvheadend/](https://www.transifex.com/projects/p/tvheadend/)
 
