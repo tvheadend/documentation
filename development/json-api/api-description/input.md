@@ -47,3 +47,7 @@ Lists the parameters, options and settings for input devices.
 ### hardware/satip/discover
 
 Triggers a discovery process for SAT>IP servers, as Configuration -> General -> SAT>IP Server -> Discover SAT>IP Servers in the GUI. This function is only available if SAT>IP client functionality has been compiled into TVHeadend.
+
+The `op` parameter must be set to `all`.
+
+Example: `/api/hardware/satip/discover?op=all`
