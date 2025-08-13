@@ -1,6 +1,6 @@
 # Config
 
-ADMIN privilege is required for all of these functions except config/capabilities.
+ADMIN privilege is required for all of these functions except config/capabilities and serverinfo.
 
 ### config/capabilities
 
