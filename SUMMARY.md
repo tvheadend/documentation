@@ -71,6 +71,7 @@
     * [EPGgrab](development/json-api/api-description/epggrab.md)
     * [ESfilter](development/json-api/api-description/esfilter.md)
     * [idnode](development/json-api/api-description/idnode.md)
+    * [Imagecache](development/json-api/api-description/imagecache.md)
     * [Input](development/json-api/api-description/input.md)
     * [intlconv/charsets](development/json-api/api-description/intlconv-charsets.md)
     * [Language](development/json-api/api-description/language.md)
