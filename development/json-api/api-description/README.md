@@ -21,6 +21,6 @@ The response from TVH follows the HTTP protocol and includes an HTTP/1.1 header 
 </BODY></HTML>
 ```
 
-The error returned is generic and does not indicate the source of the problem. Authentication failures (incorrect user/pass) will return "401 Unauthorized", lack of privilege "403 Forbidden", non-existent API functions "404 Not Found", incorrect or missing parameters generally "400 Bad Request".
+The error returned is generic and does not indicate the source of the problem. Authentication failures (incorrect user/pass) will return "401 Unauthorised", lack of privilege "403 Forbidden", non-existent API functions "404 Not Found", incorrect or missing parameters generally "400 Bad Request".
 
 Data is usually returned as JSON, without any CR or LF characters - the examples given have been 'prettified' using json\_pp or jq to make them easier to read. Functions which perform an action rather than return data will return an empty JSON object on successful completion.

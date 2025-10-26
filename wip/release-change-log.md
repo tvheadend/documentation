@@ -182,7 +182,7 @@
 * [Translation for 'pl' updated.](#user-content-fn-29)[^29] ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/c723dfa4b927cac9552e544a4e9557767ac17b8f))
 * [Translation for 'pl' updated.](#user-content-fn-29)[^29] ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/3cb8f2bf1e21dce5f88ce7a57a8903d99bd36cec))
 * [Translation for 'pl' updated.](#user-content-fn-32)[^32] ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/a2c5a039fb4aa8d4c38aa4d1752ed9ebbcd04815))
-* Replace poison memset by memset\_s to avoid compiler optimizing it out ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/c7a63e7e3b7c15d6f2c1048efafbaaa5a854ea7d))
+* Replace poison memset by memset\_s to avoid compiler optimising it out ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/c7a63e7e3b7c15d6f2c1048efafbaaa5a854ea7d))
 * Show SeriesLink for AutoRecs ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/771504eb3ea8540cc3c558e8fa91aa67acd6f350))
 * Add some ERRNOs for DVR & Config ([2024-02-20](https://github.com/tvheadend/tvheadend/commit/df46dea3524b313bfeffa60dbeb42b4c93d44099))
 * [Release 12.34.13](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2253*) (2024-02-19)
@@ -247,7 +247,7 @@
 * Mark PRs needing squashing as stale after a while ([2024-02-03](https://github.com/tvheadend/tvheadend/commit/f12919042c60566e3dd90d58940e3add60550e7a))
 * Automatically comment on PRs needing squash ([2024-02-03](https://github.com/tvheadend/tvheadend/commit/ac4a041e00529ba5325755061cd6caef0e3e8210))
 * Fix audio-only timeshift memory usage ([2024-02-03](https://github.com/tvheadend/tvheadend/commit/990b5a8f41dd9c0c039d4ce551e35809a4acbb22))
-* Sanitize filename in content-disposition header ([2024-02-03](https://github.com/tvheadend/tvheadend/commit/154b202288701013be926d5c13b205504483db93))
+* Sanitise filename in content-disposition header ([2024-02-03](https://github.com/tvheadend/tvheadend/commit/154b202288701013be926d5c13b205504483db93))
 * [Nightly build 4.3-2209](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2209*) (2024-02-02)
 * [Nightly build 4.3-2207](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2207*) (2024-02-02)
 * [Nightly build 4.3-2206](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2206*) (2024-02-02)
@@ -384,7 +384,7 @@
 * [update pict\_type from AVPacket to AVFrame](#user-content-fn-118)[^118] ([2023-04-17](https://github.com/tvheadend/tvheadend/commit/e10f98601b8bfee4c6b0093012ce45654666f501))
 * [update to ffmpeg 5.1.3](#user-content-fn-119)[^119] ([2023-04-17](https://github.com/tvheadend/tvheadend/commit/8efac01dccdf11b4b3b196080c085aaa801a62f7))
 * [update to ffmpeg 5.1.2](#user-content-fn-120)[^120] ([2023-04-08](https://github.com/tvheadend/tvheadend/commit/f32c7c59a19a276648d7b068041738e4e8337638))
-* [tv\_meta\_tvdb.py: Fix 'languague' typo.](#user-content-fn-121)[^121] ([2023-04-08](https://github.com/tvheadend/tvheadend/commit/e0f2d3234a67c6c0c88ac84166ce2626d668e0cf))
+* [tv\_meta\_tvdb.py: Fix 'language' typo.](#user-content-fn-121)[^121] ([2023-04-08](https://github.com/tvheadend/tvheadend/commit/e0f2d3234a67c6c0c88ac84166ce2626d668e0cf))
 * [Release 12.34.26](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2115*) (2023-04-02)
 * [tvhmeta: Fix tvhmeta authentication to the tvheadend API.](#user-content-fn-122)[^122] ([2023-04-02](https://github.com/tvheadend/tvheadend/commit/a10f7ea4408e5ba2b0f04cc9db970873eafa883c))
 * Remove references to CLA which is no longer available ([2023-04-02](https://github.com/tvheadend/tvheadend/commit/543fbee6344514b57366ce7c4fe2e103d2570e55))
@@ -420,7 +420,7 @@
 * [update vaapi](#user-content-fn-142)[^142] ([2023-01-23](https://github.com/tvheadend/tvheadend/commit/0adacbdf18f018c9167bbceacc2d5ebb756688e2))
 * [descrambler: cccam: move send keepalive message to traces](#user-content-fn-143)[^143] ([2023-01-23](https://github.com/tvheadend/tvheadend/commit/8082b104aecd7f2bbac3b16b853be50c902cefb3))
 * [descrambler: cccam - simplify cccam\_handle\_keys()](#user-content-fn-144)[^144] ([2023-01-23](https://github.com/tvheadend/tvheadend/commit/b8b6d5eba112a9ace28db4ebee12c4b6154327c7))
-* [descrambler: cclient: optimization for multiple key clients](#user-content-fn-145)[^145] ([2023-01-23](https://github.com/tvheadend/tvheadend/commit/d3cd3d66795df59ca41294a8008b751782f2b948))
+* [descrambler: cclient: optimisation for multiple key clients](#user-content-fn-145)[^145] ([2023-01-23](https://github.com/tvheadend/tvheadend/commit/d3cd3d66795df59ca41294a8008b751782f2b948))
 * [descrambler: cosmetic cleanups, more CAID logs](#user-content-fn-146)[^146] ([2023-01-23](https://github.com/tvheadend/tvheadend/commit/c32ace5a81e86856b3ecb29fa5e0abc170d13182))
 * [descrambler: cwc: do not register bad provider numbers for betacrypt and irdeto](#user-content-fn-147)[^147] ([2023-01-22](https://github.com/tvheadend/tvheadend/commit/3a12b3f99bc31a3217e3e2de96f3a62dac137735))
 * [descrambler: cwc: Fix the additional card registration (mgclient option in &#x6F;_&#x73;_&#x63;_&#x61;_&#x6D;)](#user-content-fn-148)[^148] ([2023-01-22](https://github.com/tvheadend/tvheadend/commit/36c1d65d9d3d6319cde25c76cb3340ed065e8e94))
@@ -439,7 +439,7 @@
 * Don't fail on strict aliasing violations ([2022-12-17](https://github.com/tvheadend/tvheadend/commit/b45571d42e9a08f45d18e368a754d4d82d047d29))
 * [Don't confuse GCC with zero-length array](#user-content-fn-154)[^154] ([2022-12-10](https://github.com/tvheadend/tvheadend/commit/abcb0ea676e7b7e822be990aae7df1aa8ff5b990))
 * [config: Enable HbbTV parser by default](#user-content-fn-155)[^155] ([2022-11-28](https://github.com/tvheadend/tvheadend/commit/d8854960361b0fb6846f0912f509dfad61f3ccbf))
-* [dvb\_psi\_pmt: Recognize AC-4 audio descriptor](#user-content-fn-156)[^156] ([2022-11-28](https://github.com/tvheadend/tvheadend/commit/765d3ed4fd0cc87f8b8594b296833f490ae86ebd))
+* [dvb\_psi\_pmt: Recognise AC-4 audio descriptor](#user-content-fn-156)[^156] ([2022-11-28](https://github.com/tvheadend/tvheadend/commit/765d3ed4fd0cc87f8b8594b296833f490ae86ebd))
 * [Add South Africa to Countries list.](#user-content-fn-157)[^157] ([2022-11-28](https://github.com/tvheadend/tvheadend/commit/eb844deb40cf9a4331c7071e56964f58910c3509))
 * [Build various targets and prepare new repository (#1476)](#user-content-fn-158)[^158] ([2022-11-27](https://github.com/tvheadend/tvheadend/commit/cd8491a5ba3c75c349997357d7751cf0fd83fb53))
 * [Avoid breaking strict aliasing in IP\_AS\_V{4,6}](#user-content-fn-159)[^159] ([2022-11-24](https://github.com/tvheadend/tvheadend/commit/7b95ba4cf9113ae8808b3e4a9425010b607dbaca))
@@ -573,10 +573,10 @@
 * Fix several issues discovered by coverity ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/c5d4d7dea487770dd8b7e4722f0c7fcc7d5315eb))
 * Remove link to bintray as they will shutdown in 2 weeks ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/bbf76ca96b274d0e007ee32b371d94d750217653))
 * Move from travis-ci.org to travis-ci.com and update date ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/d6eff494c5f1329959d435513071dcd2f80cf0fb))
-* Silcense more x265 warnings ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/d002eedb9a57b43c4e4b20a0d2583a7c03027802))
+* Silence more x265 warnings ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/d002eedb9a57b43c4e4b20a0d2583a7c03027802))
 * Enable LIBX265\_DIFFS again ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/4105972735abda7ca955305dd7fac098edd0aaa1))
 * Add accidentally deleted line again ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/9660b9c5ff8f7f3976975939f79b9ef8cd463d6e))
-* [Fix uninitialized memory access for several ioctl commands (#1382)](#user-content-fn-208)[^208] ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/71a597df3e8a2f1c075c21e5786a2f88e334e20d))
+* [Fix uninitialised memory access for several ioctl commands (#1382)](#user-content-fn-208)[^208] ([2021-02-18](https://github.com/tvheadend/tvheadend/commit/71a597df3e8a2f1c075c21e5786a2f88e334e20d))
 * Fix too small memory allocation ([2021-02-17](https://github.com/tvheadend/tvheadend/commit/8e2ac3ac8dd804f2d6c892644948b8178b5f285b))
 * Add ISDB-T in hdhomerun ([2020-12-29](https://github.com/tvheadend/tvheadend/commit/aaca05cc1087e0786eb2b41f050ee8fd3e66c728))
 * [fix vaapi-profiles (#1366)](#user-content-fn-209)[^209] ([2020-12-29](https://github.com/tvheadend/tvheadend/commit/4d91bca9af0ee05b3dd6182549f83cba252ac867))
@@ -585,11 +585,11 @@
 * [Fix possible deadlock when using tvh\_mutex\_trylock()](#user-content-fn-211)[^211] ([2020-12-16](https://github.com/tvheadend/tvheadend/commit/52b255940f9eb71904b9ac01c733cad090cd061a))
 * Sat>IP clear old signal info when opening new stream ([2020-12-14](https://github.com/tvheadend/tvheadend/commit/bd88f3db6a7ed43dc0dca5ed832da13bf627feaf))
 * Remove libva-x11 dependency ([2020-12-06](https://github.com/tvheadend/tvheadend/commit/ecd05a21de3075466476df97cf37ffd42c787e58))
-* [docs: fix simple typo, seperately -> separately](#user-content-fn-212)[^212] ([2020-11-27](https://github.com/tvheadend/tvheadend/commit/1884300f016027cc3427e3f84c1acfbace5561da))
+* [docs: fix simple typo, separately -> separately](#user-content-fn-212)[^212] ([2020-11-27](https://github.com/tvheadend/tvheadend/commit/1884300f016027cc3427e3f84c1acfbace5561da))
 * [in python 3, dict.has\_key() has been removed](#user-content-fn-213)[^213] ([2020-11-14](https://github.com/tvheadend/tvheadend/commit/febcf9818d7c37fec8a98d424934edcb3243d5e4))
 * [Changed shebang of tvhmeta to python](#user-content-fn-214)[^214] ([2020-10-28](https://github.com/tvheadend/tvheadend/commit/214a14f2968857331dc746609e15c9ad46b5f13e))
 * Correct Environment variable name. ([2020-10-28](https://github.com/tvheadend/tvheadend/commit/9a51036e86375103039d38b9c70030c681d06425))
-* [Silcence x265 warnings (#1368)](#user-content-fn-215)[^215] ([2020-10-27](https://github.com/tvheadend/tvheadend/commit/04dd1143ff23ddad5b67d95515a906fa070a5410))
+* [Silence x265 warnings (#1368)](#user-content-fn-215)[^215] ([2020-10-27](https://github.com/tvheadend/tvheadend/commit/04dd1143ff23ddad5b67d95515a906fa070a5410))
 * Add removed checksum ([2020-10-27](https://github.com/tvheadend/tvheadend/commit/11cda04ab15d269d4bf3597d0f1398f49f5fac08))
 * Use https for downloading ffmpeg and update nv-codec-headers ([2020-10-27](https://github.com/tvheadend/tvheadend/commit/cd0f33b148028330c5d6b2c4021934e2cdef271f))
 * Change no\_sanitize("thread") attributes ([2020-10-22](https://github.com/tvheadend/tvheadend/commit/c66e3bc7db52c1e1bcae9de86d8c6fe8ccb46aa4))
@@ -664,7 +664,7 @@
 * satip client: allow to set the rolloff to all possible combinations ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/fb06654aea29c13d883314c03573ddcf6a77c954))
 * satip client: SATIP Kathrein & Triax: Avoid mandatory rolloff on DVBS2, fixes #5517 ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/6c6e0e5103b874fdd926b0f1bcdaed4d7e8b464e))
 * [access: added missing break for connection limit type](#user-content-fn-230)[^230] ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/729651ce96cfd181fac127024267dbe8abedc924))
-* dvr: fix the DVR limit per user condition (substract self) ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/fb23c42a9e398d83a76ad49d07553ddaf4c6e8d5))
+* dvr: fix the DVR limit per user condition (subtract self) ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/fb23c42a9e398d83a76ad49d07553ddaf4c6e8d5))
 * access: allow to change/set xmltv/htsp output format per matched entry ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/0424fc0e30d07ba364fcf35daf34a0a72739f334))
 * access.h: reorder access\_t (format members) ([2019-10-21](https://github.com/tvheadend/tvheadend/commit/895d747cc4f5bf8f655288c3397b6d2db4f08099))
 * Fix division by 0, fixes #5754 ([2019-10-20](https://github.com/tvheadend/tvheadend/commit/d066577c4f663222fe83e00a09e15b28666b5a23))
@@ -673,7 +673,7 @@
 * dvb psi: add 0x87 estype as EAC3 (ATSC), fixes #5684 ([2019-10-17](https://github.com/tvheadend/tvheadend/commit/7f090c9829a98427692e06a907c3197ea7230071))
 * iptv: fix integer overflow on 32-bit platforms ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/baf746bc1d420e7d628994922df0ddcb665f698f))
 * linuxdvb: fix integer overflow on 32-bit platforms ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/0243112a5d6e348d226403f3e91f1a9b91dd35df))
-* [Avoid configure checks being optimized away with LTO](#user-content-fn-231)[^231] ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/cde6e98aabf30741069321f01dbb044f32b97552))
+* [Avoid configure checks being optimised away with LTO](#user-content-fn-231)[^231] ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/cde6e98aabf30741069321f01dbb044f32b97552))
 * packaging: add missing DEBHELPER placeholder to postrm script ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/7767ab4272906b253daa6a1cd61703e1073a2404))
 * Fixed bad quality for vaapi transcoding h264 and hevc with bitrate ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/c767042262eeeac2b416bad2905cdd3697b5378e))
 * [systemd service file: remove wildcard mounts preventing startup - replace with a note](#user-content-fn-232)[^232] ([2019-10-15](https://github.com/tvheadend/tvheadend/commit/6ac41a512410889d2b14a19ae6fc5693772b495d))
@@ -706,7 +706,7 @@
 * linuxdvb: fix signal status monitor ([2019-06-30](https://github.com/tvheadend/tvheadend/commit/92dffe6976416ee3363ab558dbddba101c7d474f))
 * [Fix compilation with libhdhomerun 20190621](#user-content-fn-241)[^241] ([2019-06-30](https://github.com/tvheadend/tvheadend/commit/13cd23c371e3377973502f8dc65654b6a0ff372b))
 * [Makefile: fix -pie linking according to --disable-pie](#user-content-fn-242)[^242] ([2019-06-30](https://github.com/tvheadend/tvheadend/commit/7a71536ec80a3dc03e83dd87ccd67f6a66ecc573))
-* capmt: another complation fix, fixes #5661 ([2019-06-18](https://github.com/tvheadend/tvheadend/commit/771dfd6bea7bd4035ed991eccbe735dc00d3f800))
+* capmt: another compilation fix, fixes #5661 ([2019-06-18](https://github.com/tvheadend/tvheadend/commit/771dfd6bea7bd4035ed991eccbe735dc00d3f800))
 * capmt: fix compilation with recent gcc, fixes #5657 ([2019-06-17](https://github.com/tvheadend/tvheadend/commit/4036e249c365b7840e2c5f9ce7e9b2edbecf3184))
 * [capmt: fix for the oscam r11520+, fixes #5649](#user-content-fn-243)[^243] ([2019-06-12](https://github.com/tvheadend/tvheadend/commit/bc769bfa9260bad6e1caa0c95591b70ae25f47bf))
 * [en50221: fix menu text decoding](#user-content-fn-244)[^244] ([2019-05-20](https://github.com/tvheadend/tvheadend/commit/466a0143195a0a0f15c58d4bbd93c57b13caaccd))
@@ -717,7 +717,7 @@
 * linuxdvb: use the right configuration root for the slave tuners (loading), issue #5128 ([2019-03-20](https://github.com/tvheadend/tvheadend/commit/453ee8dfd80b240e1005502c002bdc6de3f121c8))
 * linuxdvb: create the mux instances also for the slave tuners, issue #5128 ([2019-03-20](https://github.com/tvheadend/tvheadend/commit/937a5fb78552f067f889279a7c20a418c39e283e))
 * [Freesat\_huffman: Suppress characters < 0x20 except \n.](#user-content-fn-247)[^247] ([2019-03-15](https://github.com/tvheadend/tvheadend/commit/1383eab65a93763b8780e5011d592d9f249031b6))
-* http server: fix digest MD5 authorization, fixes #5573 ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/3f0c6b1e28fc5bae5c3e8934c8a79400236a1ac8))
+* http server: fix digest MD5 authorisation, fixes #5573 ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/3f0c6b1e28fc5bae5c3e8934c8a79400236a1ac8))
 * Add sat longitude and usals angle as parameters to the rotor external command ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/ec90d317ea5b5b0a18eb543ee90d1c41c30bf849))
 * [Update to newest ffmpeg to fix libX11 compile issue "DSO missing from commandline"](#user-content-fn-248)[^248] ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/d250c1844798791a1354254a60545d4be5ada197))
 * utils: sbuf - use correct format character, fixes #5565 ([2019-03-07](https://github.com/tvheadend/tvheadend/commit/811fd889e9da762d04977f3531aa1aae8ff37329))
@@ -733,7 +733,7 @@
 * iptv: another improvement in the thread exit procedure, fixes #5550 ([2019-02-28](https://github.com/tvheadend/tvheadend/commit/d2405f2988ab06d2bafba2b5397cacdac26c0d70))
 * iptv: improve the thread exit procedure - use pipe, fixes #5550 ([2019-02-27](https://github.com/tvheadend/tvheadend/commit/65c63116c23df8ea72ba6caa63fb70c94d3b106e))
 * iptv: improve the thread exit procedure, issue #5550 ([2019-02-27](https://github.com/tvheadend/tvheadend/commit/d0f3d09d853759f4e6bff95e706d9b9526fb4bcf))
-* satip client: initialize variable \_w correctly for the PIDs split rewrite, fixes #5544, issue #5549 ([2019-02-16](https://github.com/tvheadend/tvheadend/commit/22eeadd11f8d323355ee3ab6e9068b5e443884ef))
+* satip client: initialise variable \_w correctly for the PIDs split rewrite, fixes #5544, issue #5549 ([2019-02-16](https://github.com/tvheadend/tvheadend/commit/22eeadd11f8d323355ee3ab6e9068b5e443884ef))
 * satip client: fix the compilation, fixes #5547 ([2019-02-16](https://github.com/tvheadend/tvheadend/commit/143e5b1239d7e3ce5f92ef57ad1861e38fa9f148))
 * satip client: fix for the PIDs split - missing delpids, issue #5544 ([2019-02-15](https://github.com/tvheadend/tvheadend/commit/bc6ef3491e0f4bbbaf0de166abf6a44904c48df8))
 * Triax & Kathrein: Increase pid length, issue #5544 ([2019-02-15](https://github.com/tvheadend/tvheadend/commit/7ff49818e6ac5d0c46995f60f33248e1b2e172b0))
@@ -745,7 +745,7 @@
 * http: digest - return back MD5 as only digest hash (multiple login dialogs for firefox/chrome) ([2019-02-14](https://github.com/tvheadend/tvheadend/commit/0af25951debe4da57b94b28265930902535610ab))
 * http: digest - show the SHA hash as an authentication alternative (tested with curl) ([2019-02-14](https://github.com/tvheadend/tvheadend/commit/10eb0614352ebd8669c27d1b94ad72d70784b2f3))
 * mpegts input: fix the compilation error, fixes #5492 ([2019-02-14](https://github.com/tvheadend/tvheadend/commit/ec573f1f410de862d667122e37537807f925b6a4))
-* http server: fix the new digest hashes (appearently firefox nor chrome do support them) ([2019-02-14](https://github.com/tvheadend/tvheadend/commit/a08a525bd754d57555ed8f5a9ac1bb0ad4e11d84))
+* http server: fix the new digest hashes (apparently firefox nor chrome do support them) ([2019-02-14](https://github.com/tvheadend/tvheadend/commit/a08a525bd754d57555ed8f5a9ac1bb0ad4e11d84))
 * mpegts: pid subscription - fix wrong mps\_type mpegts\_mps\_cmp(), fixes #5492 ([2019-02-14](https://github.com/tvheadend/tvheadend/commit/57b766ab7e8ab3dbec2476cc269eaf8101d48b64))
 * http server: add support for SHA-256 and SHA-512/256 digest hashes ([2019-02-13](https://github.com/tvheadend/tvheadend/commit/e61acb8ad4a3411f4e7acfd8133d222299f6d47e))
 * esfilter: cosmetic fix ([2019-02-12](https://github.com/tvheadend/tvheadend/commit/ca6a3f2f7d79e04ad12cf34f78e0f71784eaaa0f))
@@ -780,14 +780,14 @@
 * service: enlist - use also is\_enabled callback to check the network/mux enable state ([2019-01-14](https://github.com/tvheadend/tvheadend/commit/97b71ef9e40064c94f17593547f7c80b1833b45a))
 * otamux: fix the 15 seconds delay for the initial scan ([2019-01-14](https://github.com/tvheadend/tvheadend/commit/757e2a90936a92773209c1867f14583e34b14558))
 * mpegts: add possibility to enable/disable network ([2019-01-14](https://github.com/tvheadend/tvheadend/commit/1413e342daecff36ee22d3b75831599bbb66c7be))
-* http: CORS - small optimization ([2019-01-14](https://github.com/tvheadend/tvheadend/commit/f44e2e58ef360e7fb9f8ab7aacf042e0de725af3))
+* http: CORS - small optimisation ([2019-01-14](https://github.com/tvheadend/tvheadend/commit/f44e2e58ef360e7fb9f8ab7aacf042e0de725af3))
 * http: CORS - add Access-Control-Allow-Credentials header for cookies ([2019-01-14](https://github.com/tvheadend/tvheadend/commit/4bf32134bb31a564ad8ad34402442cd6efd1433e))
 * parse\_ac3: avoid the endless loop for the AC3/EAC3 auto-detection, issue #5353 ([2019-01-13](https://github.com/tvheadend/tvheadend/commit/bd662457daea904eb2d4f5ccc76e0e5ae2e24cd1))
 * otamux: fix NULL dereference, fixes #5488 ([2019-01-09](https://github.com/tvheadend/tvheadend/commit/8e0dd2bee6373156907bde8da7b659948a915e12))
 * doozer: remove OOL Fedora 27 ([2019-01-09](https://github.com/tvheadend/tvheadend/commit/851a6a196d6ee805e36b9adba22158639b282e19))
 * Makefile.ffmpeg: upgrade ffmpeg to 4.1, x264 to 20190108, x265 to 2.9 ([2019-01-09](https://github.com/tvheadend/tvheadend/commit/6d57bb6192c679bc9f82847e387c31972f28d838))
 * avahi: try to fix double free, fixes #5484 ([2019-01-08](https://github.com/tvheadend/tvheadend/commit/fdafda55c5b9be93abb6df1f61cfeed5d8e19dff))
-* DVR: add utf8 validator for title/subtitle when cutted ([2019-01-08](https://github.com/tvheadend/tvheadend/commit/4e8925fe785064be3947e11888638f20e9e7ab50))
+* DVR: add utf8 validator for title/subtitle when cut ([2019-01-08](https://github.com/tvheadend/tvheadend/commit/4e8925fe785064be3947e11888638f20e9e7ab50))
 * epg: add auto-ota-module detection ([2019-01-08](https://github.com/tvheadend/tvheadend/commit/ceb6f1da66b881988f3a74595c8ff5462b635de5))
 * epggrab: reimplement the OTA grabber selection per mux ([2019-01-08](https://github.com/tvheadend/tvheadend/commit/cb01c36843aca863049350da192fac0740155ae5))
 * [ui: Make dialogs slightly bigger.](#user-content-fn-251)[^251] ([2019-01-02](https://github.com/tvheadend/tvheadend/commit/adc90275c4e19f7beeffda9612b0ac63e1791dcf))
@@ -803,14 +803,14 @@
 * xmltv: add support for the lcn tag, fixes #5471 ([2019-01-01](https://github.com/tvheadend/tvheadend/commit/7da43a563fe75368769fde33064d17810d9f2909))
 * satip client: remove the dual condition for Annex B ([2019-01-01](https://github.com/tvheadend/tvheadend/commit/d2cb8bad332ca9455750566e8f84e0af33225aaf))
 * satip client: fix the ATSC-C (Annex B) parameters, fixes #5447 ([2019-01-01](https://github.com/tvheadend/tvheadend/commit/833b61c4d14511ef20ac55a918a7fdc1c231fb0e))
-* cosmetic fixes and optimizations ([2019-01-01](https://github.com/tvheadend/tvheadend/commit/dbee3d2049faa7d5e15374ddef37a91e86768b26))
+* cosmetic fixes and optimisations ([2019-01-01](https://github.com/tvheadend/tvheadend/commit/dbee3d2049faa7d5e15374ddef37a91e86768b26))
 * xmltv export: add LCN to the display-name attribute, fixes #5471 ([2019-01-01](https://github.com/tvheadend/tvheadend/commit/bb8a25ca8b2e2e48b6b76f833f0bf96dde37c896))
 * pass muxer: fix the incorrect section length for EIT table, fixes #5418, issue #5062 ([2018-12-30](https://github.com/tvheadend/tvheadend/commit/fb11090346c06ffd20323bc97d0e32d9855fe50f))
 * teletext: fix the subtitle parser (wrong SCT\_ type match), issue #5422 ([2018-12-28](https://github.com/tvheadend/tvheadend/commit/b17dcf91490c38df678472bef3a117b4c6e2996c))
 * htsp server: use HTTP image URLs for image cache for older clients (pvr.hts), fixes #5455 ([2018-12-28](https://github.com/tvheadend/tvheadend/commit/d3d0249bce84425e94e4bee399b7f2236f77b6bf))
 * imagecache: the timer function is already called inside imagecache\_lock (sorry), fixes #5458 ([2018-12-26](https://github.com/tvheadend/tvheadend/commit/fee0b53e969da78a70229d53f9e1331511b5f237))
 * hdhomerun: auto detect DVB\_T devices ([2018-12-26](https://github.com/tvheadend/tvheadend/commit/88f2634af1bacd5f4768a994562d909f756ab7fb))
-* imagecache: fix the missing ref initialization, fixes #5458 ([2018-12-26](https://github.com/tvheadend/tvheadend/commit/112e06dfdc0a713e97a040eb7c443a31fb2ac46e))
+* imagecache: fix the missing ref initialisation, fixes #5458 ([2018-12-26](https://github.com/tvheadend/tvheadend/commit/112e06dfdc0a713e97a040eb7c443a31fb2ac46e))
 * Fix mpegts packet length in descrambler\_data\_key\_check ([2018-12-25](https://github.com/tvheadend/tvheadend/commit/b3899e3fddad1431269183fd42eba54ec16fdc22))
 * imagecache: do not use global lock, fixes #5453 ([2018-12-25](https://github.com/tvheadend/tvheadend/commit/33901bb1edd3f9859d1190a352ea7c383ebb58ab))
 * [Revert "dvr: move dvr\_notify() call to the global\_lock using timers, fixes #5437"](#user-content-fn-255)[^255] ([2018-12-25](https://github.com/tvheadend/tvheadend/commit/312dce6e22e2d3ab21475a08e1f44dae4859173c))
@@ -878,12 +878,12 @@
 * Maximize use of libdvbcsa's batch processing. ([2018-12-06](https://github.com/tvheadend/tvheadend/commit/531dc8893abfe8995f4c3ed39e47e62c1e99cdab))
 * freebsd: Fixup header files for socket definitions. Make thread owner conditional on Linux. ([2018-12-06](https://github.com/tvheadend/tvheadend/commit/652dbc3c8a58eab427f27ca79065d1e880098f63))
 * Prepend title to autorec comment when created from EPG. ([2018-12-05](https://github.com/tvheadend/tvheadend/commit/a46a8c967382ed27735cb2bc1968a56a1d513509))
-* Fix compilation error: 'saveptr' may be used uninitialized in this function \[-Werror=maybe-uninitialized] ([2018-12-05](https://github.com/tvheadend/tvheadend/commit/0ffb10398ba6fd80ab1f3431aff13556ced8ea50))
+* Fix compilation error: 'saveptr' may be used uninitialised in this function \[-Werror=maybe-uninitialised] ([2018-12-05](https://github.com/tvheadend/tvheadend/commit/0ffb10398ba6fd80ab1f3431aff13556ced8ea50))
 * xmltv: split names in credits, fixes #5359 ([2018-12-05](https://github.com/tvheadend/tvheadend/commit/5bea43b1a4e0f623a9fa22529aec2478d688cab9))
 * htsmsg: check the field/key name length (max 255 characters), issue #5359 ([2018-12-05](https://github.com/tvheadend/tvheadend/commit/42fd13d4c822edfc269e6b527333ab5666211f9d))
 * [http: forbidden status / access\_verify2() cleanups, fixes #5391](#user-content-fn-262)[^262] ([2018-12-03](https://github.com/tvheadend/tvheadend/commit/da5dc10440572e4e6e93d000bff9c6ddc7cf0790))
 * satip client: activity timeout cleanups ([2018-12-03](https://github.com/tvheadend/tvheadend/commit/8635ae50145a91eb8c245b49b0e6662cf1429792))
-* pass muxer: correct SI length for trimed events ([2018-12-03](https://github.com/tvheadend/tvheadend/commit/3d79abab788753bb4f83aacd16ccec5036deab82))
+* pass muxer: correct SI length for trimmed events ([2018-12-03](https://github.com/tvheadend/tvheadend/commit/3d79abab788753bb4f83aacd16ccec5036deab82))
 * tvh\_thread: do not use debug code when not activated, issue #5353, issue #5389 ([2018-12-03](https://github.com/tvheadend/tvheadend/commit/80ea669a5cea155ebbd1161635800c11de0175f6))
 * atomic cleanups in tvh\_thread, tvhlog (clang) ([2018-12-02](https://github.com/tvheadend/tvheadend/commit/39b74cbd8624668d03881dbd6e1184c626748788))
 * tvhlog: add missing lock ([2018-12-02](https://github.com/tvheadend/tvheadend/commit/7cac91a63dd866d81819688077e69ba0b864b7e2))
@@ -928,7 +928,7 @@
 * debian packaging: always reset superuser info on removal ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/0fc08d9ad711fa2555fed2914fbf7b181bb5c346))
 * cosmetic: TVHeadend|tvheadend -> Tvheadend, where needed for consistency ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/9ae0d14ededf94f0a4af9037a38b9a4f0aa5eeab))
 * docs: update and add persistent auth info, refresh some screenshots and tweak a few bits ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/7a9b164937ffa8599b9216fa9888cdbcc1cb66d6))
-* access: a little code reorganization for the latest tags exclude change ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/cc4ded03305514b89553abafa6168a3150480970))
+* access: a little code reorganisation for the latest tags exclude change ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/cc4ded03305514b89553abafa6168a3150480970))
 * access: fix tag exclude ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/4f9fdd0f1517ea07508c54e80d623422959a012b))
 * tvh\_thread: remove restrict keyword ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/6eb97e1c908cffcdc6f95c0a7f44b8b9ad68d37c))
 * thread: add mutex watchdog ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/76dd042e0d3bb93e1102eae65c2d23aa31233274))
@@ -936,7 +936,7 @@
 * move htsstr.h to tvh\_string.h ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/ef3386ee05201e6fae9c556bfcdf335fc5121ce1))
 * imagecache: fix the expire id, issue #4304 ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/750c1e13a504b3c4790fbf6295e86b070d268901))
 * satip client: fix activity timestamp for TCP data transfer mode, fixes #5348 ([2018-11-27](https://github.com/tvheadend/tvheadend/commit/e72b431564c860d5fc711779856dd7f61ed4f568))
-* opentv: improve the splitted event merge logic, issue #5297 ([2018-11-26](https://github.com/tvheadend/tvheadend/commit/f62816bdaab067602557262a790b2c8dadce5776))
+* opentv: improve the split event merge logic, issue #5297 ([2018-11-26](https://github.com/tvheadend/tvheadend/commit/f62816bdaab067602557262a790b2c8dadce5776))
 * imagecache: add 'expire' time for the cached files, fixes #4304 ([2018-11-26](https://github.com/tvheadend/tvheadend/commit/c73e4248a9072be57d5ede3a510773ba06bebc09))
 * tvh-json.py: add proper digest/plain authentication, fixes #5350 ([2018-11-26](https://github.com/tvheadend/tvheadend/commit/d1269210587e3423add62aa0d7aead654eb36ded))
 * satip client: add hard timeout for the incoming data ([2018-11-25](https://github.com/tvheadend/tvheadend/commit/0d101eb9116beea49d99c2d9d4834f77d336a202))
@@ -947,12 +947,12 @@
 * service: do not stop the raw service streaming when service is not enabled ([2018-11-24](https://github.com/tvheadend/tvheadend/commit/08df6feea5f2a07eeace142484c944377b5f6858))
 * pass muxer: check correct variable for MC\_CAP\_ANOTHER\_SERVICE, issue #5344 ([2018-11-24](https://github.com/tvheadend/tvheadend/commit/764c8d4686bb167d247209abd91b365a99bfe5ab))
 * pass muxer: do not check for multiple active services (it might not be true), issue #5344 ([2018-11-24](https://github.com/tvheadend/tvheadend/commit/b65a99a4b017c5b24462121c4d3c8a450a952c11))
-* pass muxer: add possibitity to continue streaming even if the service is changing, issue #5344 ([2018-11-24](https://github.com/tvheadend/tvheadend/commit/e6d3dbaa7d214b6e0c4cccb3b551dbfbd0e34080))
+* pass muxer: add possibility to continue streaming even if the service is changing, issue #5344 ([2018-11-24](https://github.com/tvheadend/tvheadend/commit/e6d3dbaa7d214b6e0c4cccb3b551dbfbd0e34080))
 * webui debugging tab: typo fix ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/bdc2ae9e19520a10cdf0bec0fcc0050b32bc75ff))
 * http/webui: return not found status when redirection is not possible, fixes #5342 ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/4512836a5149d02768e07a1770c7ba987d12f7b8))
 * [webui: epg: fix compatibility issue for FreeBSD](#user-content-fn-265)[^265] ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/d774953f6b1d775ddf31c7ae5bd6cc5e5787d108))
 * webui: Add 'query CSFD' in dvr broadcast info window ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/e6a818972c20df4896c5409df1a59bb6a725eedc))
-* webui: Add 'grougRenderer' in all tabs ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/4d28691d1e8afa02ad0fcb1fb4f3aafe88c90da7))
+* webui: Add 'groupRenderer' in all tabs ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/4d28691d1e8afa02ad0fcb1fb4f3aafe88c90da7))
 * webui: Add group renderer capabilities, now when grouping the title don't care about copyright year ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/e9260627c1a46a130113c36746331bfe8599507a))
 * spawn: show permissions problem with kill, issue #4774 ([2018-11-23](https://github.com/tvheadend/tvheadend/commit/e9aefbf2c6034c81153a773eaa7d016fa81a8a2f))
 * main: Load OpenSSL engines ([2018-11-21](https://github.com/tvheadend/tvheadend/commit/ccd64e698a38adb7f712a841bc3dc4480bb97dfb))
@@ -960,8 +960,8 @@
 * http: rewrite again the access verification routines, fixes #5339 ([2018-11-20](https://github.com/tvheadend/tvheadend/commit/fb329606ba8aa21736367296e795d9b53f3b5df1))
 * dvbpsi: move the cat decoder from descrambler to a common place and use it everywhere ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/39708112cc9d8bed21715f518d89a2f48d1cc271))
 * descrambler: improve EMM handling - add provider id checks ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/6ea7c385a37e49f798ca637d44b985eadd075c3f))
-* linuxdvb: optimize the exlusive check code (previous change) ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/b06567045c70e2d35330688e38c5b702ae084a2c))
-* [webui: access theme - color correction for EPG count info](#user-content-fn-267)[^267] ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/bfa4941a3cab411b786e1d9ebcb85424d67fccf4))
+* linuxdvb: optimise the exclusive check code (previous change) ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/b06567045c70e2d35330688e38c5b702ae084a2c))
+* [webui: access theme - colour correction for EPG count info](#user-content-fn-267)[^267] ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/bfa4941a3cab411b786e1d9ebcb85424d67fccf4))
 * [dvr: Add option to automatically delete recording after playback.](#user-content-fn-268)[^268] ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/d117b0348a4f36ecc8eca91e3c55ee01fcc49e2e))
 * [Need to delete files on complex scheduling when replacing timer after crash.](#user-content-fn-269)[^269] ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/6b99571d1dc4ef61acf93a598fc434eba465c0d0))
 * [updated nginx example](#user-content-fn-270)[^270] ([2018-11-19](https://github.com/tvheadend/tvheadend/commit/57bd906806c426045cc2a9ed746e9be5e6baee07))
@@ -981,14 +981,14 @@
 * satip server: fix the weight handling for the scrambled slave subscriptions, fixes #5314 ([2018-11-07](https://github.com/tvheadend/tvheadend/commit/cf4dfcca07bef5a801e3a8d71588180d7a29ede0))
 * satip server: fix pmt rewrite (wrong CC), use sbuf as the internal data buffer ([2018-11-07](https://github.com/tvheadend/tvheadend/commit/2ad46c44308ab2e6ad9873f22b205cdf196950a8))
 * satip server: fix memory leak for the slave service subscription, fixes #5314 ([2018-11-07](https://github.com/tvheadend/tvheadend/commit/905bf283a2fee9348403c95dc9ad3ca4a9c46929))
-* linuxdvb: do not call linuxdvb\_satconf\_power\_save for non DVB-S frontents, fixes #5311 ([2018-11-03](https://github.com/tvheadend/tvheadend/commit/1648c7b7b5cfe4ce457e4fc04b96feb3c9b7d8a2))
+* linuxdvb: do not call linuxdvb\_satconf\_power\_save for non DVB-S frontends, fixes #5311 ([2018-11-03](https://github.com/tvheadend/tvheadend/commit/1648c7b7b5cfe4ce457e4fc04b96feb3c9b7d8a2))
 * iptv: add some more traces for pipe fds... ([2018-11-03](https://github.com/tvheadend/tvheadend/commit/1222de11478788882d3c94a2b01b37e588f5f074))
 * spawn: close pipe on fork() error path ([2018-11-03](https://github.com/tvheadend/tvheadend/commit/4ba55bfb563ea187fa1ad2666ea3ab6570353b3a))
 * satip client: do faster recovery when the server reboots ([2018-11-01](https://github.com/tvheadend/tvheadend/commit/7fc6cba4d6c9a378aa160751b3f445f500313703))
 * linuxdvb: try to improve the rotor logic (finish the movement), issue #5307 ([2018-11-01](https://github.com/tvheadend/tvheadend/commit/c4f22d84a09f9b154a236dca1617ec0169499c54))
-* linuxdvb: set volt - tiny optimization ([2018-11-01](https://github.com/tvheadend/tvheadend/commit/2b16fcbf657437c227bb48b0d5c3b0b3f7d0d5bb))
+* linuxdvb: set volt - tiny optimisation ([2018-11-01](https://github.com/tvheadend/tvheadend/commit/2b16fcbf657437c227bb48b0d5c3b0b3f7d0d5bb))
 * scanfile: add support for PLS\_CODE and PLS\_MODE, fixes #5305 ([2018-10-31](https://github.com/tvheadend/tvheadend/commit/cba1d85a574eae0c0bab00274fadc67922fb91cf))
-* linuxdvb rotor: improve satellite longtitude description ([2018-10-31](https://github.com/tvheadend/tvheadend/commit/12fac489b794978d73d5ea919f7fe7cd25bd15a1))
+* linuxdvb rotor: improve satellite longitude description ([2018-10-31](https://github.com/tvheadend/tvheadend/commit/12fac489b794978d73d5ea919f7fe7cd25bd15a1))
 * epg: play link - use temporary auth tickets again, fixes #5302 ([2018-10-31](https://github.com/tvheadend/tvheadend/commit/981ba4822d388c2331a5af8fa015bb3c2f917c4a))
 * doozer/autobuild: debian buster target ([2018-10-31](https://github.com/tvheadend/tvheadend/commit/9ceae78f80fd0151577b0cf1b98cafe229c07cf0))
 * autobuild: remove Ubuntu Precise which is EOL (as of April 28, 2017) ([2018-10-31](https://github.com/tvheadend/tvheadend/commit/17717edaa6322a70f5e6e9367bc0352ab209371d))
@@ -1004,7 +1004,7 @@
 * Make authentication ticket lifetime configurable ([2018-10-25](https://github.com/tvheadend/tvheadend/commit/7185713f42eeb82b9fcfcf0b18257c2948e9f95e))
 * webui: Fix #5292 ([2018-10-25](https://github.com/tvheadend/tvheadend/commit/424a108b0fb8d77b2445fa7937fd8d2dfd86feb2))
 * webui: more tooltips for help buttons! ([2018-10-25](https://github.com/tvheadend/tvheadend/commit/689d18238af16fb1516cc1f46ff7cc2bb1aa8e64))
-* tcp: fix wrong used variable initialization, issue #5290 ([2018-10-24](https://github.com/tvheadend/tvheadend/commit/860fb782d0f2923d0b9d5a8728301475357c5ee2))
+* tcp: fix wrong used variable initialisation, issue #5290 ([2018-10-24](https://github.com/tvheadend/tvheadend/commit/860fb782d0f2923d0b9d5a8728301475357c5ee2))
 * access: fix access\_copy() for aa\_auth, fixes #5285 ([2018-10-23](https://github.com/tvheadend/tvheadend/commit/275aec3c3cf9b3c368365249c8bf3d37e57cf043))
 * service mapper: fix locking, issue #5261 ([2018-10-23](https://github.com/tvheadend/tvheadend/commit/7ad64f712e4e62cff8ae7cb878fc90a107c6752b))
 * service mapper: try to determine quickly services without A/V streams, issue #5261 ([2018-10-22](https://github.com/tvheadend/tvheadend/commit/26dc2643eff15312644c4e18ffd07536e7e318d6))
@@ -1015,19 +1015,19 @@
 * dvr: cleanup the error path in dvr\_rec\_subscribe() ([2018-10-22](https://github.com/tvheadend/tvheadend/commit/1f74101898cedf5eaaee5cd8195d044250d92100))
 * dvr\_rec: fix early access\_destroy ([2018-10-22](https://github.com/tvheadend/tvheadend/commit/8e61fcf5f6cf1ed5f6f57a4b7807f5e56debabee))
 * service mapper: implement time watchdog (cca 30 seconds) ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/ef939ad187f60bf6a009140a529d4945103409af))
-* htsp: Tidy serialization of category and keyword. ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/64afb2e0c931e00a3fcc538806e1c40391c7cd7f))
+* htsp: Tidy serialisation of category and keyword. ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/64afb2e0c931e00a3fcc538806e1c40391c7cd7f))
 * http: auth playlist, return unauthorized when the authcode is not present ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/b7e8102ce0118c7028a7567153d986451c74460a))
 * doc: add authentication type for playlist in url.md ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/7f841a351543ef3cb907a90d1fe090497999aa36))
-* fixes for the pernament tickets, issue #5274 ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/a260ce5f6ae557d7ababbbbfc4dbe7f48b1cb0eb))
+* fixes for the permanent tickets, issue #5274 ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/a260ce5f6ae557d7ababbbbfc4dbe7f48b1cb0eb))
 * http: terminate path correctly in http\_resolve() ([2018-10-21](https://github.com/tvheadend/tvheadend/commit/bc2387248ff425fc4a92a79d21228af7e1702a81))
-* add pernament tickets for the authentization, fixes #5274 ([2018-10-20](https://github.com/tvheadend/tvheadend/commit/ee714fc11fbebc4c620230df4053f9a833c49eb7))
+* add permanent tickets for the authentication, fixes #5274 ([2018-10-20](https://github.com/tvheadend/tvheadend/commit/ee714fc11fbebc4c620230df4053f9a833c49eb7))
 * dvb psi: fix for the previous commits - move pmt monitor change to mpegts\_service\_find() ([2018-10-18](https://github.com/tvheadend/tvheadend/commit/ddfbf14888a4ed13ddd134452e43ad2dab71d67e))
 * dvb psi: fix for the previous commit - reinstall pmt monitor only when it's already installed ([2018-10-18](https://github.com/tvheadend/tvheadend/commit/76147c1ddd10c9783a719cfee69931e2da12771b))
 * dvb psi: change PMT monitor when PMT PID changes for SID, issue #4942 ([2018-10-18](https://github.com/tvheadend/tvheadend/commit/f89dc75ba0e9b2aaf86e1746b3ed4434a6f118ed))
 * linuxdvb: fix again the PLS code skip when the default value is used ([2018-10-18](https://github.com/tvheadend/tvheadend/commit/6ff543223b2ff4a0b36e9f86769c84f7efad5c93))
 * linuxdvb: set PLS code only when it differs from 1, fixes #5266 ([2018-10-17](https://github.com/tvheadend/tvheadend/commit/b37656e74dc4387e2c2e1b4252bf8abe4fb5319f))
 * bintray: disable uploads :-( ([2018-10-17](https://github.com/tvheadend/tvheadend/commit/94a7f2df8bd0967328ea7d80f1728c2cd1c226d0))
-* campt: fix the ct\_multipid initialization, fixes #5097 ([2018-10-17](https://github.com/tvheadend/tvheadend/commit/67758d02f2ce9997ba10e22c666f0262ed4efd54))
+* campt: fix the ct\_multipid initialisation, fixes #5097 ([2018-10-17](https://github.com/tvheadend/tvheadend/commit/67758d02f2ce9997ba10e22c666f0262ed4efd54))
 
 **Automatically generated: 2024-08-11 03:05:13 UTC**
 
@@ -1562,7 +1562,7 @@
 
     Single bit signed integers contain a single sign-byte and zero value
 
-    bytes according to the C99 standard. This is not inteded here.
+    bytes according to the C99 standard. This is not intended here.
 
 [^50]: ci: Enforce rebasing PRs before merging
 
@@ -1628,7 +1628,7 @@
 
 [^55]: container: Add container support
 
-    This commit adds support for containizersation of TVHeadend. It adds the
+    This commit adds support for containerisation of TVHeadend. It adds the
 
     actual technology agnostic container file, an entry point and
 
@@ -1636,7 +1636,7 @@
 
     TODO: Healthcheck script is not yet working.
 
-    TODO: Add decent documetnation
+    TODO: Add decent documentation
 
     Signed-off-by: Olliver Schinagl [oliver@schinagl.nl](mailto:oliver@schinagl.nl)
 
@@ -1747,7 +1747,7 @@
 
 [^67]: Use sigaction() instead of signal()
 
-    The behavior of signal() is not consistent or defined when using it
+    The behaviour of signal() is not consistent or defined when using it
 
     to set signal handlers (see "Portability" in
 
@@ -1767,7 +1767,7 @@
 
     terminate it.
 
-    Instead, use sigaction(), which has defined behavior when setting
+    Instead, use sigaction(), which has defined behaviour when setting
 
     signal handlers. Since invoking sigaction() requires several
 
@@ -2295,7 +2295,7 @@
 
     similar looking (but completely different implemented…) EPG dialog does.
 
-    Regession-of: d501059995
+    Regression-of: d501059995
 
     Fixes: https://tvheadend.org/issues/6297
 
@@ -2439,7 +2439,7 @@
 
     headers after all. If not, we can always add if needed, but adding
 
-    usless code doesn't help anyone generally.
+    useless code doesn't help anyone generally.
 
     ```
 
@@ -2573,7 +2573,7 @@
 
     With the newly added XDG helpers, this becomes a triviality.
 
-    This change does mean, that the behavior is slightly changed, as XDG
+    This change does mean, that the behaviour is slightly changed, as XDG
 
     directories are probed first.
 
@@ -2631,7 +2631,7 @@
 
     from `hts/tvheaded` to just `hts`.
 
-    The implementation does not change behavior of existing installations!
+    The implementation does not change behaviour of existing installations!
 
     If `.hts/tvheadend` exists, it will be used as before.
 
@@ -2726,15 +2726,15 @@
     * src/transcoding/transcode/hwaccels/vaapi.c --> incorporated the struct from libavcodec/vaapi.h
     * src/transcoding/transcode/video.c: update type for qdata\_size
 
-[^121]: tv\_meta\_tvdb.py: Fix 'languague' typo.
+[^121]: tv\_meta\_tvdb.py: Fix 'language' typo.
 
-    Typo 'languague' prevents the script from fetching poster art.
+    Typo 'language' prevents the script from fetching poster art.
 
     Fixes #6262.
 
 [^122]: tvhmeta: Fix tvhmeta authentication to the tvheadend API.
 
-    Construct and add an Authorization header to the request, when a
+    Construct and add an Authorisation header to the request, when a
 
     username and password are provided to tvhmeta.
 
@@ -2883,7 +2883,7 @@
 
     Signed-off-by: Jaroslav Kysela [perex@perex.cz](mailto:perex@perex.cz)
 
-[^145]: descrambler: cclient: optimization for multiple key clients
+[^145]: descrambler: cclient: optimisation for multiple key clients
 
     Do not use client when other handles requests.
 
@@ -2950,7 +2950,7 @@
     * implemented new (dynamic) settings adjustment (in js)
     * added new parameters: b, low\_power, loop\_filter\_level, loop\_filter\_sharpness, async\_depth
     * tvhva\_context\_check\_profile() will change TVHVAContext->entrypoint from VAEntrypointEncSlice into VAEntrypointEncSliceLP if VAEntrypointEncSlice is not available for that CODEC (according to VAAPI info)
-    * moved low\_power to tvh\_codeo\_profile in order to initialize properly the entrypoint
+    * moved low\_power to tvh\_codeo\_profile in order to initialise properly the entrypoint
     * many error reporting improvements
     * separated some bundled conditions
 
@@ -2974,7 +2974,7 @@
 
     Signed-off-by: Kacper Michajłow [kasper93@gmail.com](mailto:kasper93@gmail.com)
 
-[^156]: dvb\_psi\_pmt: Recognize AC-4 audio descriptor
+[^156]: dvb\_psi\_pmt: Recognise AC-4 audio descriptor
 
     This allows pass-through of AC-4 audio stream.
 
@@ -3370,7 +3370,7 @@
 
     triggers the Werror=int-conversion error and also probably results
 
-    in unexpected behavior from passing the pointer values.
+    in unexpected behaviour from passing the pointer values.
 
 [^185]: nvenc: Fix Werror=misleading-indentation FTBFS
 
@@ -3609,9 +3609,9 @@
     * Fix potential endless loop in RTSP code
     * Change years from 2020
 
-[^208]: Fix uninitialized memory access for several ioctl commands (#1382)
+[^208]: Fix uninitialised memory access for several ioctl commands (#1382)
 
-    * Fix uninitialized memory access in linuxdvb\_frontend.c
+    * Fix uninitialised memory access in linuxdvb\_frontend.c
     * FIx unitialized memory access in linuxdvb\_satconf.c
 
 [^209]: fix vaapi-profiles (#1366)
@@ -3633,11 +3633,11 @@
 
     which most likely is a result of copy/paste.
 
-[^212]: docs: fix simple typo, seperately -> separately
+[^212]: docs: fix simple typo, separately -> separately
 
     There is a small typo in src/descrambler/capmt.c.
 
-    Should read `separately` rather than `seperately`.
+    Should read `separately` rather than `separately`.
 
 [^213]: in python 3, dict.has\_key() has been removed
 
@@ -3651,7 +3651,7 @@
 
     So it should support python 2 and 3
 
-[^215]: Silcence x265 warnings (#1368)
+[^215]: Silence x265 warnings (#1368)
 
     * Add patch
     * Add patch to Makefile
@@ -3820,13 +3820,13 @@
 
     Ticket: https://tvheadend.org/issues/5692
 
-[^231]: Avoid configure checks being optimized away with LTO
+[^231]: Avoid configure checks being optimised away with LTO
 
     In case the checks are compiled with CFLAGS including "-O1 -flto" (or any
 
-    other optimization level), a "test()" function not referenced by by main
+    other optimisation level), a "test()" function not referenced by by main
 
-    will be optimized away and discarded prior to the final linking step, and
+    will be optimised away and discarded prior to the final linking step, and
 
     there will be no undefined symbols, thus the checks always succeeds.
 
@@ -3956,7 +3956,7 @@
 
     texts.
 
-    Fix the check to match dvb\_get\_string() behavior.
+    Fix the check to match dvb\_get\_string() behaviour.
 
 [^245]: en50221: fix invalid htsmsg manipulation
 
@@ -4214,7 +4214,7 @@
 
     The EPG screen serviced by FreeBSD port of tvheadend has two abnormal control
 
-    behaviors:
+    behaviours:
 
     ```
     Reset All button makes the list empty
@@ -4234,7 +4234,7 @@
 
     Also fixed compilation for OpenSSL without ENGINE support.
 
-[^267]: webui: access theme - color correction for EPG count info
+[^267]: webui: access theme - colour correction for EPG count info
 
     EPG events count was black so we can't see it with access theme.
 

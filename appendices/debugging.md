@@ -381,7 +381,7 @@ It may be really difficult to track these problems. There are basically two tool
 
 ### Valgrind
 
-It is very slow, but it may be useable for things which are triggered everytime:
+It is very slow, but it may be useable for things which are triggered every time:
 
 ```
 valgrind --suppressions=support/valgrind.supp --leak-check=full --show-reachable=yes /tvh_command_line/

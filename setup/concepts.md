@@ -11,7 +11,7 @@ It helps to understand the basic software concepts for Tvheadend:
 ## Tvheadend <a href="#applicationtvheadend-fundamentals" id="applicationtvheadend-fundamentals"></a>
 
 * **Network** is a software definition of your carrier network that tells tuner hardware how and where to look for a signal, e.g. the network defines a such as DVB-T or DVB-S2, and how it is scanned, where the DVB-S satellite is in orbit, and similar.
-* **Muxes** are channel frequencies that transmit multiple digital channel signals in the radio frequency space of a single analogue channel. Digitial signals are multiplexed (muxed) together to allow more channels to be broadcast.
+* **Muxes** are channel frequencies that transmit multiple digital channel signals in the radio frequency space of a single analogue channel. Digital signals are multiplexed (muxed) together to allow more channels to be broadcast.
 * **Services** are the individual data streams on a Mux. They can be TV or Radio programmes, or they can provide data services such as digital teletext or catch-up IPTV services.
 * **Channels** are mapped against Services. Channels are what client software access when users think _“I’d like to watch BBC One now, please”_.
 

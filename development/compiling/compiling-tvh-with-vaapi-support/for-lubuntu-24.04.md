@@ -37,7 +37,7 @@ Preference / LXQt setting / Monitor Settings: 1280 x 720
 
 Press button Save and Yes&#x20;
 
-Preference / LXQt setting / LXQt Configuration Center : Openbox Settings --> Desktops : Number of desktops : 1&#x20;
+Preference / LXQt setting / LXQt Configuration Centre : Openbox Settings --> Desktops : Number of desktops : 1&#x20;
 
 Preference / Screen Saver : Mode : Disable screen saver
 
@@ -544,7 +544,7 @@ Restart on error: checked&#x20;
 
 Continue if descrambling fails: checked&#x20;
 
-Descrembling timeout: 2000&#x20;
+Descrambling timeout: 2000&#x20;
 
 Switch to another service: checked&#x20;
 
