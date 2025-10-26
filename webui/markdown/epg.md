@@ -21,7 +21,7 @@ such as XMLTV.
 The EPG tab displays a filterable grid containing all events, sorted
 based on start time.
 
-!['Electronic Program Guide' Tab](static/img/doc/epg/tab.png)
+!['Electronic Program Guide' Tab](../../.gitbook/assets/doc/epg/tab.png)
 
 ---
 
@@ -91,10 +91,10 @@ The main grid items have the following functions:
 
 Icon                                                                  | Description
 ----------------------------------------------------------------------|-------------
-![Clock icon](static/img/doc/icons/scheduled.png)                     | the program is scheduled for recording
-![Recording icon](static/img/doc/icons/rec.png)                       | the program is currently recording
-![Broadcast details icon](static/img/doc/icons/broadcast_details.png) | click to call up more detailed information about an event
-![Exclamation icon](static/img/doc/icons/exclamation.png)             | the program failed to record
+![Clock icon](../../.gitbook/assets/doc/icons/scheduled.png)                     | the program is scheduled for recording
+![Recording icon](../../.gitbook/assets/doc/icons/rec.png)                       | the program is currently recording
+![Broadcast details icon](../../.gitbook/assets/doc/icons/broadcast_details.png) | click to call up more detailed information about an event
+![Exclamation icon](../../.gitbook/assets/doc/icons/exclamation.png)             | the program failed to record
 
 **Progress**
 : A bar graph display of how far through a program we currently are.
@@ -150,17 +150,17 @@ If you click on a single event, a popup will display detailed
 information about the event. It also allows you to schedule the event
 for recording, find alternative events and more.
 
-![EPG Detail 2](static/img/doc/epg/autorec.png)
+![EPG Detail 2](../../.gitbook/assets/doc/epg/autorec.png)
 
 Toolbar item                                                                          | Description
 --------------------------------------------------------------------------------------|------------
 Find info from ... drop-down                                                          | Query an online service for more information on an event. Opens in new window.
-![Play](static/img/doc/icons/control_play.png) *[Play]*                               | Download a playlist file (XSPF or M3U depending on your startup options); if your system is configured for it, this will automatically launch an appropriate player, otherwise you will need to manually open the playlist to start watching (normally a double-click on the downloaded file).
+![Play](../../.gitbook/assets/doc/icons/control_play.png) *[Play]*                               | Download a playlist file (XSPF or M3U depending on your startup options); if your system is configured for it, this will automatically launch an appropriate player, otherwise you will need to manually open the playlist to start watching (normally a double-click on the downloaded file).
 (default DVR Profile) drop-down                                                       | Choose a specific DVR profile that will apply to the recording or autorec rule. You can define different profiles in the **Configuration -\> Recording -\> [Digital Video Recorder Profiles](class/dvrconfig)** tab. This allows you to set, for example, more post-broadcast padding for a channel that always runs late, or perhaps define a different post-processing command to strip adverts out on a commercial channel.
-![Record](static/img/doc/icons/rec.png) *[Record]*                                    | Record the displayed event.
-![Record Series](static/img/doc/icons/auto_rec.png) *[Record Series]* / *[Autorec]*   | **Record Series:** Series link, Record all EPG-defined episodes in the series/season. **Autorec:** Create a pseudo-series link using the autorec feature.
-![Alternative showings](static/img/doc/icons/control_repeat_blue.png)                 | List/Find alternative showings (exact matches) of this event.
-![Related events](static/img/doc/icons/clock.png)                                     | List/Find related EPG events. 
+![Record](../../.gitbook/assets/doc/icons/rec.png) *[Record]*                                    | Record the displayed event.
+![Record Series](../../.gitbook/assets/doc/icons/auto_rec.png) *[Record Series]* / *[Autorec]*   | **Record Series:** Series link, Record all EPG-defined episodes in the series/season. **Autorec:** Create a pseudo-series link using the autorec feature.
+![Alternative showings](../../.gitbook/assets/doc/icons/control_repeat_blue.png)                 | List/Find alternative showings (exact matches) of this event.
+![Related events](../../.gitbook/assets/doc/icons/clock.png)                                     | List/Find related EPG events. 
 
 To close the popup, just click on the [X] window button. The popup isn’t
 modal, so you don’t have to close it before doing something else, and

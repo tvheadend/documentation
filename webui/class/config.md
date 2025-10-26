@@ -4,7 +4,7 @@
 
 {% include "../../.gitbook/includes/config_overview.md" %}
 
-!['General Base'](static/img/doc/config/base.png)
+!['General Base'](../../.gitbook/assets/doc/config/base.png)
 
 {% include "../../.gitbook/includes/config_notes.md" %}
 

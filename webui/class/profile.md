@@ -8,7 +8,7 @@ Stream Profiles are the settings for output formats. These are used for Live TV
 streaming and recordings. The profiles can be assigned through Access Entries,
 DVR Profiles or as parameter for HTTP Streaming.
 
-!['Stream Profiles'](static/img/doc/stream/stream_profiles_tab.png)
+!['Stream Profiles'](../../.gitbook/assets/doc/stream/stream_profiles_tab.png)
 
 Type                                               | Description 
 -------------------------------------------------------------------|-------------

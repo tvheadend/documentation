@@ -7,7 +7,7 @@
 Tvheadend supports connecting to card clients via the cwc (newcamd) and
 capmt (linux network dvbapi) protocols for so-called 'softcam' descrambling.
 
-!['CA Client Configuration Example'](static/img/doc/caclient/cas.png)
+!['CA Client Configuration Example'](../../.gitbook/assets/doc/caclient/cas.png)
 
 ---
 

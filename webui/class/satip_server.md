@@ -4,7 +4,7 @@
 
 {% include "../../.gitbook/includes/config_overview.md" %}
 
-!['SAT\>IP Config tab'](static/img/doc/config/satip_server.png)
+!['SAT\>IP Config tab'](../../.gitbook/assets/doc/config/satip_server.png)
 
 {% include "../../.gitbook/includes/config_notes.md" %}
 

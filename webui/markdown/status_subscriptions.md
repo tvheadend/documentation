@@ -10,7 +10,7 @@ This tab shows information about all active subscriptions to Tvheadend.
 
 This is a read-only tab; nothing is configurable.
 
-!['Status - Subscriptions' Tab](static/img/doc/status/subscriptions.png)
+!['Status - Subscriptions' Tab](../../.gitbook/assets/doc/status/subscriptions.png)
 
 ---
 

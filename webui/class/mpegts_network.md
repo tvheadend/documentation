@@ -7,7 +7,7 @@
 A network is the type of carrier for your television signals. Tvheadend
 supports several different types of network.
 
-!['Networks' Tab Screenshot](static/img/doc/dvbinputs/dvbinput_networks.png)
+!['Networks' Tab Screenshot](../../.gitbook/assets/doc/dvbinputs/dvbinput_networks.png)
 
 ---
 

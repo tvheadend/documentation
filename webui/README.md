@@ -16,21 +16,18 @@ This directory contains the in-app help documentation for the Tvheadend web user
 - **markdown/** - General documentation in markdown format (19 files)
   - Introduction, installation, first configuration, EPG, DVR, FAQs, command-line options, etc.
 
-- **static/img/** - Images and icons referenced in the documentation (135 files)
-  - Screenshots of various configuration screens and UI elements
-  - Icons used in the documentation
-
-Reusable content blocks are stored in the root-level `.gitbook/includes/` directory (22 files) and can be referenced from any documentation file using GitBook's include syntax.
+Images and icons referenced in the documentation (135 files) are stored in the root-level `.gitbook/assets/` directory, organized in subdirectories matching the original structure. Reusable content blocks are stored in the `.gitbook/includes/` directory (22 files) and can be referenced from any documentation file using GitBook's include syntax.
 
 ## Usage in Main Repository
 
-The main Tvheadend repository can reference these files using include directives like:
+The main Tvheadend repository can reference these files using GitBook's include directives and image paths like:
 
 ```markdown
-{% include "../.gitbook/includes/users_contents.md" %}
+{% include "../../.gitbook/includes/users_contents.md" %}
+![Screenshot](../../.gitbook/assets/doc/config/base.png)
 ```
 
-This allows the in-app help system to pull content from this centralized documentation repository while keeping the help content separate from the application code.
+This allows the in-app help system to pull content from centralized reusable content blocks and assets while keeping the help content separate from the application code.
 
 ## File Count
 

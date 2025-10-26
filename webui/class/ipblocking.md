@@ -4,7 +4,7 @@
 
 {% include "../../.gitbook/includes/users_overview.md" %}
 
-!['IP Blocking' Tab](static/img/doc/users/ipblocking_tab.png)
+!['IP Blocking' Tab](../../.gitbook/assets/doc/users/ipblocking_tab.png)
 
 ### Notes on IP Blocking
 

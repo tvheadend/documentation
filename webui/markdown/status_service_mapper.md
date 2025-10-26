@@ -10,7 +10,7 @@ This tab shows information about current service mapping activity.
 
 This is a read-only tab; nothing is configurable. 
 
-!['Status - Service mapper'](static/img/doc/status/service_mapper.png) 
+!['Status - Service mapper'](../../.gitbook/assets/doc/status/service_mapper.png) 
 
 
 The [Map services to channels](class/service_mapper) dialog 

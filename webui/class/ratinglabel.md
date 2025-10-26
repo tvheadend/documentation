@@ -6,7 +6,7 @@
 
 This tab lists all defined parental rating labels.
 
-!['Complete rating labels list'](static/img/doc/ratinglabel/rating_labels_complete.png)
+!['Complete rating labels list'](../../.gitbook/assets/doc/ratinglabel/rating_labels_complete.png)
 
 A 'rating label' is a text code like 'PG', 'PG-13' or 'FSK 12' used to identify the parental rating classification of a TV programme.
 
@@ -21,15 +21,15 @@ Ratings from the OTA EPG do not contain rating text like 'PG', instead, a combin
 
 When the rating labels module encounters a new country and age combination, it will create a placeholder entry in the rating labels table as follows:
 
-!['Newly learned rating labels list'](static/img/doc/ratinglabel/rating_labels_learned.png)
+!['Newly learned rating labels list'](../../.gitbook/assets/doc/ratinglabel/rating_labels_learned.png)
 
 When a placeholder label is in use, the programme details in the EPG will show this placeholder entry rather than the expected value.
 
-!['EPG with placeholder rating'](static/img/doc/ratinglabel/epg_placeholder.png)
+!['EPG with placeholder rating'](../../.gitbook/assets/doc/ratinglabel/epg_placeholder.png)
 
 You are required to manually edit this placeholder entry in order to provide the appropriate rating text to display.  The correct text can be found by searching for the specific programme in another EPG source or by obtaining the classification guidelines in the location (country) in question.  This only needs to be done once for each label, all other programmes with that label will be automatically adjusted.
 
-!['Updated rating label details'](static/img/doc/ratinglabel/updated_label.png)
+!['Updated rating label details'](../../.gitbook/assets/doc/ratinglabel/updated_label.png)
 
 **NOTE:** In the example, the age provided by DVB is '10', whereas the age displayed is '13'.  This is because the DVB standard subtracts 3 from some recommended ages before transmission meaning that the receiver must add 3 to the number received.  When creating a placeholder label, this module will automatically add 3 where appropriate.
 
@@ -45,7 +45,7 @@ Ratings from XMLTV contain the rating label text, but not the recommended age.
 
 When a new rating is encountered from an XMLTV EPG source, a placeholder label similar to the DVB ones is created and you will need to add the country code and the ages.
 
-!['Rating label learned from xmltv'](static/img/doc/ratinglabel/xmltv_learned.png)
+!['Rating label learned from xmltv'](../../.gitbook/assets/doc/ratinglabel/xmltv_learned.png)
 
 # Combined DVB OTA and XMLTV
 

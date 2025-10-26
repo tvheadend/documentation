@@ -10,7 +10,7 @@ This tab shows information about all active connections.
 
 This is a read-only tab; nothing is configurable.
 
-!['Status - Connections' Tab](static/img/doc/status/connections.png)
+!['Status - Connections' Tab](../../.gitbook/assets/doc/status/connections.png)
 
 ---
 

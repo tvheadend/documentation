@@ -7,7 +7,7 @@
 This tab allows you to define rules that filter and order various 
 elementary streams. 
 
-!['Stream filters'](static/img/doc/stream/stream_filters_tab.png)
+!['Stream filters'](../../.gitbook/assets/doc/stream/stream_filters_tab.png)
 
 Filter type                                            | Description
 -------------------------------------------------------|-----------------------
@@ -48,7 +48,7 @@ This dialog shows the received PIDs and filtered PIDs in one window.
 
 ### Filtering out a Stream
 
-!['Removing a stream'](static/img/doc/stream/stream_filter_example.png)
+!['Removing a stream'](../../.gitbook/assets/doc/stream/stream_filter_example.png)
 
 Here we're removing the Bulgarian language audio from the 
 input (first rule). However, if Bulgarian is the only language 

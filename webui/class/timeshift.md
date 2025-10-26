@@ -6,7 +6,7 @@
 
 This tab is used to configure timeshift properties.
 
-!['Timeshift Tab'](static/img/doc/recordings/timeshift.png)
+!['Timeshift Tab'](../../.gitbook/assets/doc/recordings/timeshift.png)
 
 ---
 

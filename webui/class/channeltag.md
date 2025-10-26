@@ -10,7 +10,7 @@ Tags are not required by Tvheadend itself, but are useful in media
 applications such as Kodi and are a requirement for using Tvheadend 
 with Movian.
 
-!['Channel tag'](static/img/doc/channel/channeltag_tab.png)
+!['Channel tag'](../../.gitbook/assets/doc/channel/channeltag_tab.png)
 
 ---
 

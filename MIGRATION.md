@@ -6,7 +6,7 @@ This document summarizes the migration of in-app help documentation from the mai
 
 ## What Was Migrated
 
-All files from the `docs/` folder and associated images from `src/webui/static/img/` in the main repository have been copied to the `webui/` folder in this repository, maintaining the exact same structure and file names.
+All files from the `docs/` folder and associated images from `src/webui/static/img/` in the main repository have been migrated to this repository. Markdown files are in `webui/`, reusable content in `.gitbook/includes/`, and images in `.gitbook/assets/`.
 
 ## File Statistics
 
@@ -17,7 +17,7 @@ All files from the `docs/` folder and associated images from `src/webui/static/i
 | Wizard Steps | 8 files | `webui/wizard/` |
 | General Markdown | 19 files | `webui/markdown/` |
 | Reusable Content | 22 files | `.gitbook/includes/` |
-| Images and Icons | 135 files | `webui/static/img/` |
+| Images and Icons | 135 files | `.gitbook/assets/` |
 | **Total** | **266 files** | |
 | Supporting Documentation | 2 files | `webui/README.md`, `webui/INTEGRATION.md` |
 
@@ -48,21 +48,21 @@ webui/
 │   ├── firstconfig.md
 │   ├── epg.md
 │   └── ...
-└── static/                    # Images and icons (135 files)
-    └── img/
-        ├── opencollective.png
-        └── doc/
-            ├── caclient/
-            ├── channel/
-            ├── config/
-            ├── icons/
-            └── ...
 
-.gitbook/includes/             # Reusable content blocks (22 files)
-├── buttons.md
-├── config_contents.md
-├── users_overview.md
-└── ...
+.gitbook/
+├── includes/                  # Reusable content blocks (22 files)
+│   ├── buttons.md
+│   ├── config_contents.md
+│   ├── users_overview.md
+│   └── ...
+└── assets/                    # Images and icons (135 files)
+    ├── opencollective.png
+    └── doc/
+        ├── caclient/
+        ├── channel/
+        ├── config/
+        ├── icons/
+        └── ...
 ```
 
 ## Verification
@@ -84,8 +84,9 @@ The following aspects of the documentation have been preserved:
    - Old: `<tvh_include>inc/users_contents</tvh_include>`
    - New: `{% include "../../.gitbook/includes/users_contents.md" %}`
 
-2. **Image references**: All image paths remain unchanged
-   - Example: `!['Access Entries' Tab](static/img/doc/users/access_entries_tab.png)`
+2. **Image references**: Converted to GitBook's assets directory
+   - Old: `!['Access Entries' Tab](static/img/doc/users/access_entries_tab.png)`
+   - New: `!['Access Entries' Tab](../../.gitbook/assets/doc/users/access_entries_tab.png)`
 
 3. **Internal links**: All cross-references between files preserved
    - Example: `[Access Entries](class/access)`

@@ -4,7 +4,7 @@
 
 {% include "../../.gitbook/includes/users_overview.md" %}
 
-!['Access Entries' Tab](static/img/doc/users/access_entries_tab.png)
+!['Access Entries' Tab](../../.gitbook/assets/doc/users/access_entries_tab.png)
 
 ### Notes on Access Entries
 

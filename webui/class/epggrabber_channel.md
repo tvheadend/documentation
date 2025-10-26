@@ -6,7 +6,7 @@
 
 This tab displays EPG data used by channels.
 
-!['EPG Grabber Channels Tab'](static/img/doc/channel/grabber_channels_tab.png)
+!['EPG Grabber Channels Tab'](../../.gitbook/assets/doc/channel/grabber_channels_tab.png)
 
 ---
 

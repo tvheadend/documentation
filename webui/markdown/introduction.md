@@ -15,7 +15,7 @@ Contents                                          | Description
 Tvheadend is a lightweight, easily-configured, general-purpose TV/video
 streaming server and recorder (PVR/DVR) for GNU/Linux, FreeBSD and Android.
 
-![Tvheadend interface](static/img/doc/introduction/screenshot.png)
+![Tvheadend interface](../../.gitbook/assets/doc/introduction/screenshot.png)
 
 It supports input from a number of sources such as DVB-T, DVB-S and more, see 
 [Features](#features) for a full list.
@@ -181,7 +181,7 @@ go and get the signal for you.
 
 The following diagram explains the relationship between these components:
 
-![Relationship Between Tuners, Neworks, Muxes, Services and Channels](static/img/doc/introduction/schematic.png)
+![Relationship Between Tuners, Neworks, Muxes, Services and Channels](../../.gitbook/assets/doc/introduction/schematic.png)
 
 ---
 
@@ -199,14 +199,14 @@ together (e.g. all configuration items at the top level, then all configuration
 items for a particular topic are below that). Be aware that not all tabs are
 shown by default, some are hidden depending on the current [view level](#view-level).
 
-!["Tabs"](static/img/doc/introduction/tabbar.png)
+!["Tabs"](../../.gitbook/assets/doc/introduction/tabbar.png)
 
 Each tab is then laid out with a [menu bar](#menu-bar-panel-buttons) that provides access
 to Add/Save/Edit-type functions, and a [grid](#grids) like a spreadsheet, a panel, or a list of (grouped) settings/options below that.
 
 ### Menu bar/Panel Buttons
 
-!["Menubar"](static/img/doc/introduction/menubar.png)
+!["Menubar"](../../.gitbook/assets/doc/introduction/menubar.png)
 
 Below is a (VERY) long list of the buttons you'll find in Tvheadend, 
 They're listed here so you can quickly refer back to them at a later date (and know where to find them!).
@@ -279,8 +279,8 @@ Drop (displayed) connections             | Drop the currently-shown active conne
 View Level                               | Show/Hide more advanced options.
 Help                                     | Display the help page.
                                          | **Icon-only buttons**
-!["Right Arrow"](static/img/doc/icons/arrow_right.png) (Next)  | Display/Jump to the next associated item, channel or EPG event.
-!["Left Arrow"](static/img/doc/icons/arrow_left.png) (Previous)   | Display/Jump to the previous associated item, channel or EPG event.
+!["Right Arrow"](../../.gitbook/assets/doc/icons/arrow_right.png) (Next)  | Display/Jump to the next associated item, channel or EPG event.
+!["Left Arrow"](../../.gitbook/assets/doc/icons/arrow_left.png) (Previous)   | Display/Jump to the previous associated item, channel or EPG event.
 
 Some of these buttons are only displayed in selected tabs/panels (noted in bold underneath).
 For items not listed above, refer to the associated Help page.
@@ -292,7 +292,7 @@ displays/hides the more advanced features. By default it is set to Basic.
 Note, depending on [configuration](class/config) the view level drop-down isn't
 always visible.
 
-!["View level"](static/img/doc/introduction/viewlevel.png)
+!["View level"](../../.gitbook/assets/doc/introduction/viewlevel.png)
 
 View level            | Description
 ----------------------|-------------------------------------------------
@@ -334,7 +334,7 @@ these values.
 * **Re-size** the columns by dragging the very edges of the column header as
   required.
 
-!["Column options"](static/img/doc/introduction/columnoptions.png)
+!["Column options"](../../.gitbook/assets/doc/introduction/columnoptions.png)
 
 Note, a cookie is used to remember your column/filtering preferences; Clearing
 your cookies will reset the interface to default.
@@ -346,7 +346,7 @@ being the *TV Adapters* and *EPG Grabber Modules* tabs. On the left,
 you'll see a list of items (or a tree as shown in the screenshot below), clicking 
 on any of the items will display a parameter panel (on the right).
 
-!["Split panel example"](static/img/doc/introduction/splitpanel.png)
+!["Split panel example"](../../.gitbook/assets/doc/introduction/splitpanel.png)
 
 When making changes (in the parameter panel) be sure to save **before** 
 clicking on another item in the list.
@@ -356,7 +356,7 @@ clicking on another item in the list.
 The paging toolbar - at the bottom of most grids - offers many useful
 tools.
 
-!["Paging options"](static/img/doc/introduction/pagebar.png)
+!["Paging options"](../../.gitbook/assets/doc/introduction/pagebar.png)
 
 * General paging functions ```|< < > >|``` allow you to quickly move
 between data sets.
@@ -382,13 +382,13 @@ be used as a quick "is-it-working" overview too.
 
 To open the log click the bar at the very bottom of the interface..
 
-!["Log closed"](static/img/doc/introduction/logclosed.png)
+!["Log closed"](../../.gitbook/assets/doc/introduction/logclosed.png)
 
 The log will remain open for a few moments at a time, if you want to keep 
 it open (or to close it), press the chevron ```▲``` (up) or ```▼``` 
 (down) arrows. 
 
-!["Log open"](static/img/doc/introduction/logopen.png)
+!["Log open"](../../.gitbook/assets/doc/introduction/logopen.png)
 
 The cog (or gear) ```⚙``` icon allows you to enable/disable a more 
 verbose output.
@@ -440,7 +440,7 @@ When dealing with multiple entries, an additional check-box will be
 shown before each field in the dialog, remember to tick this
 check-box so that the changes are applied to all (selected) entries.
 
-!["Multi-select"](static/img/doc/introduction/multi-select.png)
+!["Multi-select"](../../.gitbook/assets/doc/introduction/multi-select.png)
 
 ---
 

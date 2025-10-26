@@ -15,7 +15,7 @@ individual channels are multiplexed, hence the name. However, Tvheadend
 also uses the term ‘mux’ to describe a source for multiple IP 
 streams - so an IP address, in effect.
 
-!['Mux List'](static/img/doc/dvbinputs/dvbinput_muxes.png)
+!['Mux List'](../../.gitbook/assets/doc/dvbinputs/dvbinput_muxes.png)
 
 ---
 

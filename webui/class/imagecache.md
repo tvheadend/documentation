@@ -4,7 +4,7 @@
 
 {% include "../../.gitbook/includes/config_overview.md" %}
 
-!['Image cache'](static/img/doc/config/imagecache.png)
+!['Image cache'](../../.gitbook/assets/doc/config/imagecache.png)
 
 {% include "../../.gitbook/includes/config_notes.md" %}
 

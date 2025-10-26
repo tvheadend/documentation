@@ -6,7 +6,7 @@
 
 This tab allows you to manage the codec settings used by stream profiles. 
 
-!['Stream Profiles'](static/img/doc/stream/codec_profiles_tab.png)
+!['Stream Profiles'](../../.gitbook/assets/doc/stream/codec_profiles_tab.png)
 
 ---
 

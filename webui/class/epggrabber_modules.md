@@ -9,7 +9,7 @@ grabber modules. Tvheadend supports a variety of different EPG
 grabbing mechanisms. These fall into 3 broad categories, within which 
 there are a variety of specific grabber implementations.
 
-!['EPG Grabber Configuration'](static/img/doc/channel/grabber_modules_tab.png)
+!['EPG Grabber Configuration'](../../.gitbook/assets/doc/channel/grabber_modules_tab.png)
 
 Type                                          | Description
 ----------------------------------------------|----------------------------
@@ -71,7 +71,7 @@ Although XMLTV is a standard, some providers of XMLTV data include additional in
 XPath-like expressions can be used to extract some of this additional information
 for EPG grabbers that use XMLTV as a data source.
 
-!['EPG Grabber XPath'](static/img/doc/channel/grabber_xpath_fields.png)
+!['EPG Grabber XPath'](../../.gitbook/assets/doc/channel/grabber_xpath_fields.png)
 
 ##Category Code
 

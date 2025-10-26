@@ -4,7 +4,7 @@
 
 {% include "../../.gitbook/includes/users_overview.md" %}
 
-!['Passwords' Tab](static/img/doc/users/passwords_tab.png)
+!['Passwords' Tab](../../.gitbook/assets/doc/users/passwords_tab.png)
 
 ### Notes on Passwords
 

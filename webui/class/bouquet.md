@@ -6,7 +6,7 @@
 
 Bouquets are broadcaster-defined groupings and orders of channels.
 
-!['Bouqets' Tab](static/img/doc/channel/bouquet_tab.png)
+!['Bouqets' Tab](../../.gitbook/assets/doc/channel/bouquet_tab.png)
 
 To use bouquets, ensure to add and scan all available muxes using the
 predefined muxes or manual configuration.
@@ -33,7 +33,7 @@ changes, you can do this by selecting the desired channels from within
 the grid and then pressing the *Detach selected channels from bouquet* 
 option from the *[Map services]* button.
 
-!['Map All Services'](static/img/doc/channel/detach_bouquet.png)
+!['Map All Services'](../../.gitbook/assets/doc/channel/detach_bouquet.png)
 
 If you do not detach channel(s) before mapping additional 
 services the following changes can occur..

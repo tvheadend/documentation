@@ -10,7 +10,7 @@ Contents                                          | Description
 
 This tab is used to configure various debugging options in Tvheadend.
 
-!['Debugging tab'](static/img/doc/debugging/tab.png)
+!['Debugging tab'](../../.gitbook/assets/doc/debugging/tab.png)
 
 ### Notes
 

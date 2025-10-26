@@ -16,18 +16,20 @@ webui/
 ├── property/           # Property help (45 files)  
 ├── wizard/             # Wizard steps (8 files)
 ├── markdown/           # General docs (19 files)
-├── static/img/         # Images and icons (135 files)
 └── README.md           # This structure overview
 
-.gitbook/includes/      # Reusable content blocks (22 files)
+.gitbook/
+├── includes/           # Reusable content blocks (22 files)
+└── assets/             # Images and icons (135 files)
 ```
 
 ## Using Include Directives
 
-The files use GitBook's include directive to pull in reusable content. For example:
+The files use GitBook's include directive to pull in reusable content and reference images from the `.gitbook/assets/` directory. For example:
 
 ```markdown
 {% include "../../.gitbook/includes/users_contents.md" %}
+![Screenshot](../../.gitbook/assets/doc/config/base.png)
 ```
 
 These reusable content blocks are stored in the `.gitbook/includes/` directory and can be referenced from any documentation file using relative paths.
@@ -69,6 +71,7 @@ The original `docs/` folder structure has been preserved under `webui/`:
 | `docs/wizard/*.md` | `webui/wizard/*.md` |
 | `docs/markdown/*.md` | `webui/markdown/*.md` |
 | `docs/markdown/inc/*.md` | `.gitbook/includes/*.md` (reusable content) |
+| `src/webui/static/img/**/*` | `.gitbook/assets/**/*` (images and icons) |
 
 ## Examples
 

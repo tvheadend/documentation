@@ -9,7 +9,7 @@ Contents                                            | Description
 
 ## Using the Wizard
 
-![Wizard](static/img/doc/firstconfig/wizard.png)
+![Wizard](../../.gitbook/assets/doc/firstconfig/wizard.png)
 
 The wizard helps you get up and running fast, if you don't see the 
 wizard on the initial run, or would like to use it, you can do so by 
@@ -147,7 +147,7 @@ top level (e.g. `/dev/dvb/adapter0`)
 
 Individual tuners are then the next level down (e.g. `DiBcom 7000PC : DVB-T #0`)
 
-![Adapter example](static/img/doc/firstconfig/adapters.png)
+![Adapter example](../../.gitbook/assets/doc/firstconfig/adapters.png)
 
 Click on each tuner that you want Tvheadend to use, and ensure "Enabled"
 is checked in the 'Parameters' list

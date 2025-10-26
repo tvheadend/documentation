@@ -18,7 +18,7 @@ This tab is where you configure/manage your adapters/input,
 networks, muxes and services.
 
 
-!['DVB Inputs' Tab](static/img/doc/dvbinputs/dvbinput_tab.png)
+!['DVB Inputs' Tab](../../.gitbook/assets/doc/dvbinputs/dvbinput_tab.png)
 
 ---
 
@@ -48,7 +48,7 @@ details on how to use the tree/split panel.
 Here is an example of a device tree - yours will follow the same layout,
 but this is just to give you an idea as to what all the bits mean.
 
-!['DVB Input tree explained' Tab](static/img/doc/dvbinputs/the_tree_explained.png)
+!['DVB Input tree explained' Tab](../../.gitbook/assets/doc/dvbinputs/the_tree_explained.png)
 
 Number in Image / Text                               | Description
 -----------------------------------------------------|------------------------------------
