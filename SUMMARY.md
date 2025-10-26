@@ -105,6 +105,21 @@
 
 * [Creating a Mux Dump](creating-a-mux-dump.md)
 
+## WebUI In-App Help Documentation
+
+* [About WebUI Help](webui/README.md)
+* WebUI Help Content
+  * [Introduction](webui/markdown/introduction.md)
+  * [Installation](webui/markdown/installation.md)
+  * [First Configuration](webui/markdown/firstconfig.md)
+  * [Electronic Program Guide](webui/markdown/epg.md)
+  * [Digital Video Recorder](webui/markdown/dvr.md)
+  * [DVB Inputs](webui/markdown/dvbinputs.md)
+  * [FAQs](webui/markdown/faqs.md)
+  * [Command-line Options](webui/markdown/cmdline_options.md)
+  * [URL Syntax](webui/markdown/url.md)
+  * [Table of Contents](webui/markdown/toc.md)
+
 ## WIP
 
 * [Release / Change Log](wip/release-change-log.md)
