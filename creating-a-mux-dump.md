@@ -23,7 +23,7 @@ The process will be different between specific browsers, however, the 'Play' ico
   \
   For example: `http://<TVH_IP>:9981/play/ticket/stream/mux/176838fd011c233adfa42d8a07f9ddba?title=177.5MHz%20%2F%20DVB-T%20Network` \
   \
-  Using this method, the UUID is '176838fd011c233adfa42d8a07f9ddba' can can be located between '/mux/' and the question mark.
+  Using this method, the UUID '176838fd011c233adfa42d8a07f9ddba' can be located between '/mux/' and the question mark.
 * Also, right-clicking on the icon and selecting 'Save link as' (or similar) should provide you with a prompt for a file name. The default file name provided by your browser should contain the UUID of the mux.\
   \
   For example: `d32ef9ef9c67e0552465f6a86caf1d77.m3u` \

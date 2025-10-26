@@ -572,7 +572,7 @@
 * capmt: fix the input filter ([2019-11-15](https://github.com/tvheadend/tvheadend/commit/d453f5bef392981c8b14025e2446e4012f72f422))
 * service: fix the default return value for service\_get\_source() ([2019-11-04](https://github.com/tvheadend/tvheadend/commit/e225c55e0e927787f6b055fa0d0e0fcd7c145b0c))
 * mpegts service: fix the build without mpegts\_dvb (see PR#1321) ([2019-11-04](https://github.com/tvheadend/tvheadend/commit/fda89e85e0b6ae796d8a09e178d3937aa7869270))
-* satip client: try to the the missing poll file descriptor removal, issue #5496 ([2019-11-01](https://github.com/tvheadend/tvheadend/commit/25a50f75a07b656e380b4e9e2d61cbc6c7740e4b))
+* satip client: try to fix the missing poll file descriptor removal, issue #5496 ([2019-11-01](https://github.com/tvheadend/tvheadend/commit/25a50f75a07b656e380b4e9e2d61cbc6c7740e4b))
 * docs: add hint on shell redirections (#5761) ([2019-11-01](https://github.com/tvheadend/tvheadend/commit/dea96e4418eec37aa75592fee2a9dd7672a9c108))
 * htsstr: add htsstr\_argsplit() test ([2019-10-31](https://github.com/tvheadend/tvheadend/commit/a9eaf6dc13227f712c3abc5e4987476fd83d5226))
 * htsstr: fix the wrong argument parsing, fixes #5761 ([2019-10-31](https://github.com/tvheadend/tvheadend/commit/0afdc9d3aea7b6037f1f9886945116557b6787da))
@@ -4240,7 +4240,7 @@
 
     In case the checks are compiled with CFLAGS including "-O1 -flto" (or any
 
-    other optimisation level), a "test()" function not referenced by by main
+    other optimisation level), a "test()" function not referenced by main
 
     will be optimised away and discarded prior to the final linking step, and
 
