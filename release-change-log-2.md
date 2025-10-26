@@ -726,7 +726,7 @@
 * [Freesat\_huffman: Suppress characters < 0x20 except \n.](#user-content-fn-265)[^265] ([2019-03-15](https://github.com/tvheadend/tvheadend/commit/1383eab65a93763b8780e5011d592d9f249031b6))
 * [Update to newest ffmpeg to fix libX11 compile issue "DSO missing from commandline"](#user-content-fn-266)[^266] ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/d250c1844798791a1354254a60545d4be5ada197))
 * Add sat longitude and usals angle as parameters to the rotor external command ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/ec90d317ea5b5b0a18eb543ee90d1c41c30bf849))
-* http server: fix digest MD5 authorisation, fixes #5573 ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/3f0c6b1e28fc5bae5c3e8934c8a79400236a1ac8))
+* http server: fix digest MD5 authorization, fixes #5573 ([2019-03-13](https://github.com/tvheadend/tvheadend/commit/3f0c6b1e28fc5bae5c3e8934c8a79400236a1ac8))
 * utils: sbuf - use correct format character, fixes #5565 ([2019-03-07](https://github.com/tvheadend/tvheadend/commit/811fd889e9da762d04977f3531aa1aae8ff37329))
 * SAT>IP: fix done - close sessions only when server is active ([2019-03-06](https://github.com/tvheadend/tvheadend/commit/ff7893d8fee713673d0f7662d3753b4d0de4c706))
 * eit: fix the possible NULL dereference ([2019-03-06](https://github.com/tvheadend/tvheadend/commit/a3c5e751b05018a2cb3764627c3a77b4a5d9e7ce))
@@ -2975,7 +2975,7 @@
 
 [^140]: tvhmeta: Fix tvhmeta authentication to the tvheadend API.
 
-    Construct and add an Authorisation header to the request, when a
+    Construct and add an Authorization header to the request, when a
 
     username and password are provided to tvhmeta.
 
