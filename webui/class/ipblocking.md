@@ -1,8 +1,8 @@
-<tvh_include>inc/users_contents</tvh_include>
+{% include "../../.gitbook/includes/users_contents.md" %}
 
 ---
 
-<tvh_include>inc/users_overview</tvh_include>
+{% include "../../.gitbook/includes/users_overview.md" %}
 
 !['IP Blocking' Tab](static/img/doc/users/ipblocking_tab.png)
 
@@ -18,4 +18,4 @@ enter `192.168.6.66/32` or to block the all addresses in the `192.168.6` range, 
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}

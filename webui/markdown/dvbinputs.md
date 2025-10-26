@@ -24,13 +24,13 @@ networks, muxes and services.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 
 ## Device Types and Configuration
 
-<tvh_include>inc/dvbinputs_type_table</tvh_include>
+{% include "../../.gitbook/includes/dvbinputs_type_table.md" %}
 
 ---
 

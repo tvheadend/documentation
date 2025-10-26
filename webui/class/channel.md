@@ -1,4 +1,4 @@
-<tvh_include>inc/channels_contents</tvh_include>
+{% include "../../.gitbook/includes/channels_contents.md" %}
 
 ---
 
@@ -15,6 +15,6 @@ Note, the links don't link to the actual stream but to a playlist for use with m
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

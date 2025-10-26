@@ -18,6 +18,6 @@ useful to get EPG, services or access rights updates.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

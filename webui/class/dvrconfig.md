@@ -1,4 +1,4 @@
-<tvh_include>inc/recording_contents</tvh_include>
+{% include "../../.gitbook/includes/recording_contents.md" %}
 
 ---
 
@@ -14,6 +14,6 @@ recordings.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

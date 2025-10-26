@@ -1,6 +1,6 @@
 # Service Mapper 
 
-<tvh_include>inc/status_contents</tvh_include>
+{% include "../../.gitbook/includes/status_contents.md" %}
 
 ---
 

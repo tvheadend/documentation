@@ -1,4 +1,4 @@
-<tvh_include>inc/stream_contents</tvh_include>
+{% include "../../.gitbook/includes/stream_contents.md" %}
 
 ---
 
@@ -22,7 +22,7 @@ Filter type                                            | Description
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 

@@ -1,4 +1,4 @@
-<tvh_include>inc/linuxdvb_contents</tvh_include>
+{% include "../../.gitbook/includes/linuxdvb_contents.md" %}
 
 ---
 
@@ -6,18 +6,18 @@
 
 This panel displays all available SAT>IP client parameters.
 
-<tvh_include>inc/dvbinputs_table</tvh_include>
+{% include "../../.gitbook/includes/dvbinputs_table.md" %}
 
 ---
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 
 ## Device Types and Configuration
 
-<tvh_include>inc/dvbinputs_type_table</tvh_include>
+{% include "../../.gitbook/includes/dvbinputs_type_table.md" %}
 
 ---

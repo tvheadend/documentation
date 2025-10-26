@@ -1,4 +1,4 @@
-<tvh_include>inc/channels_contents</tvh_include>
+{% include "../../.gitbook/includes/channels_contents.md" %}
 
 ---
 
@@ -13,6 +13,6 @@ This tab is used to configure the Electronic Program Guide (EPG)
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

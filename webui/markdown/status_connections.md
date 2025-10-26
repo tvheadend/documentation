@@ -1,6 +1,6 @@
 # Status - Connections
 
-<tvh_include>inc/status_contents</tvh_include>
+{% include "../../.gitbook/includes/status_contents.md" %}
 
 ---
 
@@ -16,7 +16,7 @@ This is a read-only tab; nothing is configurable.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 

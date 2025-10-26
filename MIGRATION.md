@@ -16,7 +16,7 @@ All files from the `docs/` folder and associated images from `src/webui/static/i
 | Property Help | 45 files | `webui/property/` |
 | Wizard Steps | 8 files | `webui/wizard/` |
 | General Markdown | 19 files | `webui/markdown/` |
-| Include Files | 22 files | `webui/markdown/inc/` |
+| Reusable Content | 22 files | `.gitbook/includes/` |
 | Images and Icons | 135 files | `webui/static/img/` |
 | **Total** | **266 files** | |
 | Supporting Documentation | 2 files | `webui/README.md`, `webui/INTEGRATION.md` |
@@ -47,12 +47,8 @@ webui/
 │   ├── installation.md
 │   ├── firstconfig.md
 │   ├── epg.md
-│   └── inc/                   # Include files (22 files)
-│       ├── buttons.md
-│       ├── config_contents.md
-│       ├── users_overview.md
-│       └── ...
-└── static/                    # Images and icons (136 files)
+│   └── ...
+└── static/                    # Images and icons (135 files)
     └── img/
         ├── opencollective.png
         └── doc/
@@ -61,6 +57,12 @@ webui/
             ├── config/
             ├── icons/
             └── ...
+
+.gitbook/includes/             # Reusable content blocks (22 files)
+├── buttons.md
+├── config_contents.md
+├── users_overview.md
+└── ...
 ```
 
 ## Verification
@@ -78,8 +80,9 @@ All files have been verified to match the original files byte-for-byte using MD5
 
 The following aspects of the documentation have been preserved:
 
-1. **Include directives**: All `<tvh_include>` tags remain unchanged
-   - Example: `<tvh_include>inc/users_contents</tvh_include>`
+1. **Include directives**: Converted to GitBook's include syntax
+   - Old: `<tvh_include>inc/users_contents</tvh_include>`
+   - New: `{% include "../../.gitbook/includes/users_contents.md" %}`
 
 2. **Image references**: All image paths remain unchanged
    - Example: `!['Access Entries' Tab](static/img/doc/users/access_entries_tab.png)`

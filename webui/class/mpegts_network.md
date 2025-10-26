@@ -1,4 +1,4 @@
-<tvh_include>inc/networks_contents</tvh_include>
+{% include "../../.gitbook/includes/networks_contents.md" %}
 
 ---
 
@@ -13,7 +13,7 @@ supports several different types of network.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 

@@ -30,7 +30,7 @@ To include class documentation you'd use:
 To include multi-use docs (placed in the `docs/markdown/inc/` folder:
 
 ```
-<tvh_include>inc/common_button_table_end</tvh_include>
+{% include "../../.gitbook/includes/common_button_table_end.md" %}
 ```
 
 ### Paragraphs Versus Definition Lists

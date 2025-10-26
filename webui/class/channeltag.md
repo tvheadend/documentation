@@ -1,4 +1,4 @@
-<tvh_include>inc/channels_contents</tvh_include>
+{% include "../../.gitbook/includes/channels_contents.md" %}
 
 ---
 
@@ -16,6 +16,6 @@ with Movian.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

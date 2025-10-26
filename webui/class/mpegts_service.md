@@ -1,5 +1,5 @@
 
-<tvh_include>inc/service_contents</tvh_include>
+{% include "../../.gitbook/includes/service_contents.md" %}
 
 ---
 
@@ -9,13 +9,13 @@ Services are automatically pulled from muxes and can be mapped to Channels.
 
 !['Services'](static/img/doc/dvbinputs/dvbinput_service.png)
 
-<tvh_include>inc/dvbinputs_table</tvh_include>
+{% include "../../.gitbook/includes/dvbinputs_table.md" %}
 
 ---
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 

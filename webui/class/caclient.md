@@ -1,4 +1,4 @@
-<tvh_include>inc/caclient_contents</tvh_include>
+{% include "../../.gitbook/includes/caclient_contents.md" %}
 
 ---
 
@@ -13,7 +13,7 @@ capmt (linux network dvbapi) protocols for so-called 'softcam' descrambling.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 

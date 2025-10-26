@@ -1,4 +1,4 @@
-<tvh_include>inc/ratinglabel_contents</tvh_include>
+{% include "../../.gitbook/includes/ratinglabel_contents.md" %}
 
 ---
 

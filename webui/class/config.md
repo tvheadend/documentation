@@ -1,17 +1,17 @@
-<tvh_include>inc/config_contents</tvh_include>
+{% include "../../.gitbook/includes/config_contents.md" %}
 
 ---
 
-<tvh_include>inc/config_overview</tvh_include>
+{% include "../../.gitbook/includes/config_overview.md" %}
 
 !['General Base'](static/img/doc/config/base.png)
 
-<tvh_include>inc/config_notes</tvh_include>
+{% include "../../.gitbook/includes/config_notes.md" %}
 
 ---
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

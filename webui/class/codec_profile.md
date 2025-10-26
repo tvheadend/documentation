@@ -1,4 +1,4 @@
-<tvh_include>inc/stream_contents</tvh_include>
+{% include "../../.gitbook/includes/stream_contents.md" %}
 
 ---
 
@@ -12,6 +12,6 @@ This tab allows you to manage the codec settings used by stream profiles.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

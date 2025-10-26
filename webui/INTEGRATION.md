@@ -16,19 +16,21 @@ webui/
 ├── property/           # Property help (45 files)  
 ├── wizard/             # Wizard steps (8 files)
 ├── markdown/           # General docs (19 files)
-│   └── inc/            # Include files (22 files)
+├── static/img/         # Images and icons (135 files)
 └── README.md           # This structure overview
+
+.gitbook/includes/      # Reusable content blocks (22 files)
 ```
 
 ## Using Include Directives
 
-The existing files use the `<tvh_include>` directive to pull in content. For example:
+The files use GitBook's include directive to pull in reusable content. For example:
 
 ```markdown
-<tvh_include>inc/users_contents</tvh_include>
+{% include "../../.gitbook/includes/users_contents.md" %}
 ```
 
-When migrating the main repository, these includes can be updated to reference this repository:
+These reusable content blocks are stored in the `.gitbook/includes/` directory and can be referenced from any documentation file using relative paths.
 
 ### Option 1: Git Submodule
 Add this repository as a git submodule in the main repository:
@@ -66,7 +68,7 @@ The original `docs/` folder structure has been preserved under `webui/`:
 | `docs/property/*.md` | `webui/property/*.md` |
 | `docs/wizard/*.md` | `webui/wizard/*.md` |
 | `docs/markdown/*.md` | `webui/markdown/*.md` |
-| `docs/markdown/inc/*.md` | `webui/markdown/inc/*.md` |
+| `docs/markdown/inc/*.md` | `.gitbook/includes/*.md` (reusable content) |
 
 ## Examples
 
@@ -77,8 +79,8 @@ The original `docs/` folder structure has been preserved under `webui/`:
 
 ### Include File for Users
 - **Original**: `docs/markdown/inc/users_contents.md`
-- **New Location**: `webui/markdown/inc/users_contents.md`
-- **Include**: `<tvh_include>inc/users_contents</tvh_include>`
+- **New Location**: `.gitbook/includes/users_contents.md`
+- **Include**: `{% include "../../.gitbook/includes/users_contents.md" %}`
 
 ### Wizard Hello Page
 - **Original**: `docs/wizard/hello.md`
@@ -89,8 +91,8 @@ The original `docs/` folder structure has been preserved under `webui/`:
 To maintain compatibility with the existing in-app help system:
 
 1. **Keep the same file names** - All files retain their original names
-2. **Preserve content format** - The `<tvh_include>` syntax is unchanged
-3. **Maintain structure** - The directory hierarchy remains the same (class/, property/, wizard/, markdown/, markdown/inc/)
+2. **Use GitBook includes** - Reusable content uses `{% include %}` syntax
+3. **Maintain structure** - The directory hierarchy remains the same (class/, property/, wizard/, markdown/)
 
 ## Next Steps for Main Repository
 

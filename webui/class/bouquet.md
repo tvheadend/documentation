@@ -1,4 +1,4 @@
-<tvh_include>inc/channels_contents</tvh_include>
+{% include "../../.gitbook/includes/channels_contents.md" %}
 
 ---
 

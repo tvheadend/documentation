@@ -1,8 +1,8 @@
-<tvh_include>inc/users_contents</tvh_include>
+{% include "../../.gitbook/includes/users_contents.md" %}
 
 ---
 
-<tvh_include>inc/users_overview</tvh_include>
+{% include "../../.gitbook/includes/users_overview.md" %}
 
 !['Passwords' Tab](static/img/doc/users/passwords_tab.png)
 
@@ -24,7 +24,7 @@ recommended you add one anyway (enter an asterisk `*`).
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 
 ---

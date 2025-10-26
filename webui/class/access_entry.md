@@ -1,8 +1,8 @@
-<tvh_include>inc/users_contents</tvh_include>
+{% include "../../.gitbook/includes/users_contents.md" %}
 
 ---
 
-<tvh_include>inc/users_overview</tvh_include>
+{% include "../../.gitbook/includes/users_overview.md" %}
 
 !['Access Entries' Tab](static/img/doc/users/access_entries_tab.png)
 
@@ -31,7 +31,7 @@ control which parameters are merged, see *Change parameters* [below](#items).
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 
 ---

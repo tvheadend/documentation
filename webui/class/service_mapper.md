@@ -1,5 +1,5 @@
 
-<tvh_include>inc/service_contents</tvh_include>
+{% include "../../.gitbook/includes/service_contents.md" %}
 
 ---
 
@@ -18,6 +18,6 @@ See [Services](class/mpegts_service) for more details on service mapping.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

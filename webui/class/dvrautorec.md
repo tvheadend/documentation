@@ -1,14 +1,14 @@
-<tvh_include>inc/dvr_contents</tvh_include>
+{% include "../../.gitbook/includes/dvr_contents.md" %}
 
 ---
 
-<tvh_include>inc/dvr_overview</tvh_include>
+{% include "../../.gitbook/includes/dvr_overview.md" %}
 
 ---
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 

@@ -21,6 +21,6 @@ streams - so an IP address, in effect.
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---

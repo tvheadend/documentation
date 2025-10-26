@@ -1,12 +1,12 @@
-<tvh_include>inc/config_contents</tvh_include>
+{% include "../../.gitbook/includes/config_contents.md" %}
 
 ---
 
-<tvh_include>inc/config_overview</tvh_include>
+{% include "../../.gitbook/includes/config_overview.md" %}
 
 !['SAT\>IP Config tab'](static/img/doc/config/satip_server.png)
 
-<tvh_include>inc/config_notes</tvh_include>
+{% include "../../.gitbook/includes/config_notes.md" %}
 
 * You can put a custom M3U playlist (which will be advertised to clients) in your Tvheadend configuration directory - filename *satip.m3u*.
 
@@ -14,7 +14,7 @@
 
 ## Buttons
 
-<tvh_include>inc/buttons</tvh_include>
+{% include "../../.gitbook/includes/buttons.md" %}
 
 ---
 
