@@ -29,7 +29,7 @@ Once the text from the `md` files has been assembled, the `md_props()` function 
 A typical finally assembled result may look like this:
 
 `[Content from first include file]`\
-`Some text or seperator.`\
+`Some text or separator.`\
 `[Content from second include file]`\
 `Main body of the md file`\
 `[Content from third include file]`\

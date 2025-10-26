@@ -30,7 +30,7 @@ To execute the HTTP API command:\
 \
 Set the `path` field to `channel/grid` and send the request.  The `args` field is not required.\
 \
-The response will be a HTSP `map` containing an element named `response`.  This element will be a `map` containing the the JSON response presented as HTSP elements.
+The response will be a HTSP `map` containing an element named `response`.  This element will be a `map` containing the JSON response presented as HTSP elements.
 
 ## Intermediate Request
 

@@ -425,7 +425,7 @@ Video components only:
 width              u32   optional   Width of video in pixels
 height             u32   optional   Height of video in pixels
 aspect_num         u32   optional   Aspect ratio numerator (Added in version 5) *Can be incorrect and should not be relied upon*
-aspect_den         u32   optional   Aspect ratio denonminator (Added in version 5) *Can be incorrect and should not be relied upon*
+aspect_den         u32   optional   Aspect ratio denominator (Added in version 5) *Can be incorrect and should not be relied upon*
 Audio components only:
 audio_type         u32   optional   Audio type - 0=Normal; 1=Clean effects; 2=Hearing impaired; 3=Visually impaired commentary; 4-255=Reserved (Added in version 11)
 channels           u32   optional   Number of audio channels (Added in version 5)
@@ -568,7 +568,7 @@ The queueStatus message is sent every second during normal data delivery.
 
 The transmit scheduler have different drop thresholds for different frame types.
 
-If congestion occurs it will favor dropping B-frames before P-frames before I-frames.\
+If congestion occurs it will favour dropping B-frames before P-frames before I-frames.\
 All audio is recognized as I-frames.
 
 Message fields:\

@@ -6,7 +6,7 @@ Tvheadend is operated primarily through a tabbed web interface. There are some b
 
 * The web interface uses tabs with similar functions grouped together. Tabs for major configuration functions are located on the top row, with tabs for configuration items related to the currently selected major function located on the row below. In some cases a third row of config options will be shown.
 * Most tabs have display a menu bar with _Add, Save, Edit, Undo_ functions and a spreadsheet-like grid below. Grid items are frequently editable.
-* Most configuration items are in this grid. However, some item-specific configuraiton is accessed through the _Add_ and _Edit_ dialog boxes. For example: the main network configuration tab grid covers parameters common to DVB-S, DVB-T, DVB-C and IPTV networks, but configuration like FEC rolloff or mux URL is only present in dialogs for networks that need these values.
+* Most configuration items are in this grid. However, some item-specific configuration is accessed through the _Add_ and _Edit_ dialog boxes. For example: the main network configuration tab grid covers parameters common to DVB-S, DVB-T, DVB-C and IPTV networks, but configuration like FEC rolloff or mux URL is only present in dialogs for networks that need these values.
 
 ## **Displaying & Manipulating Columns**
 

@@ -128,7 +128,7 @@
 
 ## Release: [4.3-2418\~gf7edaf48c](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2418*) (2025-06-10)
 
-> Recognize checkbox for feature proposals properly
+> Recognise checkbox for feature proposals properly
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/f7edaf48cbe2e068e2126a6b355ae64b2d1b1f6e) (2025-06-10)
 
@@ -240,13 +240,13 @@
 >
 > Currently, Tvheadend treats these errors as fatal, resulting in the transcoder stream being torn down via `tvh_stream_stop()` and interrupting client playback, typically leaving only audio and a black screen.
 >
-> While this behavior is somewhat tolerable during live TV viewing—where the user can manually resolve the issue by changing channels—it is significantly more disruptive in recording scenarios, as it results in recordings containing only audio and no video.
+> While this behaviour is somewhat tolerable during live TV viewing—where the user can manually resolve the issue by changing channels—it is significantly more disruptive in recording scenarios, as it results in recordings containing only audio and no video.
 >
 > However, when the same streams are run directly through FFmpeg’s CLI, FFmpeg **does not abort** on these errors — it logs them and continues transcoding. This makes FFmpeg's failure handling more robust than Tvheadend's.
 >
 > To identify which errors should be considered recoverable, the transcoder was instrumented to log the exact `AVERROR` codes encountered during decoding failures. A stress test was then run using a channel-hopping script that switched channels every 5 seconds over several hours. The failure rate was approximately 1%, and in **all** cases, the decoding failures were either `AVERROR(EIO)` or `AVERROR(EINVAL)`. Allowing the stream to continue after these specific errors proved effective — playback resumed, and only a minor picture glitch was visible at the affected frame, with no need to tear down the video stream.
 >
-> This patch updates `tvh_context_decode()` to include `AVERROR(EIO)` and `AVERROR(EINVAL)` in the list of tolerated decode errors, aligning Tvheadend's behavior with FFmpeg’s more forgiving approach.
+> This patch updates `tvh_context_decode()` to include `AVERROR(EIO)` and `AVERROR(EINVAL)` in the list of tolerated decode errors, aligning Tvheadend's behaviour with FFmpeg’s more forgiving approach.
 >
 > FFmpeg’s internal decoder logic in `vaapi_h264.c` and `decode.c` supports this tolerance model. For example, in `decode_simple_internal()` and `submit_frame()`, errors like `EIO` may occur during `av_hwframe_transfer_data()` or `vaEndPicture()`, but are **not considered fatal**. Instead, FFmpeg logs the issue and decoding continues on the next frame.
 
@@ -390,7 +390,7 @@
 > allow NVENC, VAAPI and MMAL to coexist in the same build
 >
 > * allow NVENC, VAAPI and MMAL to coexist in the same build.
-> * give the user the capability for prioritize hw decoder or to match the hw decoder with hw encoder
+> * give the user the capability for prioritise hw decoder or to match the hw decoder with hw encoder
 > * refactor source code: remove duplicate source code in codec.js
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/cf29292592756f778024b3f5d8df166dad899285) (2025-05-14)
@@ -409,7 +409,7 @@
 >
 > This warning is triggered due to a theoretical edge case in `tvh_strlcatf()` where combining strings like `"en,fr,de"` could approach the buffer limit of 32 bytes. While truncation is unlikely in practice, the warning is still emitted aggressively by the new FORTIFY logic.
 >
-> Increase the buffer from 32 to 64 bytes to silence the warning and ensure headroom. This avoids having to disable the diagnostic, while still keeping the logic and usage intact. This is a defensive fix with no behavioral change, and aligns with similar mitigations used in other projects facing the same issue with GCC >= 13 and especially 15+.
+> Increase the buffer from 32 to 64 bytes to silence the warning and ensure headroom. This avoids having to disable the diagnostic, while still keeping the logic and usage intact. This is a defensive fix with no behavioural change, and aligns with similar mitigations used in other projects facing the same issue with GCC >= 13 and especially 15+.
 >
 > Tested with GCC 15.1.1, built cleanly.
 >
@@ -460,7 +460,7 @@
 
 > lovcombo-all.js: Fix autorec create/edit TypeError with Firefox 134 (#1786)
 >
-> Firefox 134 added the RegExp.escape() method (https://tc39.es/proposal-regex-escaping/#sec-regexp.escape) with a standards-compliant implementation that throws TypeError if any value other than a String is passed in. This differs from the existing polyfill that simply returns the argument unmodified if it isn't a String. In TVHeadend, the day-of-the-week selector (as used in the Autorec and Timer configuration) uses Integers as keys for options, causing an Integer to get passed to RegExp.escape() on line 300 of lovcombo-all.js. Because of the non-standards- compliant permissive behavior of the polyfill, this previously didn't cause an issue. However, with Firefox 134 (and an upcoming version of Safari), the added standards-compliant method causes a TypeError to be thrown on every attempt to create or edit a timer or autorec, causing the edit window to not be shown. To solve the issue, pass the response from r.get(this.valueField) through the String() constructor to ensure anything that gets passed in is a String. This has been tested with Firefox and Chrome with both Integer and String keys.
+> Firefox 134 added the RegExp.escape() method (https://tc39.es/proposal-regex-escaping/#sec-regexp.escape) with a standards-compliant implementation that throws TypeError if any value other than a String is passed in. This differs from the existing polyfill that simply returns the argument unmodified if it isn't a String. In TVHeadend, the day-of-the-week selector (as used in the Autorec and Timer configuration) uses Integers as keys for options, causing an Integer to get passed to RegExp.escape() on line 300 of lovcombo-all.js. Because of the non-standards- compliant permissive behaviour of the polyfill, this previously didn't cause an issue. However, with Firefox 134 (and an upcoming version of Safari), the added standards-compliant method causes a TypeError to be thrown on every attempt to create or edit a timer or autorec, causing the edit window to not be shown. To solve the issue, pass the response from r.get(this.valueField) through the String() constructor to ensure anything that gets passed in is a String. This has been tested with Firefox and Chrome with both Integer and String keys.
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/cc07e3471e314469dca3086f134bf3384e06fc83) (2025-05-13)
 
@@ -1191,7 +1191,7 @@
 
 ## Release: [4.3-2258\~gc7a63e7e3](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2258*) (2024-02-21)
 
-> Replace poison memset by memset\_s to avoid compiler optimizing it out
+> Replace poison memset by memset\_s to avoid compiler optimising it out
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/c7a63e7e3b7c15d6f2c1048efafbaaa5a854ea7d) (2024-02-20)
 
@@ -1277,7 +1277,7 @@
 
 > Replace single-bit signed integers with unsigned integers
 >
-> Single bit signed integers contain a single sign-byte and zero value bytes according to the C99 standard. This is not inteded here.
+> Single bit signed integers contain a single sign-byte and zero value bytes according to the C99 standard. This is not intended here.
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/2b0b6a4c4c82adeaed9793f574e39247473c43e1) (2024-02-19)
 
@@ -1299,9 +1299,9 @@
 
 > container: Add container support
 >
-> This commit adds support for containizersation of TVHeadend. It adds the actual technology agnostic container file, an entry point and healthcheck for it and a github workflow component to publish it.
+> This commit adds support for containerisation of TVHeadend. It adds the actual technology agnostic container file, an entry point and healthcheck for it and a github workflow component to publish it.
 >
-> TODO: Healthcheck script is not yet working. TODO: Add decent documetnation
+> TODO: Healthcheck script is not yet working. TODO: Add decent documentation
 >
 > Signed-off-by: Olliver Schinagl [oliver@schinagl.nl](mailto:oliver@schinagl.nl)
 
@@ -1417,7 +1417,7 @@
 
 ## Release: [4.3-2210\~g154b20228](https://cloudsmith.io/~tvheadend/repos/tvheadend/packages/?q=version%3A4.3-2210*) (2024-02-03)
 
-> Sanitize filename in content-disposition header
+> Sanitise filename in content-disposition header
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/154b202288701013be926d5c13b205504483db93) (2024-02-03)
 
@@ -1474,9 +1474,9 @@
 
 > Use sigaction() instead of signal()
 >
-> The behavior of signal() is not consistent or defined when using it to set signal handlers (see "Portability" in https://man7.org/linux/man-pages/man2/signal.2.html). Previously we got away with this, but starting with GCC 14, using signal() apparently causes certain syscalls to be restarted after the signal is caught. One of these is the read() currently on line 63 of fsmonitor.c. The result is that read() doesn't return when the fsmonitor thread receives a signal, resulting in the thread never shutting down, resulting in TVHeadend hanging on any attempt to terminate it.
+> The behaviour of signal() is not consistent or defined when using it to set signal handlers (see "Portability" in https://man7.org/linux/man-pages/man2/signal.2.html). Previously we got away with this, but starting with GCC 14, using signal() apparently causes certain syscalls to be restarted after the signal is caught. One of these is the read() currently on line 63 of fsmonitor.c. The result is that read() doesn't return when the fsmonitor thread receives a signal, resulting in the thread never shutting down, resulting in TVHeadend hanging on any attempt to terminate it.
 >
-> Instead, use sigaction(), which has defined behavior when setting signal handlers. Since invoking sigaction() requires several lines, a helper was added to tvh\_thread.c to avoid code duplication.
+> Instead, use sigaction(), which has defined behaviour when setting signal handlers. Since invoking sigaction() requires several lines, a helper was added to tvh\_thread.c to avoid code duplication.
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/717056be02e1d1754bc86948c8523964c5ea0f1c) (2024-02-01)
 
@@ -1988,7 +1988,7 @@
 >
 > While we are at it lets also display the value in the same way the similar looking (but completely different implemented…) EPG dialog does.
 >
-> Regession-of: d501059995 Fixes: https://tvheadend.org/issues/6297
+> Regression-of: d501059995 Fixes: https://tvheadend.org/issues/6297
 
 > [GitHub commit details...](https://github.com/tvheadend/tvheadend/commit/21911b5e37a20b6f2a10ef48a93ccf7bf2dd179c) (2023-08-11)
 
@@ -2040,7 +2040,7 @@
 >
 > To keep this issue small, and tackle one problem at a time, lets just fix time\_t first. We do still have 15 years to fix the other issues.
 >
-> Note, that this patch leaves out FreeBSD specifics, as it is unclear what is specific about 32bit FreeBSD. It should be using the same glibc headers after all. If not, we can always add if needed, but adding usless code doesn't help anyone generally.
+> Note, that this patch leaves out FreeBSD specifics, as it is unclear what is specific about 32bit FreeBSD. It should be using the same glibc headers after all. If not, we can always add if needed, but adding useless code doesn't help anyone generally.
 >
 > ```
 > diff --git a/src/tvheadend.h b/src/tvheadend.h
@@ -2105,7 +2105,7 @@
 
 > tvhmeta: Fix tvhmeta authentication to the tvheadend API.
 >
-> Construct and add an Authorization header to the request, when a username and password are provided to tvhmeta.
+> Construct and add an Authorisation header to the request, when a username and password are provided to tvhmeta.
 >
 > This fixes #6260.
 

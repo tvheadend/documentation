@@ -63,9 +63,9 @@ For events without any series link information, an _\[Autorec]_ button will be p
 
 ![EPG Detail 2](https://tvheadend.readthedocs.io/en/latest/webui/docresources/epg3.png)
 
-When scheduling recording you can choose the DVR profile used for the recording or autorec rule. This will normally show _(default)_ but you can define different profiles in the **Configuration -> Recording -> Digital Video Recorder** tab. Profiles allow you to set, e.g. post-broadcast padding to accomodate a channel that always runs late, or a post-processing command to strip adverts from recordings made from a commercial channel.
+When scheduling recording you can choose the DVR profile used for the recording or autorec rule. This will normally show _(default)_ but you can define different profiles in the **Configuration -> Recording -> Digital Video Recorder** tab. Profiles allow you to set, e.g. post-broadcast padding to accommodate a channel that always runs late, or a post-processing command to strip adverts from recordings made from a commercial channel.
 
-The _\[Search IMDB]_ button runs a search against the programme title on on imdb.com, and _\[Play program]_ button. This downloads am XSPT or M3U playlist file (depending on startup options) and if your Operating System is correctly configured this will launch an appropriate player application. If not you will need to manually open (double-click) the playlist file to start watching.
+The _\[Search IMDB]_ button runs a search against the programme title on imdb.com, and _\[Play program]_ button. This downloads an XSPT or M3U playlist file (depending on startup options) and if your Operating System is correctly configured this will launch an appropriate player application. If not you will need to manually open (double-click) the playlist file to start watching.
 
 Clock on the \[X] window button (top-right) to close the popup. The popup is not modal and will remain open and visible. You can open multiple detailed information popups at the same time.
 

@@ -546,7 +546,7 @@ Restart on error: checked&#x20;
 
 Continue if descrambling fails: checked&#x20;
 
-Descrembling timeout: 2000&#x20;
+Descrambling timeout: 2000&#x20;
 
 Switch to another service: checked&#x20;
 
