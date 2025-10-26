@@ -6,7 +6,7 @@ This document summarizes the migration of in-app help documentation from the mai
 
 ## What Was Migrated
 
-All files from the `docs/` folder in the main repository have been copied to the `webui/` folder in this repository, maintaining the exact same structure and file names.
+All files from the `docs/` folder and associated images from `src/webui/static/img/` in the main repository have been copied to the `webui/` folder in this repository, maintaining the exact same structure and file names.
 
 ## File Statistics
 
@@ -17,7 +17,8 @@ All files from the `docs/` folder in the main repository have been copied to the
 | Wizard Steps | 8 files | `webui/wizard/` |
 | General Markdown | 19 files | `webui/markdown/` |
 | Include Files | 22 files | `webui/markdown/inc/` |
-| **Total** | **131 files** | |
+| Images and Icons | 135 files | `webui/static/img/` |
+| **Total** | **266 files** | |
 | Supporting Documentation | 2 files | `webui/README.md`, `webui/INTEGRATION.md` |
 
 ## Directory Structure
@@ -41,26 +42,36 @@ webui/
 │   ├── hello.md
 │   ├── login.md
 │   └── ...
-└── markdown/                  # General documentation (19 files)
-    ├── introduction.md
-    ├── installation.md
-    ├── firstconfig.md
-    ├── epg.md
-    └── inc/                   # Include files (22 files)
-        ├── buttons.md
-        ├── config_contents.md
-        ├── users_overview.md
-        └── ...
+├── markdown/                  # General documentation (19 files)
+│   ├── introduction.md
+│   ├── installation.md
+│   ├── firstconfig.md
+│   ├── epg.md
+│   └── inc/                   # Include files (22 files)
+│       ├── buttons.md
+│       ├── config_contents.md
+│       ├── users_overview.md
+│       └── ...
+└── static/                    # Images and icons (136 files)
+    └── img/
+        ├── opencollective.png
+        └── doc/
+            ├── caclient/
+            ├── channel/
+            ├── config/
+            ├── icons/
+            └── ...
 ```
 
 ## Verification
 
 All files have been verified to match the original files byte-for-byte using MD5 checksums. No content was lost or modified during the migration.
 
-- ✅ All 131 files copied successfully
+- ✅ All 131 markdown files copied successfully
+- ✅ All 135 image and icon files copied successfully
 - ✅ File structure preserved exactly
 - ✅ All include directives (`<tvh_include>`) preserved
-- ✅ All image references preserved
+- ✅ All image references working correctly
 - ✅ No files modified or lost
 
 ## Content Preservation

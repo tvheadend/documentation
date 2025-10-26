@@ -4,10 +4,10 @@ This directory contains the in-app help documentation for the Tvheadend web user
 
 ## Directory Structure
 
-- **class/** - Class-based documentation for various configuration screens and objects (31 files)
+- **class/** - Class-based documentation for various configuration screens and objects (37 files)
   - Access entries, bouquets, CA clients, channels, DVR configurations, EPG grabbers, filters, etc.
   
-- **property/** - Property-specific help documentation (44 files)
+- **property/** - Property-specific help documentation (45 files)
   - Individual field help for authentication, cron, duplicate handling, DVR settings, streaming profiles, etc.
   
 - **wizard/** - Setup wizard documentation (8 files)
@@ -18,6 +18,10 @@ This directory contains the in-app help documentation for the Tvheadend web user
   
 - **markdown/inc/** - Reusable markdown includes (22 files)
   - Common button tables, content sections, overviews that are included in other documents
+
+- **static/img/** - Images and icons referenced in the documentation (135 files)
+  - Screenshots of various configuration screens and UI elements
+  - Icons used in the documentation
 
 ## Usage in Main Repository
 
@@ -31,6 +35,8 @@ This allows the in-app help system to pull content from this centralized documen
 
 ## File Count
 
-Total files: 131
+Total files: 266
+- Markdown files: 131
+- Images and icons: 135
 
-This represents a complete mirror of the docs/ folder from the main tvheadend repository, maintaining the original structure to ensure compatibility with the in-app help system.
+This represents a complete mirror of the docs/ folder and associated images from the main tvheadend repository, maintaining the original structure to ensure compatibility with the in-app help system.
