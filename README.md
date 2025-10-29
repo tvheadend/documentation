@@ -4,6 +4,6 @@ Tvheadend documentation is authored and maintained by Tvheadend users. If you se
 
 [https://app.gitbook.com/invite/GUiJM9P5N3CkY42Hcs8P/7hmZSVRZkZqEIJarLFX5](https://app.gitbook.com/invite/GUiJM9P5N3CkY42Hcs8P/7hmZSVRZkZqEIJarLFX5)
 
-> \* IMPORTANT \*
->
-> Please do not be concerned about your English language skills when contributing changes to our documentation. It is easier for a native speaker to merge your content and then make corrections than to write everything themselves. And if there is no obvious place to put content (the current structure is sparse and incomplete) please create pages under the [WIP](broken-reference) section. It can be merged and moved later as the documentation structure evolves.
+{% hint style="info" %}
+English language skills are not important for contributions! - It is easier for a native speaker to merge changes and then make edits/corrections than to write everything themselves. If you are unsure where to place content in the current documentation structure please use the [WIP](broken-reference) section - we will move it later.
+{% endhint %}
