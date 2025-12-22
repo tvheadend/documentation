@@ -40,3 +40,5 @@ Depending upon the exact installation of TVH, scan file can be found in various 
 `/usr/share/tvheadend/data/dvb-scan/`
 
 **Please Note:** depending upon the parameters used, `w_scan` can take a **very** long time to perform a scan.
+
+More details about `w_scan` can be found here: [https://github.com/stefantalpalaru/w\_scan2](https://github.com/stefantalpalaru/w_scan2)
