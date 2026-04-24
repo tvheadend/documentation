@@ -2,6 +2,10 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
+#### v44
+
+* added feAbsoluteSNR and feAbsoluteSignal
+
 #### v43
 
 * added isNew field to eventAdd

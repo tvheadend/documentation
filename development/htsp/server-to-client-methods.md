@@ -4,8 +4,7 @@
 
 A new channel has been created on the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 channelId          u32   required   ID of channel.
@@ -24,8 +23,7 @@ tags               u32[] optional   Tags this channel is mapped to.
 services           msg[] optional   List of available services (Added in version 5)
 ```
 
-Service fields:\
-
+Service fields:\\
 
 ```
 name               str   required   Service name
@@ -43,8 +41,7 @@ Same as channelAdd, but all fields (except channelId) are optional.
 
 A channel has been deleted on the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 channelId          u32   required   ID of channel.
@@ -56,8 +53,7 @@ channelId          u32   required   ID of channel.
 
 A new tag has been created on the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 tagId              u32   required   ID of tag.
@@ -77,8 +73,7 @@ Same as tagAdd, but all fields (except tagId) are optional.
 
 A tag has been deleted from the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 tagId              u32   required   ID of tag.
@@ -92,8 +87,7 @@ tagId              u32   required   ID of tag.
 
 A new recording has been created on the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 id                 u32   required   ID of dvrEntry.
@@ -165,15 +159,13 @@ partCount          u32   optional   Part count.
 episodeOnscreen    str   optional   Textual representation of the season/episode number suitable for display.
 ```
 
-Valid values for state:\
-
+Valid values for state:\\
 
 ```
 TODO
 ```
 
-Valid values for subscriptionError:\
-
+Valid values for subscriptionError:\\
 
 ```
 noFreeAdapter            No free adapter for this service.
@@ -189,8 +181,7 @@ userLimit                Maximum number of streaming connections set in user's p
 
 ### dvrEntryUpdate
 
-Message fields:\
-
+Message fields:\\
 
 ```
 Same as dvrEntryAdd, but all fields (except id) are optional.
@@ -202,8 +193,7 @@ Same as dvrEntryAdd, but all fields (except id) are optional.
 
 A recording has been deleted from the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 id                 u32   required   ID of recording to delete.
@@ -217,8 +207,7 @@ id                 u32   required   ID of recording to delete.
 
 A new autorec recording has been created on the server.
 
-Message fields:\
-
+Message fields:\\
 
 <pre><code>id                 str   required   ID (string!) of dvrAutorecEntry.
 enabled            u32   required   If autorec entry is enabled (activated).
@@ -249,8 +238,7 @@ comment            str   optional   User Comment (Added in version 42).
 
 (Added in version 13)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 Same as autorecEntryAdd but all fields (except id) are optional.
@@ -258,8 +246,7 @@ Same as autorecEntryAdd but all fields (except id) are optional.
 
 #### autorecEntryDelete (Added in version 13)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 id                 str   required   Autorec Entry ID (string!)
@@ -273,8 +260,7 @@ id                 str   required   Autorec Entry ID (string!)
 
 A new autorec recording has been created on the server.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 title              str   required   Title for the recordings.
@@ -297,8 +283,7 @@ comment            str   optional   User Comment (Added in version 42).
 
 (Added in version 18)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 Same as timerecEntryAdd but all fields (except id) are optional.
@@ -308,8 +293,7 @@ Same as timerecEntryAdd but all fields (except id) are optional.
 
 (Added in version 18)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 id                 str   required   Timerec Entry ID (string!)
@@ -321,8 +305,7 @@ id                 str   required   Timerec Entry ID (string!)
 
 (Added in version 6)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 eventId            u32   required   Event ID
@@ -366,8 +349,7 @@ isNew              str   optional   Flag to indicate whether the programme is ne
 
 (Added in version 6)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 Same as eventAdd but all fields (except eventId) are optional.
@@ -377,8 +359,7 @@ Same as eventAdd but all fields (except eventId) are optional.
 
 (Added in version 6)
 
-Message fields:\
-
+Message fields:\\
 
 ```
 eventId            u32   required   Event ID
@@ -392,8 +373,7 @@ eventId            u32   required   Event ID
 
 Sent after all the initial metadata has been sent when session has been set to async mode.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 ```
@@ -404,8 +384,7 @@ Message fields:\
 
 Asynchronous message output when a new subscription is successfully started.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -413,8 +392,7 @@ streams            msg[] required   Array of messages with stream information
 sourceinfo         msg   optional   Source information.
 ```
 
-Stream message fields:\
-
+Stream message fields:\\
 
 ```
 index              u32   required   Index for this stream
@@ -435,8 +413,7 @@ composition_id     u32   optional   ??? (Added in version 5)
 ancillary_id       u32   optional   ??? (Added in version 5)
 ```
 
-Sourceinfo message fields:\
-
+Sourceinfo message fields:\\
 
 ```
 adapter            str   optional   Adapter name
@@ -447,8 +424,7 @@ service            str   optional   Service name
 satpos             str   optional   Satellite position name (Added in version 20).
 ```
 
-Video Stream types:\
-
+Video Stream types:\\
 
 ```
 MPEG2VIDEO                    MPEG2 video, meta field is present (configuration blocks)
@@ -456,8 +432,7 @@ H264                          H264 video, meta field is present (configuration b
 HEVC                          HEVC video, meta field is present (configuration blocks)
 ```
 
-Audio Stream types:\
-
+Audio Stream types:\\
 
 ```
 MPEG2AUDIO                    MPEG2 audio (MP2)
@@ -467,8 +442,7 @@ EAC3                          Enhanced AC3 audio
 VORBIS                        Vorbis audio, meta field is present with the main vorbis header
 ```
 
-Subtitle Stream types:\
-
+Subtitle Stream types:\\
 
 ```
 TELETEXT                      ???
@@ -481,8 +455,7 @@ Notifies client about the grace timeout (timeout for stream activation). It can 
 For example a configuration with satellite rotors requires more than 120 seconds to tune, so users\
 should be notified..
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -493,8 +466,7 @@ graceTimeout       u32   required   Grace timeout in seconds.
 
 A subscription has been stopped.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -502,8 +474,7 @@ status             str   optional   Error message if subscription stopped unexpe
 subscriptionError  str   optional   Subscription error code (Added in version 20).
 ```
 
-Valid values for subscriptionError:\
-
+Valid values for subscriptionError:\\
 
 ```
 see dvrEntryAdd
@@ -515,8 +486,7 @@ see dvrEntryAdd
 
 A subscription has been skipped.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -534,8 +504,7 @@ A subscription's playback speed has changed.
 
 This can happen even without a speed request, should playback reach either end of the buffer.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -546,8 +515,7 @@ speed              u32   required   The new speed of the subscription
 
 Subscription status update.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -555,8 +523,7 @@ status             str   optional   English clear text of error status. Absence 
 subscriptionError  str   optional   Subscription error code (Added in version 20).
 ```
 
-Valid values for subscriptionError:\
-
+Valid values for subscriptionError:\\
 
 ```
 see dvrEntryAdd
@@ -571,8 +538,7 @@ The transmit scheduler have different drop thresholds for different frame types.
 If congestion occurs it will favour dropping B-frames before P-frames before I-frames.\
 All audio is recognized as I-frames.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -591,14 +557,23 @@ The signalStatus message is sent every second during normal data delivery.
 
 The optional fields may not have been implemented or may not be supported by the active adapter.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
 feStatus           str   required   Frontend status.
 feSNR              u32   optional   Signal to noise ratio.
+feAbsoluteSNR      s64   optional   Signal to noise ratio in dB × 1000.
+                                    Present when the tuner reports in
+                                    SIGNAL_STATUS_SCALE_DECIBEL.
+                                    Mutually exclusive with feSNR.
+                                    Added in version 44.
 feSignal           u32   optional   Signal status percentage.
+feAbsoluteSignal   s64   optional   Signal strength in dBm × 1000.
+                                    Present when the tuner reports in
+                                    SIGNAL_STATUS_SCALE_DECIBEL.
+                                    Mutually exclusive with feSignal.
+                                    Added in version 44.
 feBER              u32   optional   Bit error rate.
 feUNC              u32   optional   Uncorrected blocks.
 ```
@@ -607,8 +582,7 @@ feUNC              u32   optional   Uncorrected blocks.
 
 Provide status every second about the timeshift buffer.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.
@@ -622,8 +596,7 @@ end                s64   optional   PTS of the last frame in the buffer
 
 Streaming data.
 
-Message fields:\
-
+Message fields:\\
 
 ```
 subscriptionId     u32   required   Subscription ID.

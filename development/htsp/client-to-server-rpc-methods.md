@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Client to Server (RPC) methods
 
 ### hello
@@ -20,8 +6,7 @@ Used to identify the client toward the server and to get the session challenge u
 
 Client/Server should select lowest common version, if this is not possible connection should be terminated.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -43,8 +28,7 @@ webroot            str   optional   Server HTTP webroot (Added in version 8)
                                     Note: any access to TVH webserver should include this at start of URL path
 ```
 
-Note: possible values for servercapability\[]:\
-
+Note: possible values for servercapability\[]:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -61,15 +45,13 @@ timeshift          Timeshifting available (Added in version 9).
 This can be used to issue authentication without doing anything else.\
 If no privileges are gained it will return with 'noaccess' set to 1.
 
-Request message fields:\
-
+Request message fields:<br>
 
 ```
 None   
 ```
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -85,8 +67,7 @@ noaccess           u32   optional   If set to 1, no privileges were granted.
 
 This is a proxy to HTTP API.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -95,8 +76,7 @@ path               str   required   HTTP path
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -114,15 +94,13 @@ Also see: [JSON API](../json-api/) and [Proxy Examples](http-proxy-examples.md).
 
 Return diskspace status from Tvheadend's PVR storage
 
-Request message fields:\
-
+Request message fields:<br>
 
 ```
 None
 ```
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -139,15 +117,13 @@ Also see: [JSON API 'comet/poll'](../json-api/other-functions.md).
 
 Return system time on the server.
 
-Request message fields:\
-
+Request message fields:<br>
 
 ```
 None
 ```
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -165,8 +141,7 @@ When this is enabled the client will get continuous updates from the server abou
 
 An interactive application that presents the user with information about these things should probably enable this and the implement the various server to client methods.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -177,8 +152,7 @@ language           str   optional   RFC 2616 compatible language list (Added in 
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -205,8 +179,7 @@ initialSyncComplete      required
 
 Request information about the given channel.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -214,8 +187,7 @@ channelId          u32   required   Channel ID.
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 see channelAdd
@@ -231,8 +203,7 @@ Request information about the given event. An event typically corresponds to a p
 
 The language field in the request allows preference for languages to be requested for the various string fields.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -241,8 +212,7 @@ language           str   optional   RFC 2616 compatible language list (Added in 
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 see eventAdd
@@ -256,8 +226,7 @@ Also see: [JSON API EPG](../json-api/api-description/epg.md)
 
 Request information about a set of events. If no options are specified the entire EPG database will be returned.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -269,8 +238,7 @@ language           str   optional   RFC 2616 compatible language list (Added in 
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -284,8 +252,7 @@ events             msg[] required   List of events, using response message field
 
 Query the EPG (event titles) and optionally restrict to channel/tag/content type.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -302,8 +269,7 @@ full               u32   optional  Output full event list rather than just IDs
 
 Reply message fields:
 
-if full == 1\
-
+if full == 1<br>
 
 {% code fullWidth="false" %}
 ```
@@ -323,8 +289,7 @@ eventIds           u32[] optional  List of eventIds that match the query
 
 Get detailed EPG Object info.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -347,8 +312,7 @@ TODO
 
 Return a list of DVR configurations.
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -356,8 +320,7 @@ dvrconfigs         msg[]      optional   Supported DVR configurations.
 ```
 {% endcode %}
 
-Message fields:\
-
+Message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -375,8 +338,7 @@ Also see: [JSON API DVR](../json-api/api-description/dvr.md)
 
 Create a new DVR entry. Either eventId or channelId, start and stop must be specified.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -399,8 +361,7 @@ comment            str   optional   User Comment (Added in version 42).
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -416,8 +377,7 @@ error              str   optional   English clear text of error message
 
 Update an existing DVR entry.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -438,8 +398,7 @@ comment            str   optional   User Comment (Added in version 42).
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -454,8 +413,7 @@ error              str   optional   Error message if update failed
 
 Cancel an existing recording, but don't remove the entry from the database.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -463,8 +421,7 @@ id                 u32   required   dvrEnryId to delete
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -479,8 +436,7 @@ error              str   optional   Error message if cancellation failed
 
 Delete an existing DVR entry from the database.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -488,8 +444,7 @@ id                 u32   required   DVR Entry ID
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -504,8 +459,7 @@ error              str   optional   Error message if the delete fails
 
 Get DVR cutpoints.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -513,8 +467,7 @@ id                 u32   required   DVR Entry ID
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -522,8 +475,7 @@ cutpoints          msg[] optional   List of cutpoint entries, if a file is found
 ```
 {% endcode %}
 
-Cutpoint fields:\
-
+Cutpoint fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -543,8 +495,7 @@ type               u32   required   Action type:
 
 Create a new Autorec DVR entry. Title must be specified.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -570,8 +521,7 @@ broadcastType      u32   optional   Broadcast type (0 = any, 1 = new/premiere/un
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -606,8 +556,7 @@ None (errors only propagated via HTTP status code)
 
 Delete an existing autorec DVR entry from the database.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -615,8 +564,7 @@ id                 str   required   Autorec DVR Entry ID (string!)
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -633,8 +581,7 @@ error              str   optional   Error message if the delete fails
 
 Create a new Timerec DVR entry. Title must be specified.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -653,8 +600,7 @@ comment            str   optional   User Comment.
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -689,8 +635,7 @@ None (errors only propagated via HTTP status code)
 
 Delete an existing timerec DVR entry from the database.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -698,8 +643,7 @@ id                 str   required   Timerec DVR Entry ID (string!)
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -716,8 +660,7 @@ error              str   optional   Error message if the delete fails
 
 Get a ticket to allow access to a channel or recording via HTTP
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -726,8 +669,7 @@ dvrId              u32  optional   DVR file to gain access for
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -740,8 +682,7 @@ ticket             str  required   The ticket to pass in the URL query string
 
 Request subscription to the given channel.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -762,8 +703,7 @@ profile            str   optional   Select stream profile (Added in version 16).
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -777,8 +717,7 @@ timeshiftPeriod    u32   optional   The actual timeshiftPeriod to be used
 
 Stop a subscription.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -786,8 +725,7 @@ subscriptionId     u32   required   Subscription ID.
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -799,8 +737,7 @@ None
 
 Change the weight of an existing subscription
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -809,8 +746,7 @@ weight             u32   optional   The new subscription weight.
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -822,8 +758,7 @@ None
 
 Skip a timeshift enabled subscription. The response will be asynchronous subscriptionSkip().
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -834,8 +769,7 @@ size               u64   optional   Specify skip using size (Not currently used)
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -853,8 +787,7 @@ Synonym for subscriptionSkip
 
 Set the playback speed for the subscription. The response will be asynchronous subscriptionSpeed().
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -863,8 +796,7 @@ speed              u32   required   Specify speed (0=pause, 100=1x fwd, -100=1x 
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -876,8 +808,7 @@ None
 
 Return a timeshifted session to live. Reply will be asynchronous subscriptionSkip().
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -885,8 +816,7 @@ subscriptionId     u32   required   Subscription ID.
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -898,8 +828,7 @@ None
 
 Enable or disable specified streams by index.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -909,8 +838,7 @@ disable            list[u32]  optional   Disable (filter out) stream indexes
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -924,8 +852,7 @@ None
 
 Return a list of stream profiles (configurations).
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -933,8 +860,7 @@ profiles           msg[]      optional   Supported profiles
 ```
 {% endcode %}
 
-Message fields:\
-
+Message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -950,8 +876,7 @@ comment            str        required   Profile Comment
 
 Return a list of encoders (codecs).
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -967,8 +892,7 @@ Open a file within the Tvheadend file system. This is now the preferred method (
 
 Accessing recordings via HTSP will overcome the limitations of standard HTTP streaming which cannot handle both skipping and growing files (i.e. in-progress recordings) at the same time.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -976,8 +900,7 @@ file               str   required   File path to open
 ```
 {% endcode %}
 
-Valid file paths:\
-
+Valid file paths:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -986,8 +909,7 @@ Valid file paths:\
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1003,8 +925,7 @@ mtime              u64   optional   The last time the file was modified
 
 Read data from a file.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1014,8 +935,7 @@ offset             u64   optional   Offset into the file to read (default is cur
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1029,8 +949,7 @@ data               bin   required   The data read from the file (size may be les
 
 Close an opened file.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1038,8 +957,7 @@ id                 u32   required   The file handle to be closed
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 ```
 None
@@ -1051,8 +969,7 @@ None
 
 Get status of a file.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1060,8 +977,7 @@ id                 u32   required   The file handle to be stat'd
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1076,8 +992,7 @@ mtime              u64   optional   The last time the file was modified
 
 Seek to position in a file.
 
-Request message fields:\
-
+Request message fields:<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1087,8 +1002,7 @@ whence             str   required   Where to seek relative to (default=SEEK_SET)
 ```
 {% endcode %}
 
-Note: valid values for whence\
-
+Note: valid values for whence<br>
 
 {% code fullWidth="false" %}
 ```
@@ -1098,8 +1012,7 @@ SEEK_END           Seek relative (backwards) to end of file
 ```
 {% endcode %}
 
-Reply message fields:\
-
+Reply message fields:<br>
 
 {% code fullWidth="false" %}
 ```
