@@ -96,6 +96,7 @@
     * [Recognised Tags/Attributes](development/xmltv/input/recognised-tags-attributes.md)
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
   * [Output](development/xmltv/output.md)
+* [Setup Wizard Workflow](development/setup-wizard-workflow.md)
 * [Object ID Representation](development/object-id-representation.md)
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
 * [Pathname Substitution Strings and Command Script Variables](development/pathname-substitution-strings-and-command-script-variables.md)
