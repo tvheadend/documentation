@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Date/Time Format
 
 The date and time are shown in many places within the Web User Interface.  In most places, the format used is based on the default setting of your Browser and Operating System.

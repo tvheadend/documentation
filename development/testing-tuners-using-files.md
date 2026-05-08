@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Testing Tuners Using Files
 
 If you need to test with a system that you that you don't have access to, for example, testing ATSC functionality on a DVB system, you can use a TS recording to emulate the tuner type.

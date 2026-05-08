@@ -6,7 +6,7 @@ Examples include: channels, recordings, muxes, adapters, autorecs, etc.
 
 Detailing every object class is beyond the scope of this document, however, a list of classes can be obtained via the JSON API as follows: http://\[TVH\_IP]:9981/api/classes
 
-Any object within TVH can be addressed via its UUID ([Universally unique identifier](https://en.wikipedia.org/wiki/Universally\_unique\_identifier)).
+Any object within TVH can be addressed via its UUID ([Universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier)).
 
 The UUID is represented in the JSON API as a 32 hexadecimal character string (128 bit). In the HTSP API, an object’s ID is normally represented as an unsigned 32 bit integer that corresponds to the first four bytes (eight hex characters) of the UUID.
 
@@ -23,3 +23,7 @@ The following diagram is not exhaustive, but serves to illustrate the relationsh
 Objects are stored on disk in JSON-formatted files. These files are located with the subdirectories representing their configuration function and are named to match their UUID.
 
 It is recommended that these files not be edited directly.
+
+{% file src="../.gitbook/assets/TVH Object Relationships.odg" %}
+LibreOffice diagram source
+{% endfile %}

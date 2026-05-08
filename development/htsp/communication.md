@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Communication
 
 This communication is currently implemented by using htsmsg's. All strings are encoded as UTF-8.
@@ -24,8 +10,7 @@ Apart from this there is a number of messages that needs to be exchanged during 
 
 There is a normal RPC way of doing things. I.e. the client sends a request and the server responds with a reply. All the RPC methods are listed below as the 'Client to Server' methods. Apart from all message fields listed within each message type the client can add an additional field:
 
-RPC request extra fields:\
-
+RPC request extra fields:<br>
 
 ```
 seq              int  optional   Sequence number. This field will be echoed back by the server in the reply.
@@ -38,8 +23,7 @@ The followings field should be used by the client to match the reply with the re
 All replies are guaranteed to arrive in the same order as the requests.\
 Even so, probably the best way to implement the request-reply client is by taking advantage of the 'seq' field.
 
-RPC reply extra fields:\
-
+RPC reply extra fields:<br>
 
 ```
 seq              int  optional   Sequence number. Same as in the request.

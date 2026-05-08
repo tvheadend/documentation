@@ -17,9 +17,7 @@ layout:
     visible: true
 ---
 
-# Setup Wizard Workflow
-
-#### Overview
+# Overview
 
 The Setup Wizard is a build-in feature that guides the user through the initial setup process. This page documents the protocol that underlies the setup wizard functionality.
 
@@ -32,7 +30,7 @@ This information can also be obtained from `comet/poll/.`\
 
 #### Wizard Steps
 
-<table><thead><tr><th width="133">Step Name</th><th>Wizard Operation</th></tr></thead><tbody><tr><td>"hello"</td><td>Language selection.</td></tr><tr><td>"login"</td><td>Computer Network, Admin and User details.</td></tr><tr><td>"network"</td><td>TVH Network Type to Adaptor mapping.</td></tr><tr><td>"muxes"</td><td>Pre-defined mux selection, per TVH Network type.</td></tr><tr><td>"status"</td><td>Service scanning. (<a href="setup-wizard-workflow.md#service-scan-progress-tracking">See below</a>)</td></tr><tr><td>"mapping"</td><td>Service Mapping and Tag creation.</td></tr><tr><td>"channels"</td><td>This is the 'Finished' screen.</td></tr></tbody></table>
+<table><thead><tr><th width="133">Step Name</th><th>Wizard Operation</th></tr></thead><tbody><tr><td>"hello"</td><td>Language selection.</td></tr><tr><td>"login"</td><td>Computer Network, Admin and User details.</td></tr><tr><td>"network"</td><td>TVH Network Type to Adaptor mapping.</td></tr><tr><td>"muxes"</td><td>Pre-defined mux selection, per TVH Network type.</td></tr><tr><td>"status"</td><td>Service scanning. (<a href="overview.md#service-scan-progress-tracking">See below</a>)</td></tr><tr><td>"mapping"</td><td>Service Mapping and Tag creation.</td></tr><tr><td>"channels"</td><td>This is the 'Finished' screen.</td></tr></tbody></table>
 
 At each step, there is a corresponding 'load' and 'save' operation.
 

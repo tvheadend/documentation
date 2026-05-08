@@ -115,8 +115,7 @@ Note: the TV tuner is first installed on the Host OS (Proxmox) and then passed t
    /dev/dvb/adapter0/demux0,gid=44,uid=0\
    /dev/dvb/adapter0/dvr0,gid=44,uid=0\
    /dev/dvb/adapter0/frontend0,gid=44,uid=0\
-   /dev/dvb/adapter0/net0,gid=44,uid=0\
-
+   /dev/dvb/adapter0/net0,gid=44,uid=0<br>
 8. Restart LXC container to allow passthrough
 9. Access the Tvheadend web configuration interface at:\
    https://\<yourtvhserverip>:9981
