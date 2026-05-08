@@ -97,6 +97,7 @@
     * [Episode Numbering](development/xmltv/input/episode-numbering.md)
   * [Output](development/xmltv/output.md)
 * [Setup Wizard Workflow](development/setup-wizard-workflow.md)
+* [Setup Wizard Worked Example](development/setup-wizard-worked-example.md)
 * [Object ID Representation](development/object-id-representation.md)
 * [WebUI Help Content Workflow](development/webui-help-content-workflow.md)
 * [Pathname Substitution Strings and Command Script Variables](development/pathname-substitution-strings-and-command-script-variables.md)
