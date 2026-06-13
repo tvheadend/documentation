@@ -10,12 +10,26 @@ Run the following shell command to setup a local `apt` repo:
 curl -1sLf 'https://dl.cloudsmith.io/public/tvheadend/tvheadend/setup.deb.sh' | sudo -E bash
 ```
 
+Then install Tvheadend:
+
+```
+sudo apt-get install tvheadend
+```
+
+During installation you will be prompted to create an administrator account; enter a username and password. When it finishes, Tvheadend is reachable on port `9981` (for example `http://localhost:9981/`).
+
 ## RPM Packages (Fedora, RedHat)
 
 Run the following shell command to setup a local `dnf` or `yum` repo:
 
 ```
 curl -1sLf 'https://dl.cloudsmith.io/public/tvheadend/tvheadend/setup.rpm.sh' | sudo -E bash
+```
+
+Then install Tvheadend:
+
+```
+sudo dnf install tvheadend
 ```
 
 > Tvheadend aims to provide installable packages for as long as possible to extend the usable life of server and tuner hardware. In practice this means if we can still automate regular build testing for popular distributions and versions we will have binaries available.
