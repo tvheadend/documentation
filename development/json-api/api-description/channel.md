@@ -18,6 +18,8 @@ Creates a new channel. Requires ADMIN privilege.
 
 Lists details of channels. For details of the parameters and selection criteria which can be applied, see [Grid Parameters](common-parameters.md#grid-parameters).
 
+For ATSC fractional number channels the "number" field is returned as a string (eg "36.1") instead of an integer.
+
 ```
 {
    "entries" : [
