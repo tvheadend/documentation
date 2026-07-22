@@ -40,3 +40,12 @@ TVHeadEnd only recognises a subset of the total XMLTV schema.
 ```
 
 Multiple instances of some tags like 'actor' or 'category' or 'rating' may be present.
+
+Four additional fields can be also extracted from non-standard locations using XPath-like syntax.
+
+* ETSI Category (Genre) Code
+* Unique Event ID
+* SeriesLink (CRID)
+* EpisodeLink (CRID)
+
+See the 'External: XMLTV Grabber' module help text for more details.
