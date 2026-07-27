@@ -1,6 +1,6 @@
 # Access
 
-Functions to list and manipulate access controls. With the exception of access/entry/userlist, ADMIN privilege is required to use these functions.
+Functions to list and manipulate access controls. ADMIN privilege is required to use these functions, except for access/whoami which requires Web Access privilege and access/entry/userlist which has no requirement.
 
 ### access/entry/class
 
@@ -88,6 +88,38 @@ The function is used internally to populate the "Owner" dropdown in Digital Vide
          "val" : "myUserName"
       }, ...
    ]
+}
+```
+
+### access/whoami
+
+Outputs a set of UI preferences for the calling user. Used by the Vue UI to improve performance.
+
+Available in Tvheadend 4.3-2740 and later.
+
+```
+{
+  "uilevel": "expert",
+  "uilevel_nochange": 1,
+  "theme": "blue",
+  "page_size": 999999999,
+  "quicktips": 1,
+  "chname_num": 0,
+  "chname_src": 0,
+  "date_mask": "",
+  "label_formatting": 0,
+  "default_tab": 0,
+  "dvr_show_seconds": 0,
+  "username": "myuser",
+  "dvr": 1,
+  "admin": 1,
+  "time": 1785090579,
+  "cookie_expires": 2047,
+  "ticket_expires": 300,
+  "info_area": "login,storage,time",
+  "freediskspace": 56834629632,
+  "useddiskspace": 2963262777,
+  "totaldiskspace": 62777028608
 }
 ```
 
