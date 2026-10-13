@@ -15,7 +15,7 @@ It helps to understand the basic software concepts for Tvheadend:
 * **Services** are the individual data streams on a Mux. They can be TV or Radio programmes, or they can provide data services such as digital teletext or catch-up IPTV services.
 * **Channels** are mapped against Services. Channels are what client software access when users think _“I’d like to watch BBC One now, please”_.
 
-Each configuration component supports _many-to-many_ relationships: meaning one component can be related to multiple components of the next type, and vice versa, e.g. one tuner can support multiple networks and one network can exist on multiple tuners.&#x20;
+Each configuration component supports _many-to-many_ relationships: meaning one component can be related to multiple components of the next type, and vice versa, e.g. one tuner can support multiple networks and one network can exist on multiple tuners.
 
 The following diagram explains the relationship between these components:
 
@@ -24,3 +24,11 @@ The following diagram explains the relationship between these components:
 ### Why The Complexity?
 
 Simply, because 'BBC One' probably exists in multiple different places. It has regional variations on multiple frequencies (different services on different muxes) and if often accessible through more than one piece of hardware (two satellite tuners, or one satellite and one terrestrial tuner). When you select a channel to watch or record, Tvheadend needs to know the mapped path to the right service on the right mux .. to ask the right tuner to get the signal for you.
+
+### Usernames
+
+As part of the TVH package installation process, the user is prompted for a **superuser** username and password.
+
+Once the package is installed, the user then needs to run the 'Setup Wizard' from a web browser. During this process, the user is prompted to create '**admin**' and 'user' usernames/passwords.
+
+The initial **superuser** name should be different to the **admin** username for language selection to work for that user.
