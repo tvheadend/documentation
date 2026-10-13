@@ -75,6 +75,30 @@ Lists all of the recordings that TVH knows about, ie it combines the output of `
 
 See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details, and note the default is to return only the first 50 items.
 
+#### Programme images
+
+Recording entries expose `image_poster`, `image_backdrop` and `image_still`
+string properties for programme poster, backdrop and still artwork. These names
+are also used in saved DVR configuration; EPG JSON and HTSP instead use
+`imagePoster`, `imageBackdrop` and `imageStill`.
+
+When an EPG recording is created, available typed image URLs are copied into
+the DVR entry. These snapshots persist with the recording and take precedence
+over later EPG changes. If a saved type is absent, the entry can use its
+associated EPG broadcast's image while that association exists. This fallback
+does not save later EPG artwork as a permanent recording snapshot.
+
+The properties are hidden from the normal settings UI but writable through
+entry creation and idnode save. Responses use the existing image-cache
+representation, which can be relative to the Tvheadend HTTP service. Saved
+configuration holds the source URLs. Unavailable typed images return empty
+strings, matching the legacy `image` and `fanart_image` properties; EPG JSON
+instead omits unavailable typed images.
+
+The existing `image` remains a separate programme icon. JSON `fanart_image`
+retains its existing metadata-lookup semantics and does not use the typed
+backdrop fallback provided by HTSP `fanartImage`.
+
 ### dvr/entry/grid\_upcoming
 
 Lists all of the currently-scheduled recordings. See [Grid Parameters](common-parameters.md#grid-parameters) for parameter details, and note the default is to return only the first 50 items.
@@ -106,6 +130,9 @@ The value of `rating_label_uuid` points to a current parental rating label recor
       "channelname": "BBC TWO HD",
       "image": "",
       "fanart_image": "",
+      "image_poster": "imagecache/39",
+      "image_backdrop": "imagecache/40",
+      "image_still": "imagecache/41",
       "title": {
         "eng": "Inside the Bank of England"
       },
@@ -202,6 +229,9 @@ Because legislation can change over time, the value of `rating_label_uuid` is bl
       "channelname": "YESTERDAY",
       "image": "",
       "fanart_image": "",
+      "image_poster": "imagecache/39",
+      "image_backdrop": "imagecache/40",
+      "image_still": "imagecache/41",
       "title": {
         "eng": "Abandoned Engineering"
       },
@@ -286,6 +316,9 @@ If you merge the 'failed' and 'completed' recordings into a single list, the onl
          "child" : "",
          "uri" : "crid://fp.bbc.co.uk/247LP4",
          "image" : "",
+         "image_poster" : "",
+         "image_backdrop" : "",
+         "image_still" : "",
          "dvb_eid" : 62795,
          "autorec_caption" : " (Created from EPG query)",
          "removal" : 0,
