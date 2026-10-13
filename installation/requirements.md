@@ -21,7 +21,7 @@ You will need one or more tuner devices to receive Cable, Satellite, or Terrestr
 
 ## Server Software
 
-Tvheadend is designed for use on Linux and we provide general purpose binary packges and Docker containers that can be used with a large range of Linux distributions and distro versions:
+Tvheadend is designed for use on Linux and we provide general purpose binary packages and Docker containers that can be used with a large range of Linux distributions and distro versions:
 
 * Debian derivatives (Debian, Raspberry Pi, Ubuntu, Mint, etc.)
 * RedHat derivatives (Fedora, RHEL)
