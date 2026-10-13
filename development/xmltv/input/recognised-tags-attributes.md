@@ -36,6 +36,9 @@ TVHeadEnd only recognises a subset of the total XMLTV schema.
 		<value>Rating displey text</value>
 	</rating>
 	<icon src="Icon URL" />
+	<image type="poster" orient="P">https://example.org/poster.jpg</image>
+	<image type="backdrop" orient="L">https://example.org/backdrop.jpg</image>
+	<image type="still" orient="L">https://example.org/still.jpg</image>
 </programme>
 ```
 
@@ -49,3 +52,34 @@ Four additional fields can be also extracted from non-standard locations using X
 * EpisodeLink (CRID)
 
 See the 'External: XMLTV Grabber' module help text for more details.
+
+## Programme images
+
+Select the artwork to import in **Programme image types** (`image_types`) on
+the internal or external XMLTV grabber module. The available types are `poster`,
+`backdrop` and `still`; none are selected by default. This setting does not
+change the existing programme `<icon>` handling. Person and character images
+are not imported.
+
+The `<image>` URL is the element's text, not a `src` attribute. Surrounding XML
+whitespace is stripped and empty values are ignored. Tvheadend retains one URL
+per selected type: the first poster, and the first explicitly landscape
+(`orient="L"`) backdrop or still. If no image of that type is marked landscape,
+the first one wins. The `size` and `system` attributes do not affect selection.
+Tvheadend uses the declared orientation, not measured image dimensions.
+
+Normal grabber priority and merge rules apply. A subsequent accepted programme
+import can clear a previously imported type if it is missing from the source or
+has been deselected. Changing the setting alone does not immediately remove
+artwork from existing EPG events.
+
+Priority applies to the broadcast, not separately to artwork. A lower-priority
+XMLTV grabber cannot supplement images on a broadcast owned by a higher-priority
+source. An accepted non-merge update from a source without typed images, such as
+EIT, can clear them; merge updates can preserve omitted fields.
+
+Selected images use the existing image cache and its settings. Additional types
+can increase image requests and cache storage. Clients need support for the
+separate [JSON EPG](../../json-api/api-description/epg.md#programme-images) or
+[HTSP](../../htsp/server-to-client-methods.md#eventadd) fields to display them.
+Typed images do not replace or automatically populate the programme icon.

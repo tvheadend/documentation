@@ -39,6 +39,10 @@ EPG sources differ in the information which they provide, and there are many mor
          "start": 1747148400,
          "stop": 1747152000,
          "title": "Tipping Point",
+         "image": "imagecache/38",
+         "imagePoster": "imagecache/39",
+         "imageBackdrop": "imagecache/40",
+         "imageStill": "imagecache/41",
          "summary": "Ben Shephard hosts the quiz show in which three players take on an extraordinary machine in the hope of winning a cash jackpot. [S,HD]",
          "widescreen": 1,
          "subtitled": 1,
@@ -63,6 +67,27 @@ If the event is scheduled to be recorded, these extra items will appear:
 ```
 
 Other possible values for `dvrState` are "recording", "completed", "completedError", "completedWarning" and "completedRerecord". The 'completed' values can only be present if the recording stopped before the scheduled stop time.
+
+#### Programme images
+
+EPG event objects can include these optional string fields, including in
+`epg/events/grid` and `epg/events/load` responses:
+
+| Field | Meaning |
+| --- | --- |
+| `imagePoster` | Programme poster image reference. |
+| `imageBackdrop` | Programme backdrop image reference. |
+| `imageStill` | Programme still image reference. |
+
+Fields without artwork are omitted. References use the existing image-cache
+representation and may be relative to the Tvheadend HTTP service; resolve them
+like the existing `image` field. The examples show cached references.
+
+The existing `image` is the programme icon, populated from XMLTV `<icon>`.
+It is separate from `imageStill` and remains unchanged: typed images neither
+overwrite it nor fill it when an icon is absent. See
+[XMLTV programme images](../../xmltv/input/recognised-tags-attributes.md#programme-images)
+for the opt-in import setting and selection rules.
 
 ### epg/events/alternative
 
@@ -111,6 +136,10 @@ The common parameters which apply to other 'load' functions do not work here.
          "start": 1747148400,
          "stop": 1747152000,
          "title": "Tipping Point",
+         "image": "imagecache/38",
+         "imagePoster": "imagecache/39",
+         "imageBackdrop": "imagecache/40",
+         "imageStill": "imagecache/41",
          "summary": "Ben Shephard hosts the quiz show in which three players take on an extraordinary machine in the hope of winning a cash jackpot. [S,HD]",
          "widescreen": 1,
          "subtitled": 1,

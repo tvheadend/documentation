@@ -87,6 +87,19 @@ tagId              u32   required   ID of tag.
 
 A new recording has been created on the server.
 
+Typed programme images were added in protocol version 45. Available images are
+copied from the EPG when the recording is created; saved values take precedence
+over later EPG changes. A missing saved type falls back to the associated EPG
+broadcast while available. `image` remains separate from these typed images.
+
+Full recording messages send empty strings for unavailable typed images and
+for `fanartImage` when neither lookup fan art nor a backdrop is available.
+Clients must clear cached artwork on an empty string. Statistics-only
+`dvrEntryUpdate` messages omit these fields: absence means no artwork change.
+The new fields are also sent to clients negotiating earlier protocol versions.
+Resolve image references like the existing `image` field; they may be relative
+image-cache paths rather than external URLs.
+
 Message fields:\\
 
 ```
@@ -147,7 +160,11 @@ removal            u32   optional   TBA. (Something to do with retention.)
 playcount          u32   optional   TBA. (Probably the number of times the recording has been played.)
 playposition       u32   optional   TBA. (Probably the last played position.
 image              str   optional   Path to artwork.
-fanartImage        str   optional   TBA. (Probably path to fan art.)
+fanartImage        str   optional   Path to metadata-lookup fan art, or the programme backdrop
+                                    if lookup fan art is unavailable (fallback added in version 45).
+imagePoster        str   optional   Programme poster; empty string when unavailable (Added in version 45).
+imageBackdrop      str   optional   Programme backdrop; empty string when unavailable (Added in version 45).
+imageStill         str   optional   Programme still; empty string when unavailable (Added in version 45).
 copyrightYear      u32   optional   TBA. (Probably the year produced.)
 duplicate          u32   optional   TBA.
 seasonNumber       u32   optional   Season number.
@@ -303,6 +320,15 @@ id                 str   required   Timerec Entry ID (string!)
 
 ### eventAdd
 
+Typed programme images (`imagePoster`, `imageBackdrop`, `imageStill`) were added
+in protocol version 45 and are also sent to clients negotiating earlier
+versions. Event messages send empty strings when a type is unavailable, so
+clients must clear cached artwork on an empty string. Image-only changes can
+produce an `eventUpdate`. This differs from JSON EPG responses, which omit
+unavailable typed fields. References use the existing `image` representation
+and may be relative image-cache paths. XMLTV programme `<icon>` continues to
+populate `image`; typed images do not replace it or provide an automatic fallback.
+
 (Added in version 6)
 
 Message fields:\\
@@ -330,7 +356,10 @@ episodeCount       u32   optional   Season episode count (Added in version 6).
 partNumber         u32   optional   Multi-part episode part number (Added in version 6).
 partCount          u32   optional   Multi-part episode part count (Added in version 6).
 episodeOnscreen    str   optional   Textual representation of episode number (Added in version 6).
-image              str   optional   URL to a still capture from the episode (Added in version 6).
+image              str   optional   Programme icon, separate from the typed XMLTV imageStill (Added in version 6).
+imagePoster        str   optional   Programme poster; empty string when unavailable (Added in version 45).
+imageBackdrop      str   optional   Programme backdrop; empty string when unavailable (Added in version 45).
+imageStill         str   optional   Programme still; empty string when unavailable (Added in version 45).
 dvrId              u32   optional   ID of a recording (Added in version 5).
 nextEventId        u32   optional   ID of next event on the same channel.
 ratingLabel        str   optional   Parental rating label text (Added in version 37).
