@@ -9,6 +9,7 @@
 * full messages send empty strings for unavailable typed images and DVR fanartImage so clients can clear cached artwork; statistics-only DVR updates remain partial
 * added subtitling\_type (DVBSUB), teletext\_page and teletext\_type (TEXTSUB) and teletext\_initial\_page (TELETEXT) to the stream messages of subscriptionStart, and the server capability subtitleinfo
 * added receiver\_mix to the audio stream messages of subscriptionStart; audio\_type is also taken from the AC-3, Enhanced AC-3 and AAC descriptors
+* added component\_tag (DVB stream identifier descriptor) to the stream messages of subscriptionStart
 
 #### v44
 

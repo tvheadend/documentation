@@ -428,6 +428,7 @@ index              u32   required   Index for this stream
 type               str   required   Type of stream
 meta               bin   optional   Codec metadata (private data, libav - extradata) (Added in version 17)
 language           str   optional   Language for stream
+component_tag      u32   optional   Component tag of the DVB stream identifier descriptor, if the stream has one; teletext subtitles have the tag of their teletext stream (Added in version 45)
 Video components only:
 width              u32   optional   Width of video in pixels
 height             u32   optional   Height of video in pixels
