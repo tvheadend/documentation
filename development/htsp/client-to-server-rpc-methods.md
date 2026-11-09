@@ -37,6 +37,7 @@ v4l                Analogue TV available
 linuxdvb           Linux DVB API available
 imagecache         Image caching available
 timeshift          Timeshifting available (Added in version 9).
+subtitleinfo       Subtitle page and type and teletext initial page in subscriptionStart (Added in version 45).
 ```
 {% endcode %}
 

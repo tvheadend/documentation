@@ -428,6 +428,7 @@ index              u32   required   Index for this stream
 type               str   required   Type of stream
 meta               bin   optional   Codec metadata (private data, libav - extradata) (Added in version 17)
 language           str   optional   Language for stream
+component_tag      u32   optional   Component tag of the DVB stream identifier descriptor, if the stream has one; teletext subtitles have the tag of their teletext stream (Added in version 45)
 Video components only:
 width              u32   optional   Width of video in pixels
 height             u32   optional   Height of video in pixels
@@ -435,11 +436,17 @@ aspect_num         u32   optional   Aspect ratio numerator (Added in version 5) 
 aspect_den         u32   optional   Aspect ratio denominator (Added in version 5) *Can be incorrect and should not be relied upon*
 Audio components only:
 audio_type         u32   optional   Audio type - 0=Normal; 1=Clean effects; 2=Hearing impaired; 3=Visually impaired commentary; 4-255=Reserved (Added in version 11)
+receiver_mix       u32   optional   1 = supplementary audio to be mixed with the main audio by the receiver, not for playing alone (e.g. an audio description that carries the narration only). Absent otherwise (Added in version 45)
 channels           u32   optional   Number of audio channels (Added in version 5)
 rate               u32   optional   Audio bitrate (Added in version 5)
 Subtitle components only:
 composition_id     u32   optional   ??? (Added in version 5)
 ancillary_id       u32   optional   ??? (Added in version 5)
+subtitling_type    u32   optional   DVBSUB only: subtitling_type of the subtitling descriptor - 0x10..0x15 normal; 0x20..0x25 for the hard of hearing (Added in version 45)
+teletext_page      u32   optional   TEXTSUB only: teletext page of the subtitles, e.g. 777 (Added in version 45)
+teletext_type      u32   optional   TEXTSUB only: teletext type - 2=Subtitle page; 5=Subtitle page for the hearing impaired (Added in version 45)
+Teletext components only:
+teletext_initial_page u32 optional  Initial page of the teletext service, e.g. 100 (Added in version 45)
 ```
 
 Sourceinfo message fields:\\
@@ -474,8 +481,9 @@ VORBIS                        Vorbis audio, meta field is present with the main 
 Subtitle Stream types:\\
 
 ```
-TELETEXT                      ???
-DVBSUB                        ???
+TELETEXT                      Teletext
+DVBSUB                        DVB subtitles
+TEXTSUB                       Teletext subtitles (page in teletext_page)
 ```
 
 ### subscriptionGrace
