@@ -159,6 +159,8 @@ curl  "http://192.168.0.1:9981/api/raw/export?class=service"|jq
 
 Lists the streams comprising the service.
 
+Optional fields: `receiver_mix` (audio, 1 = to be mixed with the main audio by the receiver), `subtitle_type` (subtitles: the `subtitling_type` of DVBSUB, the teletext type of TEXTSUB), `teletext_page` (TEXTSUB) and `teletext_initial_page` (TELETEXT). They are present only when the PMT signals them.
+
 * `uuid` uuid of the service. This parameter is mandatory; it is not possible to list all services.
 
 ```
