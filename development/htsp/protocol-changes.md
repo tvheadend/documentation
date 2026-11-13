@@ -7,6 +7,7 @@
 * added imagePoster, imageBackdrop and imageStill to event and DVR entry messages
 * added programme backdrop fallback for DVR fanartImage
 * full messages send empty strings for unavailable typed images and DVR fanartImage so clients can clear cached artwork; statistics-only DVR updates remain partial
+* added isRepeat field to eventAdd
 
 #### v44
 

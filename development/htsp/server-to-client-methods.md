@@ -367,6 +367,7 @@ ratingIcon         str   optional   Parental rating label icon (Added in version
 ratingCountry      str   optional   Parental rating label country (Added in version 41).
 ratingAuthority    str   optional   Parental rating label authority (Added in version 41).
 isNew              str   optional   Flag to indicate whether the programme is new to air (Added in version 43).
+isRepeat           u32   optional   Flag to indicate whether the programme is a repeat screening; sent only when set (Added in version 45).
 ```
 
 * contentType previously had the major DVB category in the bottom 4 bits,\
