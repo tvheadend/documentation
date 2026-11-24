@@ -82,19 +82,147 @@ Lists all of the api functions supported by the server.
 
 ### serverinfo
 
-Lists information about the server including the software version number.
+Lists information about the server including the software and api version numbers. "Build\_timestamp" is only available from version 4.3-2911.
 
 ```
 {
-   "api_version" : 19,
-   "webroot" : "/testserver",
-   "name" : "Tvheadend",
-   "capabilities" : [
-      "caclient",
-      "tvadapters",
-      "trace",
-      "libav"
-   ],
-   "sw_version" : "4.3-943~g9b85e7b7c-dirty"
+  "sw_version": "4.3-2964~gfce1dbfff-dirty",
+  "api_version": 20,
+  "name": "Tvheadend",
+  "webroot" : "/testserver",
+  "capabilities": [
+    "caclient",
+    "tvadapters",
+    "trace"
+  ],
+  "build_timestamp": "2026-11-24T14:34:12+0000"
 }
+```
+
+### serverinfo/build
+
+Lists the input and output of the configure step of the server build. Requires version 4.3.2911 or later. The output string contains embedded newline characters which have been removed here for readability.
+
+```
+{
+  "build_config": "Configure arguments:
+    --prefix=/usr --disable-libav --disable-libvpx --disable-libvpx_static --enable-libx265 --disble-libx264_static --disable-libx265_static --disable-libvorbis --disable-libvorbis_static --disable-libtheora_static --disable-libtheora --disable-libopus --disable-libopus_static --disable-ffmpeg_static --disable-libfdkaac-static --disable-hdhomerun_static --disable-hdhomerun_client --disable-hdhomerun_server --disable-satip_server --disable-satip_client --disable-imagecache --enable-dvbscan --disable-cwc --disable-cccam --disable-capmt --disable-constcw --enable-ddci --enable-iptv --disable-avahi
+    Compiler:
+      Using C compiler:                        cc
+        Build for arch:                          aarch64
+        Binaries:
+          Using PYTHON:                            python
+          Using GZIP:                              gzip
+          Using BZIP2:                             bzip2
+        Options:
+          pie                                      yes
+          ccdebug                                  no
+          cardclient                               no
+          cwc                                      no
+          cccam                                    no
+          capmt                                    no
+          constcw                                  no
+          linuxdvb                                 yes
+          satip_server                             no
+          satip_client                             no
+          hdhomerun_client                         no
+          hdhomerun_server                         no
+          hdhomerun_static                         no
+          iptv                                     yes
+          tsfile                                   yes
+          dvbscan                                  yes
+          timeshift                                yes
+          trace                                    yes
+          avahi                                    no
+          zlib                                     yes
+          libav                                    no
+          vue_build                                yes
+          vue_cache                                no
+          ffmpeg_static                            no
+          libx264                                  yes
+          libx264_static                           yes
+          libx265                                  yes
+          libx265_static                           no
+          libvpx                                   no
+          libvpx_static                            no
+          libtheora                                no
+          libtheora_static                         no
+          libvorbis                                no
+          libvorbis_static                         no
+          libfdkaac                                no
+          libfdkaac_static                         yes
+          libopus                                  no
+          libopus_static                           no
+          nvenc                                    no
+          vaapi                                    no
+          mmal                                     no
+          omx                                      no
+          inotify                                  yes
+          epoll                                    yes
+          pcre                                     no
+          pcre2                                    yes
+          uriparser                                no
+          ccache                                   no
+          tvhcsa                                   no
+          bundle                                   no
+          pngquant                                 no
+          kqueue                                   no
+          dbus_1                                   yes
+          android                                  no
+          gtimer_check                             no
+          slow_memoryinfo                          no
+          libsystemd_daemon                        no
+          pcloud_cache                             yes
+          ddci                                     yes
+          cclang_threadsan                         yes
+          gperftools                               no
+          execinfo                                 yes
+          W_unused_result                          yes
+          f_stack_protector                        yes
+          f_stack_protector_strong                 yes
+          f_stack_check                            yes
+          f_PIE                                    yes
+          strlcat                                  yes
+          strlcpy                                  yes
+          fdatasync                                yes
+          getloadavg                               yes
+          atomic32                                 yes
+          atomic64                                 yes
+          atomic_time_t                            yes
+          atomic_ptr                               yes
+          bitops64                                 yes
+          lockowner                                yes
+          qsort_r                                  yes
+          time_ld                                  yes
+          gmtoff                                   yes
+          recvmmsg                                 yes
+          sendmmsg                                 yes
+          ifnames                                  yes
+          py_gzip                                  yes
+          bin_pkg_config                           yes
+          bin_xgettext                             yes
+          bin_msgmerge                             yes
+          bin_gzip                                 yes
+          bin_bzip2                                yes
+          ssl                                      yes
+          linuxdvbapi                              yes
+          linuxdvb_ca                              yes
+          inotify_h                                yes
+          inotify_init1                            yes
+          epoll_create1                            yes
+          mpegts                                   yes
+          mpegts_dvb                               yes  
+        Packages:
+          openssl                                  4.1.0
+          zlib                                     1.4
+          libpcre2-8                               10.49
+          dbus-1                                   1.16.4
+        Installation paths:
+          Prefix:                                  /usr
+          Binaries:                                ${prefix}/bin
+          Libraries:                               ${prefix}/lib
+          Data files:                              ${prefix}/share
+          Man pages:                               ${datadir}/man"
+}
+
 ```
