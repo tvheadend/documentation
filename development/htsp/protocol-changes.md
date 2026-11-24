@@ -2,11 +2,15 @@
 
 #### This information may be outdated. If you have some spare time, please to through the commit History and add the changes to the documentation.
 
-#### v45
+#### v46
 
 * added imagePoster, imageBackdrop and imageStill to event and DVR entry messages
 * added programme backdrop fallback for DVR fanartImage
 * full messages send empty strings for unavailable typed images and DVR fanartImage so clients can clear cached artwork; statistics-only DVR updates remain partial
+
+#### v45
+
+* added isRepeat field to eventAdd
 
 #### v44
 
