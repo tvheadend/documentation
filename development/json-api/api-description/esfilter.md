@@ -17,3 +17,5 @@ Returns the parameters of the defined filters of the chosen type. The usual sele
 Creates a new filter of the chosen type. ADMIN privilege is required.
 
 * `conf` A JSON object describing the filter.
+
+The `language` of a filter is a language code of ISO 639-2 (`eng`, `ger`), empty for any language. The codes `qaa` to `qtz` are reserved for local use; each of them is a language of its own, and `q??` stands for any of them ("Any code for local use" in the web interface).
